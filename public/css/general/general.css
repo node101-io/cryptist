@@ -3,7 +3,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-family: 'ClashDisplay-Regular','Ubuntu', Helvetica, Arial, sans-serif;
 }
 html {
   width: 100vw;
@@ -56,14 +56,19 @@ input[type=number] {
   --box-padding: 30px;
 
   --main-color: rgba(255, 96, 58, 1);
-  --box-color: rgba(254, 254, 254, 1);
-  --background-color: rgba(248, 248, 248, 1);
-  --background-color-two: rgba(254, 254, 254, 1);
-  --border-color: rgba(7, 7, 7, 1);
+  --box-color: rgba(35, 35, 35, 1);
+  --background-color: rgba(14, 14, 14, 1);
+  --background-color-two: rgba(14, 14, 14, 0.50);
+  --border-color:rgba(79, 79, 79, 1);
   --hover-color: rgba(148, 148, 148, 0.2);
   --hover-color-light: rgba(254, 254, 254, 0.8);
-  --text-color: rgba(254, 254, 254, 1);
-  --text-color-two: rgba(212, 212, 212, 1);
+  
+  --text-color: #D9D9D9;
+  --text-color-two: #6FDBEE;
+  --text-color-purple: #A382FE;
+  --text-color-turquoise: #67FCE6;
+  --text-color-green: #ADF872;
+  --text-color-orange: #FF7A00;
   --placeholder-color: rgba(248, 248, 248, 0.6);
 }
 
@@ -72,6 +77,28 @@ input[type=number] {
 }
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('/fonts/ClashDisplay-Regular.ttf');
+      font-weight: 400;
+}
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('/fonts/ClashDisplay-Medium.ttf');
+       font-weight: 500;
+}
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('/fonts/ClashDisplay-Semibold.ttf');
+       font-weight: 700;
+}
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('/fonts/ClashDisplay-Bold.ttf');
+       font-weight: 700;
 }
 
 @media only screen and (min-width: 1900px) {
