@@ -681,7 +681,6 @@ p.all-content-sponsors-text-1 {
   display: flex;
   flex-direction: column;
 }
-
 .all-footer-bottom-title {
   font-size: var(--md-font-size);
   padding-bottom: var(--xl-text-gap);
@@ -693,7 +692,6 @@ p.all-content-sponsors-text-1 {
   padding-bottom: var(---sm-text-gap);
 
 }
-
 .all-footer-bottom-contact-us-wrapper {
   width: 30%;
   min-width: 30%;
@@ -708,7 +706,6 @@ p.all-content-sponsors-text-1 {
   display: flex;
   flex-direction: column;
 }
-
 
 @media only screen and (max-width: 1200px) {
   :root {
