@@ -58,6 +58,7 @@
   z-index: 100;
   padding: 0 var(--header-padding);
   background-color: var(--background-color-two);
+  backdrop-filter: blur(20px);
 }
 
 .all-header-logo-wrapper {
@@ -131,7 +132,7 @@
   color: var(--text-color-two);
 }
 .all-content-zkEvent-subtext {
-  font-size: var(--md-font-size);
+  font-size: var(--sm-2-font-size);
   margin-bottom: var(--xl-2-text-gap);
 }
 /* SMALL BUTTON */
@@ -204,7 +205,7 @@
 .all-content-small-button-text {
   position: absolute;
   font-size: var(--xs-font-size);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-color-black);
 }
 .all-content-large-button-wrapper {
@@ -921,6 +922,7 @@ p.all-content-sponsors-text-3 {
 }
 .all-footer-bottom-left-text-1 {
   font-size: var(--xl-font-size);
+  font-weight: 700;
   padding-bottom: var(--xl-text-gap);
 }
 .all-footer-bottom-left-line-shape {
@@ -989,7 +991,7 @@ p.all-content-sponsors-text-3 {
   padding: var(--xl-text-gap) var(--header-padding);
 }
 .all-footer-info-mail-clipboard-text {
-  font-size: var(--sm-font-size);
+  font-size: var(--xs-font-size);
   color: var(--placeholder-color);
 
   padding-right: 5px;
@@ -1015,7 +1017,7 @@ p.all-content-sponsors-text-3 {
   padding: var(--xl-2-text-gap) var(--header-padding);
 }
 .all-footer-info-text {
-  font-size: var(--sm-font-size);
+  font-size: var(--xs-font-size);
 }
 @media only screen and (max-width: 1200px) {
   :root {
