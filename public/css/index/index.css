@@ -319,10 +319,10 @@
 .all-content-whyCryptist-circle {
   position: absolute;
   bottom: 0;
-  height: 60vw;
-  min-height: 60vw;
-  width: 60vw;
-  min-width: 60vw;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vh;
+  min-width: 100vh;
   background-image: linear-gradient(300deg, #D9D9D9 0%, #6FDBEE 100%);
   border-radius: 100%;
 }
@@ -353,21 +353,22 @@
 
 
 .all-content-pastEvent-wrapper {
-  height: fit-content;
-  min-height: fit-content;
+  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   min-width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .all-content-pastEvent-text-wrapper {
-  height: 100%;
-  min-height: 100%;
+  height: fit-content;
+  min-height: fit-content;
   width: 50%;
   min-width: 50%;
   z-index: 2;
-  padding: calc(3 * var(--content-padding)) var(--header-padding);
+  padding: calc(2 * var(--content-padding)) var(--header-padding);
 }
 .all-content-pastEvent-text-1 {
   font-size: var(--md-font-size);
@@ -383,7 +384,7 @@
   padding-bottom: var(--sm-text-gap);
 }
 .all-content-pastEvent-text-3 {
-  font-size: var(--sm-font-size);
+  font-size: var(--xs-font-size);
   padding-bottom: var(--md-text-gap);
 }
 .all-content-pastEvent-text-3-bold {
@@ -397,75 +398,80 @@
   position: relative;  
   height: 100%;
   min-height: 100%;
-  width: 50%;
-  min-width: 50%;
+  width: 60%;
+  min-width: 60%;
   display: flex;
 }
 .all-content-pastEvents-spiral-wrapper {
-  height: 50%;
-  min-height: 50%;
-  width: 50%;
-  min-width: 50%;
-  z-index: 0;
-
-} 
-.all-content-pastEvents-spiral {
-  width: 50vw; 
-  height: 50vw;
-  margin: var(--content-padding) var(--content-padding);
-
-}
-.all-content-pastEvents-slide-wrapper {
-  position: absolute;
-  left: var(--header-padding);
-  height: 70%;
-  min-height: 50%;
-  width: 70%;
-  min-width: 50%;
-  display: flex;
-  z-index: 1;
-  padding-top: calc(3 * var(--content-padding));
-}
-.all-content-pastEvents-slide-container {
   height: 100%;
   min-height: 100%;
   width: 100%;
   min-width: 100%;
-  position: relative;
-}
+  z-index: 0;
 
+} 
+.all-content-pastEvents-spiral {
+  width: 100vh; 
+  height: 100vh;
+  margin: 0 calc(2 * var(--content-padding));
+
+}
+.all-content-pastEvents-slide-container {
+  position: absolute;
+  top: calc((100vh - 30vw) / 2);
+  height: 30vw;
+  min-height: 30vw;
+  width: 40vw;
+  min-width: 40vw;
+  flex: 1;
+}
 .all-content-pastEvents-slide-image-wrapper {
   position: relative;
-  height: 40%;
-  min-height: 40%;
-  width: 40%;
-  object-fit: cover;
-  min-width: 40%;
+  height: 30vw;
+  min-height: 30vw;
+  width: 40vw;
+  min-width: 40vw;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
   list-style: none;
 } 
 .all-content-pastEvents-slide-image {
   position: absolute;
   top: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 40vw;
+  min-width: 40vw;
+  height: auto;
+  min-height: auto;
   object-fit: cover;
   opacity: 0;
 }
 .all-content-pastEvents-slide-image[data-active] {
   opacity: 1;
   z-index: 1;
+  width: 40vw;
+  min-width: 40vw;
+  height: auto;
+  min-height: auto;
+}
+.slide-image {
+  width: 40vw;
+  min-width: 40vw;
+  height: auto;
+  min-height: auto;
+  object-fit: cover;
+
 }
 .all-content-pastEvents-slide-button-wrapper {
   position: absolute;
   width: 40px;
   height: 40px;
-  right: -20px;
-  top: 50%;
-  z-index: 2;
+  top: calc(15vw - 20px);
+  left: 40vw;
   border-radius: 100%;
-  background-color: rgba(34, 34, 34, 0.5);
+  background: linear-gradient(15deg, rgba(217, 217, 217, 0.5) 0%, rgba(103, 252, 230,0.5) 100%);
+  backdrop-filter: blur(20px);
   cursor: pointer;
   outline: none;
   border: none;
@@ -532,11 +538,11 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  padding: var(--box-padding);
+  padding: 20px;
   z-index: 2;
 }
 .all-content-speakers-card-name-company {
-  font-size: var(--xs-font-size);
+  font-size: 13px;
   font-weight: 700;
 }
 .purple{
@@ -562,14 +568,14 @@
 }
 .all-content-speakers-card-title {
   font-size: var(--sm-2-font-size);
-  font-weight: 700;
+  font-weight: 900;
   padding-top: var(--sm-text-gap);
 }
 .all-content-speakers-card-socials
 .all-content-speakers-card-linkedin
 
 .all-content-sponsors-wrapper {
-  height: fit-content;
+  height: fit-content; /*calc*/
   min-height: fit-content;
   width: 100vw;
   min-width: 100vw;
@@ -822,21 +828,21 @@ p.all-content-sponsors-text-3 {
 .all-content-saltGalata-location-icon {
   height: 24px;
 }
-.all-content-saltGalata-slide {
-}
 .all-content-saltGalata-slide-wrapper {
-  width: 50%;
-  min-width: 50%;
-  height: 100%;
-  min-height: 100%;
+  position: relative;
+  width: 40vw;
+  min-width: 40vw;
+  height: 30vw;
+  min-height: 30vw;
 }
 .all-content-saltGalata-slide-image-wrapper {
   position: relative;
-  height: 40%;
-  min-height: 40%;
-  width: 40%;
-  min-width: 40%;
+  width: 40vw;
+  min-width: 40vw;
+  height: 30vw;
+  min-height: 30vw;
   margin: 0;
+  padding: 0;
   list-style: none;
 } 
 .all-content-saltGalata-slide-image {
@@ -853,11 +859,14 @@ p.all-content-sponsors-text-3 {
   z-index: 1;
 }                                                                                                                 
 .all-content-saltGalata-slide-button-wrapper {
+  position: absolute;
   width: 40px;
   height: 40px;
-  z-index: 2;
+  top: calc(15vw - 20px);
+  left: 40vw;
   border-radius: 100%;
-  background-color: rgba(34, 34, 34, 0.5);
+  background: linear-gradient(15deg, rgba(217, 217, 217, 0.5) 0%, rgba(103, 252, 230,0.5) 100%);
+  backdrop-filter: blur(20px);
   cursor: pointer;
   outline: none;
   border: none;
@@ -891,7 +900,15 @@ p.all-content-sponsors-text-3 {
   align-items: center;
   padding: var(--content-padding) calc(3 * var(--header-padding)) ;
 }
-.all-footer-upper-text {
+.all-footer-upper-text-1 {
+  font-size: var(--md-2-font-size);
+  text-align: center;
+  background: linear-gradient(154deg, #D9D9D9 6.04%, #67FCE6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.all-footer-upper-text-2 {
   font-size: var(--md-2-font-size);
   text-align: center;
   background: linear-gradient(154deg, #D9D9D9 6.04%, #67FCE6 100%);
