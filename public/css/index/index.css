@@ -40,7 +40,7 @@
   --pastEvent-spiral-width: 100vh;
   --speakers-card-container-width: 100vw;
   --speakers-card-width: calc((100vw - 4 * var(--header-padding) - 3 * var(--box-padding)) / 4);
-  --sponsors-text-wrapper-width: 100%;
+  --sponsors-text-wrapper-width: fit-content;
   --sponsors-image-width: 40vw;
   --sponsors-card-wrapper-width: 100vw;
   --sponsors-card-width: calc((100vw - 6 * var(--header-padding) - 3 * var(--box-padding)) / 4);
@@ -387,8 +387,8 @@
   filter: drop-shadow(2px 0 20px rgba(111, 219, 238, 0.1));
 }
 .all-content-whyCryptist-vector-right {
-  height: fit-content;
-  min-height: fit-content;
+  height: auto;
+  min-height: auto;
   width: 40%;
   min-width: 40%;
 }
@@ -1090,7 +1090,6 @@ p.all-content-sponsors-text-3 {
   :root {
     --header-padding: 80px;
     --content-padding:70px;
-
 
     --xl-4-font-size: 60px;
     --xl-3-font-size: 56px;
