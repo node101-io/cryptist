@@ -1,8 +1,4 @@
 window.addEventListener('load', () => {
-  
-});
-
-document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelectorAll('[data-carousel-button]')
 
     button.forEach(button => {
