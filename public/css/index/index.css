@@ -983,8 +983,11 @@ p.all-content-sponsors-text-3 {
   min-height: var(--schedule-timeline-container-height);
   width: var(--schedule-timeline-container-width);
   min-width: var(--schedule-timeline-container-width);
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin-bottom: var(--xl-2-text-gap);
+  z-index: 2;
+  margin-left: calc(var(--xl-2-text-gap) * -1);
 }
 .all-content-schedule-timeline-container::-webkit-scrollbar {
   width: 3px;
@@ -1518,6 +1521,10 @@ p.all-content-sponsors-text-3 {
     padding-top: var(--xl-2-text-gap);
     width: 95vw;
     min-width: 95vw;
+    margin-left: unset;
+  }
+  .all-content-schedule-timeline-container::-webkit-scrollbar {
+    display: none;
   }
   .all-content-saltGalata-wrapper {
     flex-direction: column;
