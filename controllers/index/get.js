@@ -1,11 +1,10 @@
 module.exports = (req, res) => {
   return res.render('index/index', {
     page: 'index/index',
-    title: res.__('Cryptist'),
     includes: {
       external: {
         css: ['general', 'page'],
-        js: ['page', 'serverRequest']
+        js: ['page', 'serverRequest', 'header']
       },
       meta: {
         title: res.__('Cryptist'),

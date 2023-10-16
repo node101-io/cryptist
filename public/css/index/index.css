@@ -64,15 +64,25 @@
 }
 
 .all-wrapper {
-  height: 100vh;
-  min-height: 100vh;
+  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
   width: 100vw;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: overlay;
   color: var(--text-color);
+  margin-top: var(--header-height);
+}
+.all-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.all-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--background-color-blue);
+}
+.all-wrapper::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .all-header {
@@ -95,14 +105,15 @@
 
 .all-header-logo-wrapper {
   padding-left:0 var(--header-padding);
-  width: 50%;
+  width: auto;
+  margin-right: auto;
 }
 .all-header-logo {
   height: 50px;
   width: auto;
 }
 .all-header-pages-wrapper {
-  width: 40%;
+  width: fit-content;
 }
 .all-header-pages {
   display: flex;
@@ -113,6 +124,23 @@
 .all-header-pages-text {
   text-decoration: none;
   color: var(--text-color);
+  width: fit-content;
+  cursor: pointer;
+}
+.all-header-mobile-menu-button-icon {
+ cursor: pointer;
+}
+.all-header-mobile-menu-sections-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 var(--header-padding);
+  gap: 40px;
+}
+.all-header-mobile-menu-each-section-button {
+  display: flex;
+  font-size: var(--xl-2-font-size);
+  cursor: pointer;
 }
 .all-header-social-button {
   width: 10%;
@@ -122,6 +150,10 @@
   display: flex;
   justify-content: flex-end;
   column-gap: 10px;
+}
+.all-header-social-button-image a {
+  display: flex;
+  align-items: center;
 }
 .all-header-social-twitter {
   height: 20px;
@@ -140,13 +172,21 @@
   min-height: 100vh;
   width: 100vw;
   min-width: 100vw;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(50px);
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.all-header-menu-button-icon {
+  position: absolute;
+  top: var(--header-padding);
+  right: var(--header-padding);
+  width: var(--header-padding);
+  height: var(--header-padding);
+  cursor: pointer;
 }
 
 .all-content {
@@ -1441,10 +1481,16 @@ p.all-content-sponsors-text-3 {
     --saltGalata-text-wrapper-height: 40vh;
     --saltGalata-slide-wrapper-width: 100vw;
     --saltGalata-slide-wrapper-height: fit-content;
-    --footer-bottom-left-width: 100vw;
+    --footer-bottom-left-width: 100%;
     --footer-bottom-left-height: 100%;
     --footer-bottom-right-height: 0;
     --footer-bottom-right-width: 0;
+  }
+  .all-header-pages-wrapper {
+    display: none !important;
+  }
+  .all-header-mobile-menu-button-icon {
+    display: flex !important;
   }
   .all-content-whyCryptist-wrapper {
     flex-direction: column;
@@ -1502,6 +1548,7 @@ p.all-content-sponsors-text-3 {
     --speakers-card-container-width: 675vw;
     --sponsors-card-wrapper-width: 350vw;
 
+    --large-button-width: 240px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1509,5 +1556,11 @@ p.all-content-sponsors-text-3 {
     --header-padding: 30px;
     --speakers-card-container-width: 700vw;
     --sponsors-card-wrapper-width: 375vw;
+  }
+  .all-content-sponsors-button-wrapper {
+    flex-direction: column;
+  }
+  .all-content-sponsors-title {
+    margin-top: var(--xl-text-gap);
   }
 }
