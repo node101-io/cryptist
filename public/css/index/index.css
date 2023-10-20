@@ -15,7 +15,7 @@
   --md-font-size: 24px;
   --sm-2-font-size: 20px;
   --sm-font-size: 16px;
-  --xs-font-size: 14px;
+  --xs-font-size: 12px;
 
   --xl-2-text-gap: 40px;
   --xl-text-gap: 20px;
@@ -204,6 +204,7 @@
   min-width: 100vw;
   display: flex;
   flex-direction: row;
+  column-gap: 50px;
 }
 .all-content-zkEvent-text-wrapper {
   height: 100vh;
@@ -211,7 +212,7 @@
   width: var(--zkEvent-text-wrapper-width);
   min-width: var(--zkEvent-text-wrapper-width);
   color: var(--text-color);
-  padding-top: 30vh;
+  padding-top: 15vh;
   padding-left: var(--header-padding);
 }
 
@@ -221,7 +222,7 @@
 }
 .all-content-zkEvent-title {
   font-size: var(--xl-4-font-size);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: var(--xl-text-gap);
 }
 .all-content-zkEvent-title-blue {
@@ -231,12 +232,72 @@
   font-size: var(--sm-2-font-size);
   margin-bottom: var(--xl-2-text-gap);
 }
-.all-content-zkEvent-vector-wrapper {
+.all-content-zkEvent-lines-wrapper {
   height: 100vh;
   min-height: 100vh;
   width: 40vw;
   min-width: 40vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: -200px;
+  animation: margin-top-change ease-out 10s infinite;
 }
+@keyframes margin-top-change {
+  from {
+      margin-top: -200px; 
+  }
+  to {
+      margin-top: -0;
+  }
+}
+.all-content-zkEvent-line {
+  height: 1000px;
+  min-height: 1000px;
+  width: 3px;
+  min-width: 3px;
+  border-radius: 38px;
+  background: linear-gradient(180deg, rgba(0, 26, 31, 0.00) 33.33%, #6FDBEE 100%);
+  margin-right: 25px;
+}
+
+#line-1 {
+  height: 200px;
+  min-height: 200px;
+}
+#line-2 {
+  height: 300px;
+  min-height: 300px;
+}
+#line-3, #line-12, #line-18 {
+  height: 500px;
+  min-height: 500px;
+}
+#line-4 , #line-9, #line-16{
+  height: 600px;
+  min-height: 600px;
+}
+#line-5, #line-13 {
+  height: 400px;
+  min-height: 400px;
+}
+#line-6, #line-10, #line-17  {
+  height: 650px;
+  min-height: 650px;
+}
+#line-7 {
+  height: 300px;
+  min-height: 400px;
+}
+#line-8, #line-11, #line-14 {
+  height: 450px;
+  min-height: 450px;
+}
+#line-15 {
+  height: 375px;
+  min-height: 375px;
+}
+
 /* SMALL BUTTON */
 .all-content-small-button-wrapper {
   position: relative;
@@ -512,12 +573,12 @@
 }
 .all-content-whyCryptist-title {
   font-size: var(--md-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding-bottom: var(--xl-2-text-gap);
 }
 .all-content-whyCryptist-paragraph {
   font-size: var(--md-2-font-size);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-color-two);
   padding-bottom: var(--md-text-gap);
 }
@@ -598,7 +659,7 @@
 }
 .all-content-pastEvent-text-2 {
   font-size: var(--xl-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding-bottom: var(--sm-text-gap);
 }
 .all-content-pastEvent-text-3 {
@@ -606,7 +667,7 @@
   padding-bottom: var(--md-text-gap);
 }
 .all-content-pastEvent-text-3-bold {
-  font-weight: 700;
+  font-weight: 500;
 }
 .all-content-pastEvent-moda-palas-image {
   padding-top: var(--xl-2-text-gap);
@@ -707,7 +768,7 @@
 
 .all-content-speakers-title {
   font-size: var(--xl-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding-top: var(--xl-2-text-gap);
   padding-bottom: var(--xl-2-text-gap);
   padding-left: calc(2 * var(--header-padding));
@@ -765,7 +826,7 @@
 }
 .all-content-speakers-card-name-company {
   font-size: var(--xs-font-size);
-  font-weight: 700;
+  font-weight: 500;
 }
 .purple{
   color: var(--text-color-purple);
@@ -789,8 +850,8 @@
   color: var(--text-color-blue);
 }
 .all-content-speakers-card-title {
-  font-size: var(--sm-2-font-size);
-  font-weight: 900;
+  font-size: var(--sm-font-size);
+  font-weight: 500;
   padding-top: var(--sm-text-gap);
 }
 .all-content-speakers-card-socials
@@ -826,11 +887,11 @@
 }
 p.all-content-sponsors-text-1 {
   font-size: var(--md-2-font-size);
-  font-weight: 700;
+  font-weight: 500;
 }
 p.all-content-sponsors-text-2 {
   font-size: var(--md-2-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding-bottom: var(--xl-text-gap);
 }
 .all-content-sponsors-button-wrapper {
@@ -858,7 +919,7 @@ p.all-content-sponsors-text-3 {
 }
 .all-content-sponsors-title {
   font-size: var(--md-2-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding: var(--md-text-gap) calc(3 * var(--header-padding));
 }
 .all-content-sponsors-card-wrapper {
@@ -1053,7 +1114,7 @@ p.all-content-sponsors-text-3 {
 }
 .all-content-saltGalata-text-1 {
   font-size: var(--xl-2-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding-bottom: var(--xl-2-text-gap);
 }
 .all-content-saltGalata-text-2 {
@@ -1177,7 +1238,7 @@ p.all-content-sponsors-text-3 {
 }
 .all-footer-bottom-left-text-1 {
   font-size: var(--xl-font-size);
-  font-weight: 700;
+  font-weight: 500;
   padding-bottom: var(--xl-text-gap);
 }
 .all-footer-bottom-left-line-shape {
