@@ -1,5 +1,10 @@
 extends ../partials/head
 block content
+  each item, i in example
+    - console.log(i, 'itemin indexi')
+    - console.log(item.text)
+    - console.log(item.link)
+    - console.log(item.image)
   .all-wrapper
     .all-header
       a.all-header-logo-wrapper(href='/' + (query_lang ? '?lang = ' + query_lang : ''))

@@ -999,7 +999,7 @@ p.all-content-sponsors-text-3 {
 .all-content-schedule-timeline-line-container {
   display: flex;
   width: 100%;
-  height: 20%;
+  height: fit-content;
   font-size: var(--sm-font-size);
   padding-left: var(--header-padding);
   padding-right: var(--content-padding);
