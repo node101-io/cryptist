@@ -15,4 +15,18 @@ window.addEventListener('load', () => {
             delete activeSlide.dataset.active
         });    
     });
+
+    document.addEventListener('click', event => {
+        if (event.target.closest('.all-footer-info-mail-clipboard')) {
+            const emailEl = document.querySelector('.all-footer-info-mail-clipboard-text');
+
+            navigator.clipboard.writeText(emailEl.innerText);
+
+            const originalText = emailEl.innerText;
+            emailEl.innerText = 'Copied!';
+            setTimeout(() => {
+                emailEl.innerText = originalText;
+            }, 1000);
+        };
+    });
 });
