@@ -26,7 +26,7 @@ module.exports = (req, res) => {
         color: 'turquoise',
         name: 'Emre Tekişalp',
         company: 'O(1) Labs',
-        title: '',
+        title: 'Zk Use cases',
         linkedin: 'https://www.linkedin.com/in/emretekisalp',
         twitter: 'https://x.com/etekis',
         image: 'emre.png'
@@ -57,6 +57,24 @@ module.exports = (req, res) => {
         linkedin: 'https://tr.linkedin.com/in/oay',
         twitter: '',
         image: 'ozgur.png'
+      },
+      {
+        color: 'red',
+        name: 'Toghrul Maharramov',
+        company: 'Scroll',
+        title: 'Why Scroll?',
+        linkedin: 'https://www.linkedin.com/in/toghrulmaharramov',
+        twitter: 'https://x.com/toghrulmaharram',
+        image: 'toghrul.png'
+      },
+      {
+        color: 'green',
+        name: 'Craig Johnson',
+        company: 'Aleo',
+        title: 'Aleo Advantage: ZK by Design',
+        linkedin: '',
+        twitter: 'https://twitter.com/craigjson',
+        image: 'craig.png'
       }
       // {
       //   color: 'green',
@@ -107,14 +125,6 @@ module.exports = (req, res) => {
       //   image: 'doruk.png'
       // },
       // {
-      //   color: 'blue',
-      //   name: 'Toghrul Maharramov',
-      //   company: 'Scroll',
-      //   title: 'Zero-Knowledge Proofs in the World of Rollups',
-      //   linkedin: '',
-      //   image: 'toghrul.png'
-      // },
-      // {
       //   color: 'purple',
       //   name: 'Utku Dördüncü',
       //   company: 'Paribu Ventures',
@@ -155,68 +165,91 @@ module.exports = (req, res) => {
       //   image: 'kerim.png'
       // }
     ],
-    workshops: [],
-    sponsors: [
+    workshops: [
       {
-        image: 'aleo.png',
-        name: 'Aleo Network',
-        website: 'https://aleo.org',
-        linkedin: 'https://www.linkedin.com/company/aleohq',
-        twitter: 'https://x.com/AleoHQ',
-        type: 'Lead Sponsor'
+        color: 'gray',
+        name: 'Mauro Toscano',
+        company: 'Lambda Class',
+        title: 'How to use Lambdaworks and the STARK Platinum Prover.',
+        linkedin: '',
+        twitter: '',
+        image: 'mauro.png'
       },
       {
-        image: 'zksync.png',
-        name: 'zkSync',
-        website: 'https://zksync.io',
-        linkedin: 'https://www.linkedin.com/company/zksync-network',
-        twitter: 'https://x.com/zksync',
-        type: 'Platinum Sponsor'
-      },
-      // {
-      //   image: 'sponsor-2.png',
-      //   name: 'dYdX Foundation',
-      //   linkedin: 'https://ch.linkedin.com/company/dydx-foundation',
-      //   twitter: 'https://x.com/dydxfoundation',
-      //   type: 'Platinum Partner'
-      // },
-      // {
-      //   image: 'sponsor-3.png',
-      //   name: 'Ethereum Foundation',
-      //   linkedin: 'https://www.linkedin.com/company/ethereum-foundation/',
-      //   twitter: 'https://x.com/ethereum',
-      //   type: 'Platinum Partner'
-      // },
-      // {
-      //   image: 'sponsor-4.png',
-      //   name: 'Manta Network',
-      //   linkedin: 'https://www.linkedin.com/company/mantanetwork/',
-      //   twitter: 'https://x.com/MantaNetwork',
-      //   type: 'Platinum Partner'
-      // },
-      // {
-      //   image: 'sponsor-5.png',
-      //   name: 'O(1) Labs',
-      //   linkedin: 'https://www.linkedin.com/company/o1labs/',
-      //   twitter: 'https://x.com/o1_labs',
-      //   type: 'Platinum Partner'
-      // },
-      // {
-      //   image: 'sponsor-6.png',
-      //   name: 'Paribu Ventures',
-      //   linkedin: 'https://www.linkedin.com/company/paribu-ventures/',
-      //   twitter: 'https://x.com/ParibuVentures',
-      //   type: 'Platinum Partner'
-      // },
-      {
-        image: 'scroll.png',
-        name: 'Scroll',
-        website: 'https://scroll.io/',
-        linkedin: 'https://www.linkedin.com/company/scroll-io/',
-        twitter: 'https://x.com/Scroll_ZKP',
-        type: 'Platinum Sponsor'
-      },
+        color: 'gray',
+        name: 'Saurabh Chalke',
+        company: 'ZkHub',
+        title: 'Fast and Privacy- Preserving Zero-Knowledge Proof Generation',
+        linkedin: 'https://www.linkedin.com/in/saurabhchalke',
+        twitter: 'https://x.com/saurabhchalke',
+        image: 'saurabh.png'
+      }
     ],
+    sponsors: {
+      lead: [
+        {
+          image: 'aleo.png',
+          name: 'Aleo Network',
+          website: 'https://aleo.org',
+          linkedin: 'https://www.linkedin.com/company/aleohq',
+          twitter: 'https://x.com/AleoHQ',
+          type: 'Lead Sponsor'
+        },
+      ],
+      platinum: [
+        {
+          image: 'zksync.png',
+          name: 'zkSync',
+          website: 'https://zksync.io',
+          linkedin: 'https://www.linkedin.com/company/zksync-network',
+          twitter: 'https://x.com/zksync',
+          type: 'Platinum Sponsor'
+        },
+        // {
+        //   image: 'sponsor-2.png',
+        //   name: 'dYdX Foundation',
+        //   linkedin: 'https://ch.linkedin.com/company/dydx-foundation',
+        //   twitter: 'https://x.com/dydxfoundation',
+        //   type: 'Platinum Partner'
+        // },
+        // {
+        //   image: 'sponsor-3.png',
+        //   name: 'Ethereum Foundation',
+        //   linkedin: 'https://www.linkedin.com/company/ethereum-foundation/',
+        //   twitter: 'https://x.com/ethereum',
+        //   type: 'Platinum Partner'
+        // },
+        // {
+        //   image: 'sponsor-4.png',
+        //   name: 'Manta Network',
+        //   linkedin: 'https://www.linkedin.com/company/mantanetwork/',
+        //   twitter: 'https://x.com/MantaNetwork',
+        //   type: 'Platinum Partner'
+        // },
+        // {
+        //   image: 'sponsor-5.png',
+        //   name: 'O(1) Labs',
+        //   linkedin: 'https://www.linkedin.com/company/o1labs/',
+        //   twitter: 'https://x.com/o1_labs',
+        //   type: 'Platinum Partner'
+        // },
+        // {
+        //   image: 'sponsor-6.png',
+        //   name: 'Paribu Ventures',
+        //   linkedin: 'https://www.linkedin.com/company/paribu-ventures/',
+        //   twitter: 'https://x.com/ParibuVentures',
+        //   type: 'Platinum Partner'
+        // },
+        {
+          image: 'scroll.png',
+          name: 'Scroll',
+          website: 'https://scroll.io/',
+          linkedin: 'https://www.linkedin.com/company/scroll-io/',
+          twitter: 'https://x.com/Scroll_ZKP',
+          type: 'Platinum Sponsor'
+        },
+      ]
+    },
     partners: [
       {
         image: 'antalpha.png',
@@ -322,7 +355,7 @@ module.exports = (req, res) => {
       {
         time: '12:10 - 12:40',
         title: 'Emre Tekişalp, O(1) Labs',
-        text: '“ZK and Web3 Mass Adoption (and it’s not just about scalability)”'
+        text: '“Zk Use cases”'
       },
       {
         time: '12:40 - 13:10',

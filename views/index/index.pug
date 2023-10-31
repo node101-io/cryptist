@@ -131,7 +131,7 @@ block content
             each speaker in speakers
               .all-content-speakers-card
                 img.all-content-speakers-card-glow(src=`img/glow/glow-${speaker.color}.png`, alt=`Background Glow ${speaker.color}`)
-                img.all-content-speakers-card-image(src=`img/speakers/${speaker.color}-${speaker.image}`, alt=`${speaker.name}, ${speaker.company} image`)
+                img.all-content-speakers-card-image(src=`img/speakers/${speaker.image}`, alt=`${speaker.name}, ${speaker.company} image`)
                 .all-content-speakers-card-info-wrap
                   p.all-content-speakers-card-name-company(class=speaker.color) #{speaker.name}, #{speaker.company}
                   p.all-content-speakers-card-title "#{speaker.title}"
@@ -143,15 +143,15 @@ block content
           .all-content-speakers-card-container.display-none#workshops-speakers-container
             each workshop in workshops
               .all-content-speakers-card
-                img.all-content-speakers-card-glow(src=`img/glow/glow-${speaker.color}.png`, alt=`Background Glow ${speaker.color}`)
-                img.all-content-speakers-card-image(src=`img/speakers/${speaker.color}-${speaker.image}`, alt=`${speaker.name}, ${speaker.company} image`)
+                img.all-content-speakers-card-glow(src=`img/glow/glow-${workshop.color}.png`, alt=`Background Glow ${workshop.color}`)
+                img.all-content-speakers-card-image(src=`img/speakers/${workshop.image}`, alt=`${workshop.name}, ${workshop.company} image`)
                 .all-content-speakers-card-info-wrap
-                  p.all-content-speakers-card-name-company(class=speaker.color) #{speaker.name}, #{speaker.company}
-                  p.all-content-speakers-card-title "#{speaker.title}"
+                  p.all-content-speakers-card-name-company(class=workshop.color style='color: var(--text-color-turquoise);') #{workshop.name}, #{workshop.company}
+                  p.all-content-speakers-card-title "#{workshop.title}"
                   .all-content-speakers-card-socials
-                    a(href=speaker.linkedin target='_blank')
+                    a(href=workshop.linkedin target='_blank')
                       img.all-content-speakers-card-linkedin(src="img/socials/linkedin_logo.svg", alt="")
-                    a(href=speaker.twitter target='_blank')
+                    a(href=workshop.twitter target='_blank')
                       img.all-content-speakers-card-twitter(src="img/socials/x_logo.svg", alt="")
       .all-content-sponsors-wrapper
         .all-content-sponsors-upper-wrapper
@@ -177,9 +177,23 @@ block content
           .all-content-sponsors-image-wrapper
             img.all-content-sponsors-image(src="img/sponsors/vector.png", alt="")
         .all-content-sponsors-title Sponsors
-        .all-content-sponsors-card-wrapper 
+        .all-content-sponsors-card-wrapper
+          .all-content-sponsors-card-container(style='padding-bottom: 0;')
+            each sponsor in sponsors.lead
+              .all-content-sponsors-card
+                a(href=sponsor.website target='_blank')
+                  img.all-content-sponsors-card-image(src=`img/sponsors/${sponsor.image}`, alt=`${sponsor.name} logo`)
+                .all-content-sponsors-info-wrapper 
+                  p.all-content-sponsors-card-project-title #{sponsor.name}
+                  .all-content-sponsors-card-socials
+                    a(href=sponsor.linkedin target='_blank')
+                      img.all-content-sponsors-card-linkedin(src="img/socials/linkedin_logo.svg", alt="")
+                    a(href=sponsor.twitter target='_blank')
+                      img.all-content-sponsors-card-twitter(src="img/socials/x_logo.svg", alt="")
+                p.all-content-sponsor-type #{sponsor.type}
+        .all-content-sponsors-card-wrapper
           .all-content-sponsors-card-container
-            each sponsor in sponsors
+            each sponsor in sponsors.platinum
               .all-content-sponsors-card
                 a(href=sponsor.website target='_blank')
                   img.all-content-sponsors-card-image(src=`img/sponsors/${sponsor.image}`, alt=`${sponsor.name} logo`)
