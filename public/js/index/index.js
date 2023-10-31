@@ -28,5 +28,21 @@ window.addEventListener('load', () => {
                 emailEl.innerText = originalText;
             }, 1000);
         };
+
+        if (event.target.closest('.all-content-speakers-each-category')) {
+            const clickedCategory = event.target.closest('.all-content-speakers-each-category');
+
+            if (!clickedCategory.classList.contains('all-content-speakers-each-category-active')) {
+                document.querySelector('.all-content-speakers-each-category-active').classList.remove('all-content-speakers-each-category-active');
+
+                clickedCategory.classList.add('all-content-speakers-each-category-active');
+
+                document.querySelectorAll('.all-content-speakers-card-container').forEach(container => {
+                    container.classList.add('display-none');
+                });
+
+                document.getElementById(clickedCategory.id + '-container').classList.remove('display-none');
+            };
+        };
     });
 });
