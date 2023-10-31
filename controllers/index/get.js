@@ -44,7 +44,7 @@ module.exports = (req, res) => {
         color: 'green',
         name: 'Anish Mohammed',
         company: 'Panther Protocol',
-        title: '',
+        title: 'Privacy Architectures - Complaince Trade',
         linkedin: 'https://ae.linkedin.com/in/anishmohammed',
         twitter: 'https://x.com/anishmohammed',
         image: 'anish.png'
@@ -198,6 +198,14 @@ module.exports = (req, res) => {
       ],
       platinum: [
         {
+          image: 'scroll.png',
+          name: 'Scroll',
+          website: 'https://scroll.io/',
+          linkedin: 'https://www.linkedin.com/company/scroll-io/',
+          twitter: 'https://x.com/Scroll_ZKP',
+          type: 'Platinum Sponsor'
+        },
+        {
           image: 'zksync.png',
           name: 'zkSync',
           website: 'https://zksync.io',
@@ -240,14 +248,6 @@ module.exports = (req, res) => {
         //   twitter: 'https://x.com/ParibuVentures',
         //   type: 'Platinum Partner'
         // },
-        {
-          image: 'scroll.png',
-          name: 'Scroll',
-          website: 'https://scroll.io/',
-          linkedin: 'https://www.linkedin.com/company/scroll-io/',
-          twitter: 'https://x.com/Scroll_ZKP',
-          type: 'Platinum Sponsor'
-        },
       ]
     },
     partners: [
@@ -355,7 +355,7 @@ module.exports = (req, res) => {
       {
         time: '12:10 - 12:40',
         title: 'Emre Tekişalp, O(1) Labs',
-        text: '“Zk Use cases”'
+        text: '“Zk Use Cases”'
       },
       {
         time: '12:40 - 13:10',
