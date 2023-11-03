@@ -918,11 +918,11 @@
 }
 .all-content-speakers-card-image {
   position: absolute;
-  height: 65%;
+  height: 55%;
   width: auto;
   bottom: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
 }
 .all-content-speakers-card-info-wrap {
   position: absolute;

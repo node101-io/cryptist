@@ -44,7 +44,7 @@ module.exports = (req, res) => {
         color: 'green',
         name: 'Anish Mohammed',
         company: 'Panther Protocol',
-        title: 'Privacy Architectures - Complaince Trade',
+        title: 'Privacy Architectures - Compliance Trade Offs',
         linkedin: 'https://ae.linkedin.com/in/anishmohammed',
         twitter: 'https://x.com/anishmohammed',
         image: 'anish.png'
@@ -257,7 +257,7 @@ module.exports = (req, res) => {
         website: 'https://antalpha.com/',
         linkedin: 'https://www.linkedin.com/company/antalpha/',
         twitter: 'https://x.com/Antalpha_Labs',
-        type: 'Community Partner'
+        type: 'Developer Community Partner'
       },
       {
         image: 'rise-in.png',
@@ -281,7 +281,7 @@ module.exports = (req, res) => {
         website: 'https://link3.to/hoodiescommunity',
         linkedin: 'https://www.linkedin.com/company/hoodiescommunity',
         twitter: 'https://x.com/HoodiesCT',
-        type: 'Developer Community Partner'
+        type: 'Community Partner'
       },
       // {
       //   image: 'partner-1.png',
