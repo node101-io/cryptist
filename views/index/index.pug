@@ -106,6 +106,9 @@ block content
           .all-content-pastEvent-spiral-wrapper 
             img.all-content-pastEvent-spiral(src="img/slide/slide-background-vector.png", alt="")
           .all-content-pastEvent-slide-container(data-carousel)
+            button.all-content-pastEvent-slide-button-wrapper.all-content-pastEvent-slide-button-left(data-carousel-button-left)
+              svg.all-content-pastEvent-slide-button-next(viewBox="0 0 14 18" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);")
+                path(d="M0.665649 9.06359H13.394M7.65202 17.3523L13.394 11.4896V6.83979L7.65202 0.707495")
             ul.all-content-pastEvent-slide-image-wrapper(data-slides)
               li.all-content-pastEvent-slide-image(data-active)
                 img.slide-image(src="img/slide/slide-1.png", alt="Cryptist 2022")
@@ -117,7 +120,7 @@ block content
                 img.slide-image(src="img/slide/slide-4.png", alt="Cryptist 2022")
               li.all-content-pastEvent-slide-image
                 img.slide-image(src="img/slide/slide-5.png", alt="Moda Palas 2023")
-            button.all-content-pastEvent-slide-button-wrapper(data-carousel-button)
+            button.all-content-pastEvent-slide-button-wrapper.all-content-pastEvent-slide-button-right(data-carousel-button-right)
               svg.all-content-pastEvent-slide-button-next(viewBox="0 0 14 18" xmlns="http://www.w3.org/2000/svg")
                 path(d="M0.665649 9.06359H13.394M7.65202 17.3523L13.394 11.4896V6.83979L7.65202 0.707495")
             .all-content-pastEvent-slide-text Cryptist 2022
@@ -134,12 +137,15 @@ block content
                 img.all-content-speakers-card-image(src=`img/speakers/${speaker.image}`, alt=`${speaker.name}, ${speaker.company} image`)
                 .all-content-speakers-card-info-wrap
                   p.all-content-speakers-card-name-company(class=speaker.color) #{speaker.name}, #{speaker.company}
-                  p.all-content-speakers-card-title "#{speaker.title}"
+                  if speaker.title
+                    p.all-content-speakers-card-title "#{speaker.title}"
                   .all-content-speakers-card-socials
-                    a(href=speaker.linkedin target='_blank')
-                      img.all-content-speakers-card-linkedin(src="img/socials/linkedin_logo.svg", alt="")
-                    a(href=speaker.twitter target='_blank')
-                      img.all-content-speakers-card-twitter(src="img/socials/x_logo.svg", alt="")
+                    if speaker.linkedin
+                      a(href=speaker.linkedin target='_blank')
+                        img.all-content-speakers-card-linkedin(src="img/socials/linkedin_logo.svg", alt="")
+                    if speaker.twitter
+                      a(href=speaker.twitter target='_blank')
+                        img.all-content-speakers-card-twitter(src="img/socials/x_logo.svg", alt="")
           .all-content-speakers-card-container.display-none#workshops-speakers-container
             each workshop in workshops
               .all-content-speakers-card
@@ -149,10 +155,12 @@ block content
                   p.all-content-speakers-card-name-company(class=workshop.color style='color: var(--text-color-turquoise);') #{workshop.name}, #{workshop.company}
                   p.all-content-speakers-card-title "#{workshop.title}"
                   .all-content-speakers-card-socials
-                    a(href=workshop.linkedin target='_blank')
-                      img.all-content-speakers-card-linkedin(src="img/socials/linkedin_logo.svg", alt="")
-                    a(href=workshop.twitter target='_blank')
-                      img.all-content-speakers-card-twitter(src="img/socials/x_logo.svg", alt="")
+                    if workshop.linkedin
+                      a(href=workshop.linkedin target='_blank')
+                        img.all-content-speakers-card-linkedin(src="img/socials/linkedin_logo.svg", alt="")
+                    if workshop.twitter
+                      a(href=workshop.twitter target='_blank')
+                        img.all-content-speakers-card-twitter(src="img/socials/x_logo.svg", alt="")
       .all-content-sponsors-wrapper
         .all-content-sponsors-image-wrapper
           img.all-content-sponsors-image(src="img/sponsors/vector.png", alt="")
@@ -248,6 +256,9 @@ block content
               path(d="M0 0h48v48H0z" fill="none")            
             a.all-content-grandPera-text-2(href="https://www.google.com/maps/place/SALT+Galata/@41.0239214,28.9734887,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab9e8144a79f5:0x616d8eecf6ae3aa6!8m2!3d41.0239214!4d28.9734887!16s%2Fg%2F1tl6nrm5?entry=ttu" target='_blank')  Azapkapı, Bankalar Cd. No:11, 34420 Beyoğlu/İstanbul
         .all-content-grandPera-slide-wrapper(data-carousel)
+          button.all-content-grandPera-slide-button-wrapper.all-content-grandPera-slide-button-left(data-carousel-button-left)
+              svg.all-content-grandPera-slide-button-next(viewBox="0 0 14 18" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);")
+                path(d="M0.665649 9.06359H13.394M7.65202 17.3523L13.394 11.4896V6.83979L7.65202 0.707495")    
           ul.all-content-grandPera-slide-image-wrapper(data-slides)
             li.all-content-grandPera-slide-image(data-active)
               img.slide-image(src="img/grandPera/grandPera-1.png", alt="")
@@ -259,7 +270,7 @@ block content
               img.slide-image(src="img/grandPera/grandPera-4.png", alt="")
             li.all-content-grandPera-slide-image
               img.slide-image(src="img/grandPera/grandPera-5.png", alt="")
-          button.all-content-grandPera-slide-button-wrapper(data-carousel-button)
+          button.all-content-grandPera-slide-button-wrapper.all-content-grandPera-slide-button-right(data-carousel-button-right)
               svg.all-content-grandPera-slide-button-next(viewBox="0 0 14 18" xmlns="http://www.w3.org/2000/svg")
                 path(d="M0.665649 9.06359H13.394M7.65202 17.3523L13.394 11.4896V6.83979L7.65202 0.707495")                                                                                                                            
       .all-footer

@@ -790,12 +790,18 @@
      object-fit: cover;
 
 }
+.all-content-pastEvent-slide-button-left {
+  left: calc(-1 * var(--pastEvent-slide-button-height));
+}
+.all-content-pastEvent-slide-button-right {
+  left: var(--pastEvent-slide-container-width);
+}
 .all-content-pastEvent-slide-button-wrapper {
+  z-index: 2;
   position: absolute;
   width: var(--pastEvent-slide-button-height);
   height: var(--pastEvent-slide-button-height);
   top: calc((var(--pastEvent-slide-container-height) / 2) - 20px);
-  left: var(--pastEvent-slide-container-width);
   border-radius: 100%;
   background: linear-gradient(15deg, rgba(217, 217, 217, 0.5) 0%, rgba(103, 252, 230,0.5) 100%);
   -webkit-backdrop-filter: blur(20px);
@@ -803,7 +809,6 @@
   cursor: pointer;
   outline: none;
   border: none;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1349,12 +1354,18 @@ p.all-content-sponsors-text-3 {
   opacity: 1;
   z-index: 1;
 }
+.all-content-grandPera-slide-button-left {
+  left: calc(-1 * var(--pastEvent-slide-button-height));
+}
+.all-content-grandPera-slide-button-right {
+  left: 40vw;
+}
 .all-content-grandPera-slide-button-wrapper {
+  z-index: 2;
   position: absolute;
   width: 40px;
   height: 40px;
   top: calc(15vw - 20px);
-  left: 40vw;
   border-radius: 100%;
   background: linear-gradient(15deg, rgba(217, 217, 217, 0.5) 0%, rgba(103, 252, 230,0.5) 100%);
   -webkit-backdrop-filter: blur(20px);
@@ -1365,6 +1376,10 @@ p.all-content-sponsors-text-3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: var(--pastEvent-slide-button-height);
+  min-width: var(--pastEvent-slide-button-height);
+  height: var(--pastEvent-slide-button-height);
+  min-height: var(--pastEvent-slide-button-height);
 }
 .all-content-grandPera-slide-button-next {
   width: 20px;
@@ -1871,8 +1886,10 @@ p.all-content-sponsors-text-3 {
   .all-content-grandPera-slide-wrapper {
     padding: 0 var(--page-horizontal-padding);
   }
-  .all-content-grandPera-slide-button-wrapper {
+  .all-content-grandPera-slide-button-right {
     left: calc(100% - var(--page-horizontal-padding));
+  }
+  .all-content-grandPera-slide-button-wrapper {
     top: calc((var(--grandPera-slide-wrapper-width) * 0.65 - var(--pastEvent-slide-button-height)) / 2);
   }
   .all-footer-bottom-container {

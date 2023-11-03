@@ -36,8 +36,8 @@ module.exports = (req, res) => {
         name: 'Diego Kingston',
         company: 'Lambda Class',
         title: 'Deep dive into the Stark Platinum Prover',
-        linkedin: '',
-        twitter: '',
+        linkedin: null,
+        twitter: 'https://twitter.com/zkdiegokingston',
         image: 'diego.png'
       },
       {
@@ -55,7 +55,7 @@ module.exports = (req, res) => {
         company: 'Ethereum Foundation',
         title: 'Elliptic Curves and ZK Proof Aggregation',
         linkedin: 'https://tr.linkedin.com/in/oay',
-        twitter: '',
+        twitter: null,
         image: 'ozgur.png'
       },
       {
@@ -72,9 +72,54 @@ module.exports = (req, res) => {
         name: 'Craig Johnson',
         company: 'Aleo',
         title: 'Aleo Advantage: ZK by Design',
-        linkedin: '',
+        linkedin: 'https://www.linkedin.com/in/craigjson/',
         twitter: 'https://twitter.com/craigjson',
         image: 'craig.png'
+      },
+      {
+        color: 'turquoise',
+        name: 'Porter Adams',
+        company: null,
+        title: 'Defending ZK Circuits',
+        linkedin: 'https://www.linkedin.com/in/porter-adams-0127b7125/',
+        twitter: 'https://twitter.com/portport255',
+        image: 'porter.png'
+      },
+      {
+        color: 'purple',
+        name: 'Andy Guzman',
+        company: 'Ethereum Foundation',
+        title: 'ZK Webauthn Part 2',
+        linkedin: 'https://www.linkedin.com/in/andyguzmantoledo/',
+        twitter: 'https://twitter.com/AndyGuzmanEth',
+        image: 'andy.png'
+      },
+      {
+        color: 'orange',
+        name: 'Ekrem Bal',
+        company: 'Chainway',
+        title: 'The Future of Privacy and Proof of Innocence',
+        linkedin: 'https://www.linkedin.com/in/ekrembal/',
+        twitter: 'https://twitter.com/ekrembal_',
+        image: 'ekrem.png'
+      },
+      {
+        color: 'red',
+        name: 'Doğan Alpaslan',
+        company: 'Clave',
+        title: 'ZK Webauthn Part',
+        linkedin: 'https://www.linkedin.com/in/doganalpaslan/',
+        twitter: 'https://twitter.com/DoganEth',
+        image: 'dogan.png'
+      },
+      {
+        color: 'green',
+        name: 'Kaan Uzdoğan',
+        company: 'Ethereum Foundation',
+        title: null,
+        linkedin: 'https://www.linkedin.com/in/kuzdogan',
+        twitter: 'https://x.com/kaanuzdogan',
+        image: 'kaan.png'
       }
       // {
       //   color: 'green',
@@ -170,20 +215,47 @@ module.exports = (req, res) => {
         color: 'gray',
         name: 'Mauro Toscano',
         company: 'Lambda Class',
-        title: 'How to use Lambdaworks and the STARK Platinum Prover.',
-        linkedin: '',
-        twitter: '',
+        title: 'How to use Lambdaworks and the STARK Platinum Prover Part 1',
+        linkedin: null,
+        twitter: 'https://twitter.com/MauroToscanoDev',
         image: 'mauro.png'
+      },
+      {
+        color: 'gray',
+        name: 'Diego Kingston',
+        company: 'Lambda Class',
+        title: 'How to use Lambdaworks and the STARK Platinum Prover Part 2',
+        linkedin: null,
+        twitter: 'https://twitter.com/zkdiegokingston',
+        image: 'diego.png'
+      },
+      {
+        color: 'gray',
+        name: 'Florent Tavernier',
+        company: 'Proof of Passport',
+        title: 'Proof of Passport: Towards ZK Identity Singularity',
+        linkedin: null,
+        twitter: 'https://twitter.com/turboblitzzz',
+        image: 'florent.png'
       },
       {
         color: 'gray',
         name: 'Saurabh Chalke',
         company: 'ZkHub',
-        title: 'Fast and Privacy- Preserving Zero-Knowledge Proof Generation',
-        linkedin: 'https://www.linkedin.com/in/saurabhchalke',
-        twitter: 'https://x.com/saurabhchalke',
+        title: 'Fast and Privacy - Preserving Zero-Knowledge Proof Generation',
+        linkedin: null,
+        twitter: 'https://twitter.com/saurabhchalke',
         image: 'saurabh.png'
-      }
+      },
+      {
+        color: 'gray',
+        name: 'ZK Lim',
+        company: 'Aleo',
+        title: 'Learning Leo',
+        linkedin: null,
+        twitter: 'https://twitter.com/zklim5389',
+        image: 'zklim.png'
+      },
     ],
     sponsors: {
       lead: [

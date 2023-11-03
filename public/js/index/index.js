@@ -30,8 +30,8 @@ window.addEventListener('load', () => {
             };
         };
 
-        if (event.target.closest('[data-carousel-button]')) {
-            const button = event.target.closest('[data-carousel-button]');
+        if (event.target.closest('[data-carousel-button-right]')) {
+            const button = event.target.closest('[data-carousel-button-right]');
             const slides = button
                 .closest('[data-carousel]')
                 .querySelector('[data-slides]')
@@ -39,6 +39,22 @@ window.addEventListener('load', () => {
             const activeSlide = slides.querySelector('[data-active]')
             let newIndex = [...slides.children].indexOf(activeSlide) + 1
             if(newIndex >= slides.children.length) newIndex = 0
+        
+            slides.children[newIndex].dataset.active = true
+            delete activeSlide.dataset.active
+            
+            if (event.target.closest('.all-content-pastEvent-wrapper'))
+                pastEventSlideText.innerText = slides.children[newIndex].firstChild.alt;
+        };
+        if (event.target.closest('[data-carousel-button-left]')) {
+            const button = event.target.closest('[data-carousel-button-left]');
+            const slides = button
+                .closest('[data-carousel]')
+                .querySelector('[data-slides]')
+        
+            const activeSlide = slides.querySelector('[data-active]')
+            let newIndex = [...slides.children].indexOf(activeSlide) - 1
+            if(newIndex < 0) newIndex = slides.children.length - 1
         
             slides.children[newIndex].dataset.active = true
             delete activeSlide.dataset.active
