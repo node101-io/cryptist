@@ -79,7 +79,7 @@ module.exports = (req, res) => {
       {
         color: 'turquoise',
         name: 'Porter Adams',
-        company: null,
+        company: 'zkSync',
         title: 'Defending ZK Circuits',
         linkedin: 'https://www.linkedin.com/in/porter-adams-0127b7125/',
         twitter: 'https://twitter.com/portport255',
@@ -89,7 +89,7 @@ module.exports = (req, res) => {
         color: 'purple',
         name: 'Andy Guzman',
         company: 'Ethereum Foundation',
-        title: 'ZK Webauthn Part 2',
+        title: 'Introducing PSE: Open Source Tooling & Research for the Community',
         linkedin: 'https://www.linkedin.com/in/andyguzmantoledo/',
         twitter: 'https://twitter.com/AndyGuzmanEth',
         image: 'andy.png'
@@ -107,7 +107,7 @@ module.exports = (req, res) => {
         color: 'red',
         name: 'Doğan Alpaslan',
         company: 'Clave',
-        title: 'ZK Webauthn Part',
+        title: 'ZK Webauthn Part 1',
         linkedin: 'https://www.linkedin.com/in/doganalpaslan/',
         twitter: 'https://twitter.com/DoganEth',
         image: 'dogan.png'
@@ -119,7 +119,7 @@ module.exports = (req, res) => {
         title: null,
         linkedin: 'https://www.linkedin.com/in/kuzdogan',
         twitter: 'https://x.com/kaanuzdogan',
-        image: 'kaan.png'
+        image: 'kaan_2.png'
       }
       // {
       //   color: 'green',
@@ -234,7 +234,7 @@ module.exports = (req, res) => {
         name: 'Florent Tavernier',
         company: 'Proof of Passport',
         title: 'Proof of Passport: Towards ZK Identity Singularity',
-        linkedin: null,
+        linkedin: 'https://www.linkedin.com/in/florent-tavernier-771aa0180/',
         twitter: 'https://twitter.com/turboblitzzz',
         image: 'florent.png'
       },
@@ -243,7 +243,7 @@ module.exports = (req, res) => {
         name: 'Saurabh Chalke',
         company: 'ZkHub',
         title: 'Fast and Privacy - Preserving Zero-Knowledge Proof Generation',
-        linkedin: null,
+        linkedin: 'https://linkedin.com/in/saurabhchalke',
         twitter: 'https://twitter.com/saurabhchalke',
         image: 'saurabh.png'
       },
@@ -252,7 +252,7 @@ module.exports = (req, res) => {
         name: 'ZK Lim',
         company: 'Aleo',
         title: 'Learning Leo',
-        linkedin: null,
+        linkedin: 'https://www.linkedin.com/in/zklim5389',
         twitter: 'https://twitter.com/zklim5389',
         image: 'zklim.png'
       },

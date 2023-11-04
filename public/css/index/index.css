@@ -18,7 +18,7 @@
   --xs-font-size: 12px;
 
   --xl-2-text-gap: 40px;
-  --xl-text-gap: 20px;
+  --xl-text-gap: 24px;
   --md-text-gap: 10px;
   --sm-text-gap: 5px;
 
@@ -923,7 +923,7 @@
 }
 .all-content-speakers-card-image {
   position: absolute;
-  height: 55%;
+  height: 60%;
   width: auto;
   bottom: 0;
   right: 0;
@@ -1153,8 +1153,8 @@ p.all-content-sponsors-text-3 {
   height: 10%;
   width: auto;
   display: flex;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 .all-content-sponsors-card-socials a {
   display: flex;
