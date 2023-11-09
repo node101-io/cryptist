@@ -77,15 +77,6 @@ module.exports = (req, res) => {
         image: 'craig.png'
       },
       {
-        color: 'turquoise',
-        name: 'Porter Adams',
-        company: 'zkSync',
-        title: 'Defending ZK Circuits',
-        linkedin: 'https://www.linkedin.com/in/porter-adams-0127b7125/',
-        twitter: 'https://twitter.com/portport255',
-        image: 'porter.png'
-      },
-      {
         color: 'purple',
         name: 'Andy Guzman',
         company: 'Ethereum Foundation',
@@ -93,6 +84,15 @@ module.exports = (req, res) => {
         linkedin: 'https://www.linkedin.com/in/andyguzmantoledo/',
         twitter: 'https://twitter.com/AndyGuzmanEth',
         image: 'andy.png'
+      },
+      {
+        color: 'turquoise',
+        name: 'Porter Adams',
+        company: 'zkSync',
+        title: 'Defending ZK Circuits',
+        linkedin: 'https://www.linkedin.com/in/porter-adams-0127b7125/',
+        twitter: 'https://twitter.com/portport255',
+        image: 'porter.png'
       },
       {
         color: 'orange',
@@ -120,7 +120,34 @@ module.exports = (req, res) => {
         linkedin: 'https://www.linkedin.com/in/kuzdogan',
         twitter: 'https://x.com/kaanuzdogan',
         image: 'kaan_2.png'
-      }
+      },
+      {
+        color: 'purple',
+        name: 'Deniz Baş',
+        company: 'Herodotus',
+        title: 'Enhancing L2s with Storage Proofs: Introducing Herodotus',
+        linkedin: null,
+        twitter: 'https://twitter.com/d0x471b',
+        image: 'deniz.png'
+      },
+      {
+        color: 'turquoise',
+        name: 'Marcin Kaźmierczak',
+        company: 'RedStone',
+        title: 'Panel Moderator',
+        linkedin: 'https://www.linkedin.com/in/marcin-kazmierczak1/',
+        twitter: 'https://twitter.com/Marcin_Kaz13',
+        image: 'marcin.png'
+      },
+      {
+        color: 'orange',
+        name: 'Raphael Panic',
+        company: 'Protokit',
+        title: 'ZK App Chain Thesis',
+        linkedin: 'https://at.linkedin.com/in/rpanic',
+        twitter: 'https://twitter.com/rpanic46',
+        image: 'raphael.png'
+      },
       // {
       //   color: 'green',
       //   name: 'Eda Akturk',
@@ -285,6 +312,13 @@ module.exports = (req, res) => {
           twitter: 'https://x.com/zksync',
           type: 'Platinum Sponsor'
         },
+        {
+          image: 'sponsor-6.png',
+          name: 'Paribu Ventures',
+          linkedin: 'https://www.linkedin.com/company/paribu-ventures/',
+          twitter: 'https://x.com/ParibuVentures',
+          type: 'Platinum Sponsor'
+        },
         // {
         //   image: 'sponsor-2.png',
         //   name: 'dYdX Foundation',
@@ -311,13 +345,6 @@ module.exports = (req, res) => {
         //   name: 'O(1) Labs',
         //   linkedin: 'https://www.linkedin.com/company/o1labs/',
         //   twitter: 'https://x.com/o1_labs',
-        //   type: 'Platinum Partner'
-        // },
-        // {
-        //   image: 'sponsor-6.png',
-        //   name: 'Paribu Ventures',
-        //   linkedin: 'https://www.linkedin.com/company/paribu-ventures/',
-        //   twitter: 'https://x.com/ParibuVentures',
         //   type: 'Platinum Partner'
         // },
       ]
@@ -355,6 +382,41 @@ module.exports = (req, res) => {
         twitter: 'https://x.com/HoodiesCT',
         type: 'Community Partner'
       },
+      {
+        image: 'ytu_blockchain.png',
+        name: 'YTU Blockchain',
+        linkedin: null,
+        twitter: null,
+        type: 'Talent Partner'
+      },
+      {
+        image: 'partner-2.png',
+        name: 'ITU Blockchain',
+        linkedin: 'https://www.linkedin.com/company/itublockchain/',
+        twitter: 'https://x.com/ITUblockchain',
+        type: 'Talent Partner'
+      },
+      {
+        image: 'odtu_blockchain.png',
+        name: 'ODTU Blockchain',
+        linkedin: null,
+        twitter: null,
+        type: 'Talent Partner'
+      },
+      {
+        image: 'uzman_coin.png',
+        name: 'Uzmancoin',
+        linkedin: null,
+        twitter: null,
+        type: 'Talent Partner'
+      },
+      {
+        image: 'krpt.png',
+        name: 'KRPT',
+        linkedin: null,
+        twitter: null,
+        type: 'Media Partner'
+      },
       // {
       //   image: 'partner-1.png',
       //   name: 'Buchain',
@@ -362,13 +424,7 @@ module.exports = (req, res) => {
       //   twitter: 'https://x.com/bogazicichain',
       //   type: 'Platinum Partner'
       // },
-      // {
-      //   image: 'partner-2.png',
-      //   name: 'ITU Blockchain',
-      //   linkedin: 'https://www.linkedin.com/company/itublockchain/',
-      //   twitter: 'https://x.com/ITUblockchain',
-      //   type: 'Platinum Partner'
-      // },
+      
       // {
       //   image: 'partner-3.png',
       //   name: 'L2 Planet',
