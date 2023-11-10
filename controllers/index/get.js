@@ -456,80 +456,176 @@ module.exports = (req, res) => {
     ],
     schedule: [
       {
-        time: '9:00 - 10:00',
-        title: 'Good Morning Coffee',
-        text: 'Welcome Speech, Errol Drummond & Murat Karademir'
+        time: '10.00 - 10.20',
+        title: 'Mete Koray Gergin, Mustafa Aksöz, Error Drummond',
+        text: 'Welcome Speech'
       },
       {
-        time: '10:10 - 10:40',
-        title: 'Todd Norton, Manta Network',
-        text: '“SNARKs, ZKPs, and Other Things The NSA Doesn’t Want You to Know About”'
+        time: '10.20 - 10.40',
+        title: 'Ekrem Bal, Chainway',
+        text: 'Proof of Innocence'
       },
       {
-        time: '10:40 - 11:10',
-        title: 'Kaan Uzdoğan, Ethereum Foundation',
-        text: '“Ethereum Rollup-Centric Roadmap”'
+        time: '10.40 - 11.00',
+        title: 'Raphael Panic, Protokit',
+        text: 'ZK AppChain Thesis'
       },
       {
-        time: '11:10 - 11:40',
-        title: 'Luke Pearson, Polychain Capital',
-        text: '“Tips and Tricks: Finding Your Way Around a ZK Universe”'
+        time: '11.20 - 11.40',
+        title: 'Dieho Kingston, Lambda Class',
+        text: 'Deep Dive into the Stark Platinum Prover'
       },
       {
-        time: '11:40 - 12:10',
-        title: 'Coffee Break',
+        time: '11.40 - 12.00',
+        title: 'Break',
         text: ''
       },
       {
-        time: '12:10 - 12:40',
+        time: '12.00 - 12.30',
+        title: 'Anish Mohammed, Panther Protocol',
+        text: 'Privacy Architectures - Compliance Trade-offs'
+      },
+      {
+        time: '12.30 - 12.50',
+        title: 'Craig Johnson, Aleo',
+        text: 'Aleo Advantage: ZK by Design'
+      },
+      {
+        time: '12.50 - 13.10',
+        title: 'Deniz Baş, Herodotus',
+        text: 'Storage Proofs '
+      },
+      {
+        time: '13.10 - 13.30',
+        title: 'Porter Adams, zkSync',
+        text: 'Defending ZK Circuits'
+      },
+      {
+        time: '13.30 - 14.30',
+        title: 'Lunch Break',
+        text: ''
+      },
+      {
+        time: '14.30 - 14:50',
+        title: 'Utku Dördüncü, Paribu Ventures',
+        text: 'Funding the Path to Mass ZK Adoption: How Much More to Invest in the ZK Space'
+      },
+      {
+        time: '14.50 - 15.20',
+        title: 'PANEL: Ethereum Foundation, Aleo, Celestia, Powdr Labs, ZKM',
+        text: 'Get Ready for Deep Dives into ZK Tooling and Developer Experience'
+      },
+      {
+        time: '15.20 - 15.40',
+        title: 'Andy Guzman, Ethereum Foundation',
+        text: 'Introducing PSE: Open Source Tooling & Research for the Community'
+      },
+      {
+        time: '15.40 - 16.00',
+        title: 'Doğan Alpaslan',
+        text: 'ZK Webauthn'
+      },
+      {
+        time: '16.00 - 16.20',
+        title: 'Break',
+        text: ''
+      },
+      {
+        time: '16.20 - 16.50',
+        title: 'PANEL: Redstone, Scroll, O(1) Labs, Starknet, zkSync',
+        text: 'Benefits of Scaling that Comes with Zero-Knowledge'
+      },
+      {
+        time: '16.50 - 17.10',
+        title: 'Özgür Armanc Yiğit, Ethereum Foundation',
+        text: 'Elliptic Curves and ZK Proof Aggregation'
+      },
+      {
+        time: '17.10 - 17.30',
         title: 'Emre Tekişalp, O(1) Labs',
-        text: '“Zk Use Cases”'
+        text: 'ZK Use Cases'
       },
       {
-        time: '12:40 - 13:10',
-        title: 'Anthony DiPrinzio, Aleo',
-        text: '“Use Cases for Private Applications on Web3: Where is the Real Value?”'
-      },
-      {
-        time: '13:10 - 13:40',
-        title: 'Eda Akturk, Helium Foundation',
-        text: '“Getting Into Web3 as a Developer”'
-      },
-      {
-        time: '13:40 - 14:40',
-        title: 'Lunch and Networking',
-        text: ''
-      },
-      {
-        time: '14:40 - 15:10',
-        title: 'Doruk İşmen, dYdX',
-        text: '“dYdX V4 - The dYdX Chain”'
-      },
-      {
-        time: '15:10 - 15:40',
-        title: 'Albiona Hoti, Manta Network',
-        text: '“Private Everything: On-chain Privacy Demo with Manta Network\'s Dolphin Testnet”'
-      },
-      {
-        time: '15:40 - 16:00',
-        title: 'Coffee Break',
-        text: ''
-      },
-      {
-        time: '16:30 - 17:00',
+        time: '17.30 - 17.50',
         title: 'Toghrul Maharramov, Scroll',
-        text: '“Zero-Knowledge Proofs in the World of Rollups”'
-      },
-      {
-        time: '17:00 - 18:00',
-        title: 'Chill Vibes Only',
-        text: ''
-      },
-      {
-        time: '20:00 - 00:00',
-        title: 'After Party at a different location',
-        text: ''
+        text: 'Why Scroll?'
       }
+
+      // {
+      //   time: '9:00 - 10:00',
+      //   title: 'Good Morning Coffee',
+      //   text: 'Welcome Speech, Errol Drummond & Murat Karademir'
+      // },
+      // {
+      //   time: '10:10 - 10:40',
+      //   title: 'Todd Norton, Manta Network',
+      //   text: '“SNARKs, ZKPs, and Other Things The NSA Doesn’t Want You to Know About”'
+      // },
+      // {
+      //   time: '10:40 - 11:10',
+      //   title: 'Kaan Uzdoğan, Ethereum Foundation',
+      //   text: '“Ethereum Rollup-Centric Roadmap”'
+      // },
+      // {
+      //   time: '11:10 - 11:40',
+      //   title: 'Luke Pearson, Polychain Capital',
+      //   text: '“Tips and Tricks: Finding Your Way Around a ZK Universe”'
+      // },
+      // {
+      //   time: '11:40 - 12:10',
+      //   title: 'Coffee Break',
+      //   text: ''
+      // },
+      // {
+      //   time: '12:10 - 12:40',
+      //   title: 'Emre Tekişalp, O(1) Labs',
+      //   text: '“Zk Use Cases”'
+      // },
+      // {
+      //   time: '12:40 - 13:10',
+      //   title: 'Anthony DiPrinzio, Aleo',
+      //   text: '“Use Cases for Private Applications on Web3: Where is the Real Value?”'
+      // },
+      // {
+      //   time: '13:10 - 13:40',
+      //   title: 'Eda Akturk, Helium Foundation',
+      //   text: '“Getting Into Web3 as a Developer”'
+      // },
+      // {
+      //   time: '13:40 - 14:40',
+      //   title: 'Lunch and Networking',
+      //   text: ''
+      // },
+      // {
+      //   time: '14:40 - 15:10',
+      //   title: 'Doruk İşmen, dYdX',
+      //   text: '“dYdX V4 - The dYdX Chain”'
+      // },
+      // {
+      //   time: '15:10 - 15:40',
+      //   title: 'Albiona Hoti, Manta Network',
+      //   text: '“Private Everything: On-chain Privacy Demo with Manta Network\'s Dolphin Testnet”'
+      // },
+      // {
+      //   time: '15:40 - 16:00',
+      //   title: 'Coffee Break',
+      //   text: ''
+      // },
+      // {
+      //   time: '16:30 - 17:00',
+      //   title: 'Toghrul Maharramov, Scroll',
+      //   text: '“Zero-Knowledge Proofs in the World of Rollups”'
+      // },
+      // {
+      //   time: '17:00 - 18:00',
+      //   title: 'Chill Vibes Only',
+      //   text: ''
+      // },
+      // {
+      //   time: '20:00 - 00:00',
+      //   title: 'After Party at a different location',
+      //   text: ''
+      // }
     ]
   });
 };

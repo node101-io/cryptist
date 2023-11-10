@@ -1915,6 +1915,13 @@ p.all-content-sponsors-text-3 {
 
     --large-button-width: 240px;
   }
+  .all-content-schedule-timeline-time {
+    width: 35%;
+    min-width: 35%;
+  }
+  .all-content-schedule-timeline-line-container {
+    padding: 0 20px;
+  }
 }
 @media only screen and (max-width: 400px) {
   :root {
@@ -1927,5 +1934,11 @@ p.all-content-sponsors-text-3 {
   }
   .all-content-sponsors-title {
     margin-top: var(--xl-text-gap);
+  }
+}
+@media only screen and (max-width: 390px) {
+  .all-content-schedule-timeline-time {
+    width: 40%;
+    min-width: 40%;
   }
 }

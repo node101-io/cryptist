@@ -237,19 +237,19 @@ block content
           img.all-content-schedule-vector-wrapper(src="img/schedule/schedule-vector.png", alt="")
           .all-content-schedule-text-wrapper
             p.all-content-schedule-text-1 Schedule
-            p.all-content-schedule-text-2 Check out the schedule of Istanbul's most anticipated zero-knowledge-proof community event day. Do not miss any of the speeches or panels.
+            p.all-content-schedule-text-2 Check out the schedule of Istanbul's most anticipated zero-knowledge-proof community event day. Do not miss any of the speeches or panels!
         .all-content-schedule-timeline-container
-          //- each part in schedule
-          //-   .all-content-schedule-timeline-line-container
-          //-     .all-content-schedule-timeline-time
-          //-       p #{part.time}
-          //-       .all-content-schedule-timeline-dot
-          //-     .all-content-schedule-timeline-event
-          //-       .all-content-schedule-timeline-event-title
-          //-         p #{part.title}
-          //-       .all-content-schedule-timeline-event-text 
-          //-         p #{part.text}
-          .all-content-tba TO BE ANNOUNCED.
+          each part in schedule
+            .all-content-schedule-timeline-line-container
+              .all-content-schedule-timeline-time
+                p #{part.time}
+                .all-content-schedule-timeline-dot
+              .all-content-schedule-timeline-event
+                .all-content-schedule-timeline-event-title
+                  p #{part.title}
+                .all-content-schedule-timeline-event-text 
+                  p #{part.text}
+          //- .all-content-tba TO BE ANNOUNCED.
       .all-content-location-wrapper.all-content-grandPera-wrapper 
         .all-content-grandPera-text-wrapper 
           .all-content-location-text Location
