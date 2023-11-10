@@ -1302,6 +1302,14 @@ p.all-content-sponsors-text-3 {
   flex-direction: column;
   gap: var(--xl-2-text-gap);
 }
+.all-content-location-text {
+  font-size: var(--xl-font-size);
+  background: -webkit-linear-gradient(154deg, rgb(217, 217, 217) 20.04%, rgb(103, 252, 230) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: -40px;
+}
 .all-content-grandPera-text-1 {
   font-size: var(--xl-2-font-size);
   font-weight: 500;

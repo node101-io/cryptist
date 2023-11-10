@@ -22,5 +22,8 @@ window.addEventListener('load', () => {
         if (e.target.closest('#footer-schedule-button') || e.target.closest('#header-schedule-button') || e.target.closest('#header-schedule-button-mobile')) {
             document.querySelector('.all-content-schedule-wrapper').scrollIntoView({ behavior: 'smooth' });
         };
+        if (e.target.closest('#footer-location-button') || e.target.closest('#header-location-button') || e.target.closest('#header-location-button-mobile')) {
+            document.querySelector('.all-content-location-wrapper').scrollIntoView({ behavior: 'smooth' });
+        };
     });
 });
