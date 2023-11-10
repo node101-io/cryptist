@@ -153,7 +153,7 @@ module.exports = (req, res) => {
         name: 'Utku Dördüncü',
         company: 'Paribu Ventures',
         title: 'Funding the Path to Mass ZK Adoption: How Much More to Invest in the ZK Space',
-        linkedin: null,
+        linkedin: 'https://www.linkedin.com/in/utkudorduncu',
         twitter: null,
         image: 'utku.png'
       },
@@ -162,7 +162,7 @@ module.exports = (req, res) => {
         name: 'Gökhan El',
         company: 'IOSG Ventures',
         title: 'Funding the Path to Mass ZK Adoption: How Much More to Invest in the ZK Space',
-        linkedin: '',
+        linkedin: 'https://www.linkedin.com/in/ergokhaner?',
         twitter: 'https://x.com/ergokhaner?s=21',
         image: 'gokhan.png'
       }
@@ -404,7 +404,7 @@ module.exports = (req, res) => {
       {
         image: 'ytu_blockchain.png',
         name: 'YTU Blockchain',
-        website: 'https://www.yildizblockchain.com/',
+        website: 'https://linktr.ee/blockchainytu',
         linkedin: null,
         twitter: null,
         type: 'Talent Partner'
@@ -500,12 +500,12 @@ module.exports = (req, res) => {
         text: 'Deep Dive into the Stark Platinum Prover'
       },
       {
-        time: '11.40 - 12.00',
+        time: '11.40 - 12.10',
         title: 'Break',
         text: ''
       },
       {
-        time: '12.00 - 12.30',
+        time: '12.10 - 12.30',
         title: 'Anish Mohammed, Panther Protocol',
         text: 'Privacy Architectures - Compliance Trade-offs'
       },

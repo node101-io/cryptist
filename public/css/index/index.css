@@ -791,9 +791,11 @@
 }
 .all-content-pastEvent-slide-button-left {
   left: calc(-1 * var(--pastEvent-slide-button-height));
+  transform: translateX(50%);
 }
 .all-content-pastEvent-slide-button-right {
   left: var(--pastEvent-slide-container-width);
+  transform: translateX(-50%);
 }
 .all-content-pastEvent-slide-button-wrapper {
   z-index: 2;
@@ -1363,9 +1365,11 @@ p.all-content-sponsors-text-3 {
 }
 .all-content-grandPera-slide-button-left {
   left: calc(-1 * var(--pastEvent-slide-button-height));
+  transform: translateX(50%);
 }
 .all-content-grandPera-slide-button-right {
   left: 40vw;
+  transform: translateX(-50%);
 }
 .all-content-grandPera-slide-button-wrapper {
   z-index: 2;
