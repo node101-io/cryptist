@@ -1174,15 +1174,14 @@ p.all-content-sponsors-text-3 {
 
 .all-content-schedule-wrapper {
   position: relative;
-  height: calc(100vh - var(--header-height));
-  min-height: calc(100vh - var(--header-height));
+  height: fit-content;
+  min-height: fit-content;
   width: 100vw;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: var(--content-padding);
-  overflow: hidden;
   padding-left: calc(2 * var(--header-padding));
   padding-right: calc(3 * var(--header-padding));
 }
@@ -1200,8 +1199,8 @@ p.all-content-sponsors-text-3 {
 .all-content-schedule-text-wrapper {
   width: var(--schedule-text-wrapper-width);
   min-width: var(--schedule-text-wrapper-width);
-  height: auto;
-  min-height: auto;
+  height: fit-content;
+  min-height: fit-content;
   top: calc(2 * var(--content-padding));
   z-index: 2;
   margin-right: auto;
@@ -1232,7 +1231,7 @@ p.all-content-sponsors-text-3 {
   min-width: 40%;
   height: fit-content;
   min-height: fit-content;
-  font-size: var(--md-font-size);
+  font-size: var(--sm-2-font-size);
   font-weight: 500;
   color: var(--text-color);
   padding: 10px 0;
@@ -1257,7 +1256,6 @@ p.all-content-sponsors-text-3 {
   overflow-y: auto;
   overflow-x: hidden;
   margin-bottom: var(--xl-2-text-gap);
-  z-index: 2;
   background-color: rgba(14, 14, 14, 0.4);
 }
 .all-content-schedule-timeline-container::-webkit-scrollbar {
@@ -1272,9 +1270,8 @@ p.all-content-sponsors-text-3 {
 .all-content-schedule-timeline-line-container {
   display: flex;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
+  min-height: fit-content;
   font-size: var(--sm-font-size);
   padding-left: var(--header-padding);
   padding-right: var(--content-padding);
