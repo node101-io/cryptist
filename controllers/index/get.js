@@ -165,6 +165,60 @@ module.exports = (req, res) => {
         linkedin: 'https://www.linkedin.com/in/ergokhaner?',
         twitter: 'https://x.com/ergokhaner?s=21',
         image: 'gokhan.png'
+      },
+      {
+        color: 'red',
+        name: 'Georg Wiese',
+        company: 'Powdr Labs',
+        title: 'Get ready for deep dives into ZK tooling and developer experience',
+        linkedin: 'https://www.linkedin.com/in/georgwiese?originalSubdomain=de',
+        twitter: 'https://twitter.com/georgwiese',
+        image: 'georg.png'
+      },
+      {
+        color: 'green',
+        name: 'Connor O Hara Rollkit',
+        company: 'Celestia',
+        title: 'Get ready for deep dives into ZK tooling and developer experience',
+        linkedin: 'https://www.linkedin.com/in/connor-o-hara-2a8a7696/',
+        twitter: 'https://twitter.com/colludingnode',
+        image: 'connor.png'
+      },
+      {
+        color: 'turquoise',
+        name: 'Milica Vulić',
+        company: 'ZKM',
+        title: 'Get ready for deep dives into ZK tooling and developer experience',
+        linkedin: 'https://www.linkedin.com/in/0xmilica?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+        twitter: 'https://twitter.com/0xMilica',
+        image: 'milica.png'
+      },
+      {
+        color: 'orange',
+        name: 'Clément Walter',
+        company: 'Kakarot',
+        title: 'Kakarot, an EVM execution client ZK by design',
+        linkedin: 'https://www.linkedin.com/in/clementwalter/',
+        twitter: 'https://twitter.com/ClementWalter',
+        image: 'clement.png'
+      },
+      {
+        color: 'purple',
+        name: 'Ye Zang',
+        company: 'Scroll',
+        title: 'Benefits of Scaling that Comes with Zero-Knowledge',
+        linkedin: 'https://www.linkedin.com/in/ye-zhang-70b072148/?originalSubdomain=cn',
+        twitter: 'https://twitter.com/yezhang1998',
+        image: 'ye-zang.png'
+      },
+      {
+        color: 'orange',
+        name: 'Henri Lieutaud',
+        company: 'Starknet Foundation',
+        title: 'Benefits of Scaling that Comes with Zero-Knowledge',
+        linkedin: 'https://www.linkedin.com/in/henri-lieutaud-2156a142/?locale=en_US',
+        twitter: 'https://twitter.com/henrlihenrli',
+        image: 'henri.png'
       }
       // {
       //   color: 'green',
@@ -285,6 +339,15 @@ module.exports = (req, res) => {
       },
       {
         color: 'gray',
+        name: 'ZK Lim',
+        company: 'Aleo',
+        title: 'Learning Leo',
+        linkedin: 'https://www.linkedin.com/in/zklim5389',
+        twitter: 'https://x.com/zklim5389',
+        image: 'zklim.png'
+      },
+      {
+        color: 'gray',
         name: 'Saurabh Chalke',
         company: 'ZkHub',
         title: 'Fast and Privacy - Preserving Zero-Knowledge Proof Generation',
@@ -294,13 +357,67 @@ module.exports = (req, res) => {
       },
       {
         color: 'gray',
-        name: 'ZK Lim',
-        company: 'Aleo',
-        title: 'Learning Leo',
-        linkedin: 'https://www.linkedin.com/in/zklim5389',
-        twitter: 'https://x.com/zklim5389',
-        image: 'zklim.png'
+        name: 'Gunit Malik',
+        company: 'ZkHub',
+        title: 'Fast and Privacy-Preserving Zero-Knowledge Proof Generation',
+        linkedin: 'https://www.linkedin.com/in/gunit-malik-765776281/',
+        twitter: 'https://twitter.com/_gumnut',
+        image: 'gunit.png'
       },
+      {
+        color: 'gray',
+        name: 'Craig Johnson',
+        company: 'Aleo',
+        title: 'dApp Development on Aleo',
+        linkedin: 'https://www.linkedin.com/in/craigjson/',
+        twitter: 'https://twitter.com/Akinsp_',
+        image: 'craig.png'
+      },
+      {
+        color: 'gray',
+        name: 'Akın Semih Pur',
+        company: 'Aleo',
+        title: 'dApp Development on Aleo',
+        linkedin: 'https://www.linkedin.com/in/akinsemihpur/?originalSubdomain=tr',
+        twitter: 'https://twitter.com/craigjson',
+        image: 'akin.png'
+      },
+      {
+        color: 'gray',
+        name: 'Evan Marshall',
+        company: 'Demox',
+        title: 'Optimizing Client-Side Proofs - Deploying zkNFT Collections',
+        linkedin: 'https://www.linkedin.com/in/evan-marshall-66598053/',
+        twitter: 'https://twitter.com/CoralRelief',
+        image: 'evan.png'
+      },
+      {
+        color: 'gray',
+        name: 'Luke Newman',
+        company: 'Puzzle',
+        title: 'Multiplayer Privacy with Puzzle (Part 2)',
+        linkedin: 'https://www.linkedin.com/in/lucas-newman-5a683a8a/',
+        twitter: null,
+        image: 'luke.png'
+      },
+      {
+        color: 'gray',
+        name: 'Alp Bassa',
+        company: 'Veridise',
+        title: 'Formal Verification of ZKP Circuits',
+        linkedin: 'https://www.linkedin.com/in/alp-bassa-8b655420/',
+        twitter: null,
+        image: 'alp.png'
+      },
+      {
+        color: 'gray',
+        name: 'Matt Wyatt',
+        company: 'Puzzle',
+        title: 'Multiparty Privacy Stack',
+        linkedin: 'https://www.linkedin.com/in/matthew-wyatt-196433a7/',
+        twitter: 'https://twitter.com/zkmattwyatt',
+        image: 'matt.png'
+      }
     ],
     sponsors: {
       lead: [
@@ -405,8 +522,8 @@ module.exports = (req, res) => {
         image: 'ytu_blockchain.png',
         name: 'YTU Blockchain',
         website: 'https://linktr.ee/blockchainytu',
-        linkedin: null,
-        twitter: null,
+        linkedin: 'https://www.linkedin.com/company/ytu-blockchain/',
+        twitter: 'https://twitter.com/BlockchainYtu',
         type: 'Talent Partner'
       },
       {
@@ -421,24 +538,24 @@ module.exports = (req, res) => {
         image: 'odtu_blockchain.png',
         name: 'ODTU Blockchain',
         website: 'https://x.com/odtublockchain',
-        linkedin: null,
-        twitter: null,
+        linkedin: 'https://www.linkedin.com/company/odtublockchain/?viewAsMember=true',
+        twitter: 'https://twitter.com/odtublockchain',
         type: 'Talent Partner'
       },
       {
         image: 'uzman_coin.png',
         name: 'Uzmancoin',
         website: 'https://uzmancoin.com/',
-        linkedin: null,
-        twitter: null,
+        linkedin: 'https://www.linkedin.com/company/uzmancoin/',
+        twitter: 'https://twitter.com/uzmancoin',
         type: 'Media Partner'
       },
       {
         image: 'krpt.png',
         name: 'KRPT',
         website: 'https://krpt.com/tr/',
-        linkedin: null,
-        twitter: null,
+        linkedin: 'https://www.linkedin.com/company/krptcom/',
+        twitter: 'https://twitter.com/KRPTcom',
         type: 'Media Partner'
       },
       // {
