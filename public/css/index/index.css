@@ -49,7 +49,7 @@
   --sponsors-card-width: calc((100vw - 6 * var(--header-padding) - 3 * var(--box-padding)) / 4);
   --schedule-text-vector-wrapper-width: 40vw;
   --schedule-text-vector-wrapper-height: calc(100vh - var(--header-height));
-  --schedule-text-wrapper-width: 50vw;
+  --schedule-text-wrapper-width: 700px;
   --schedule-timeline-container-width:50vw;
   --schedule-timeline-container-height:50vh;
   --grandPera-text-wrapper-width: 40vw;
@@ -1179,38 +1179,33 @@ p.all-content-sponsors-text-3 {
   width: 100vw;
   min-width: 100vw;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
   padding-bottom: var(--content-padding);
   overflow: hidden;
+  padding-left: calc(2 * var(--header-padding));
+  padding-right: calc(3 * var(--header-padding));
 }
 
-.all-content-schedule-text-vector-wrapper {
-  position: relative;
-  height: var(--schedule-text-vector-wrapper-height);
-  min-height: var(--schedule-text-vector-wrapper-height);
-  width: var(--schedule-text-vector-wrapper-width);
-  min-width: var(--schedule-text-vector-wrapper-width);
-  -o-object-fit: cover;
-     object-fit: cover;
-  inset: 0;
-  align-items: center;
-}
-.all-content-schedule-vector-wrapper {
+.all-content-schedule-vector {
+  position: absolute;
   height: 110vh;
   min-height: 110vh;
   width: auto;
   min-width: auto;
+  left: 0;
   margin-left: -200px;
 }
+
 .all-content-schedule-text-wrapper {
-  position: absolute;
   width: var(--schedule-text-wrapper-width);
   min-width: var(--schedule-text-wrapper-width);
   height: auto;
   min-height: auto;
   top: calc(2 * var(--content-padding));
   z-index: 2;
-  padding-left: calc(2 * var(--header-padding));
+  margin-right: auto;
+  padding-bottom: 30px;
 }
 .all-content-schedule-text-1 {
   font-size: var(--xl-2-font-size);
@@ -1219,12 +1214,42 @@ p.all-content-sponsors-text-3 {
 .all-content-schedule-text-2 {
   font-size: var(--sm-font-size);
 }
+
+.all-content-schedule-header-wrapper {
+  height: fit-content;
+  min-height: fit-content;
+  width: var(--schedule-timeline-container-width);
+  min-width: var(--schedule-timeline-container-width);
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  margin-left: auto;
+  padding-left: var(--header-padding);
+  background-color: rgba(14, 14, 14, 0.4);
+}
+.all-content-schedule-header-each-button {
+  width: 40%;
+  min-width: 40%;
+  height: fit-content;
+  min-height: fit-content;
+  font-size: var(--md-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.all-content-schedule-header-each-button-selected {
+  border-color: var(--text-color-two);
+}
+
 .all-content-schedule-timeline-container {
-  position: relative;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   -moz-column-gap: var(--md-text-gap);
-       column-gap: var(--md-text-gap);
+  column-gap: var(--md-text-gap);
   height: var(--schedule-timeline-container-height);
   min-height: var(--schedule-timeline-container-height);
   width: var(--schedule-timeline-container-width);
@@ -1233,7 +1258,7 @@ p.all-content-sponsors-text-3 {
   overflow-x: hidden;
   margin-bottom: var(--xl-2-text-gap);
   z-index: 2;
-  margin-left: calc(var(--xl-2-text-gap) * -1);
+  background-color: rgba(14, 14, 14, 0.4);
 }
 .all-content-schedule-timeline-container::-webkit-scrollbar {
   width: 3px;
@@ -1740,6 +1765,11 @@ p.all-content-sponsors-text-3 {
     min-width: fit-content;
   }
 
+  .all-content-schedule-wrapper {
+    padding-left: var(--header-padding);
+    padding-right: var(--header-padding);
+  }
+
   .all-footer-upper {
       padding: var(--content-padding)  var(--header-padding);
   }
@@ -1756,11 +1786,6 @@ p.all-content-sponsors-text-3 {
     --sponsors-card-wrapper-width: 200vw;
     --schedule-text-vector-wrapper-width: 30vw;
     --schedule-text-vector-wrapper-height: 100vh;
-    --schedule-timeline-container-width:70vw;
-    --schedule-timeline-container-height:50vh;
-  }
-  .all-content-schedule-text-wrapper {
-    top: calc(3 * var(--content-padding));
   }
 }
 @media only screen and (max-width: 800px) {
@@ -1778,6 +1803,12 @@ p.all-content-sponsors-text-3 {
     --pastEvent-slide-container-width: calc(100vw - 4 * var(--page-horizontal-padding));
     --pastEvent-slide-container-height: calc(var(--pastEvent-slide-container-width) * 0.7);
     --footer-bottom-right-width: 40vw;
+
+    --schedule-timeline-container-width: 70vw;
+  }
+  .all-content-schedule-text-wrapper {
+    width: 100%;
+    min-width: 100%;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -1796,6 +1827,8 @@ p.all-content-sponsors-text-3 {
 
     --speakers-card-container-width: 500vw;
     --sponsors-card-wrapper-width: 250vw;
+
+    --schedule-timeline-container-width: 80vw;
   }
 
   .all-content-speakers-categories-wrapper {
@@ -1873,13 +1906,30 @@ p.all-content-sponsors-text-3 {
     top: var(--page-horizontal-padding);
     /* bottom: var(--header-height); */
   }
-  .all-content-schedule-timeline-container {
-    border-radius: 16px;
+  .all-content-schedule-header-wrapper {
     background: rgba(217, 217, 217, 0.10);
     -webkit-backdrop-filter: blur(27.5px);
-            backdrop-filter: blur(27.5px);
+    backdrop-filter: blur(27.5px);
+    width: calc(100vw - 2 * var(--page-horizontal-padding));
+    min-width: calc(100vw - 2 * var(--page-horizontal-padding));
+    margin: 0 var(--page-horizontal-padding);
+    margin-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  .all-content-schedule-header-each-button {
+    padding-bottom: 5px;
+  }
+  .all-content-schedule-timeline-container {
+    padding-top: 10px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background: rgba(217, 217, 217, 0.10);
+    -webkit-backdrop-filter: blur(27.5px);
+    backdrop-filter: blur(27.5px);
     overflow: auto;
-    padding-top: var(--xl-2-text-gap);
     width: calc(100vw - 2 * var(--page-horizontal-padding));
     min-width: calc(100vw - 2 * var(--page-horizontal-padding));
     margin: 0 var(--page-horizontal-padding);
@@ -1911,6 +1961,7 @@ p.all-content-sponsors-text-3 {
     gap: var(--xl-text-gap);
   }
 }  
+
 @media only screen and (max-width: 500px) {
   :root {
     --header-padding: 40px;

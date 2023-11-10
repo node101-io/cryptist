@@ -2,6 +2,18 @@ window.addEventListener('load', () => {
     const pastEventSlideText = document.querySelector('.all-content-pastEvent-slide-text');
     
     document.addEventListener('click', event => {
+        if (event.target.id == 'schedule-main-button')  {
+            document.getElementById('schedule-main-button').classList.add('all-content-schedule-header-each-button-selected');
+            document.getElementById('schedule-workshops-button').classList.remove('all-content-schedule-header-each-button-selected');
+            document.getElementById('schedule-main-container').style.display = 'flex';
+            document.getElementById('schedule-workshops-container').style.display = 'none';
+        } else if (event.target.id == 'schedule-workshops-button') {
+            document.getElementById('schedule-main-button').classList.remove('all-content-schedule-header-each-button-selected');
+            document.getElementById('schedule-workshops-button').classList.add('all-content-schedule-header-each-button-selected');
+            document.getElementById('schedule-main-container').style.display = 'none';
+            document.getElementById('schedule-workshops-container').style.display = 'flex';
+        }
+
         if (event.target.closest('.all-footer-info-mail-clipboard')) {
             const emailEl = document.querySelector('.all-footer-info-mail-clipboard-text');
 

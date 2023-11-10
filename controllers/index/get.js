@@ -612,6 +612,11 @@ module.exports = (req, res) => {
         text: 'ZK AppChain Thesis'
       },
       {
+        time: '11.00 - 11.20',
+        title: 'Clément Walter, Kakarot',
+        text: 'Kakarot, an EVM Execution Client ZK by Design '
+      },
+      {
         time: '11.20 - 11.40',
         title: 'Dieho Kingston, Lambda Class',
         text: 'Deep Dive into the Stark Platinum Prover'
@@ -767,6 +772,78 @@ module.exports = (req, res) => {
       //   title: 'After Party at a different location',
       //   text: ''
       // }
+    ],
+    workshops_schedule: [
+      {
+        time: '10.00 - 10.45',
+        title: 'Mauro Toscano - Diego Kingston, Lambda Class',
+        text: 'Lambda Class - How to use Lambdaworks and the STARK Platinum Prover'
+      },
+      {
+        time: '10.45 - 11.25',
+        title: 'Gunit Malik - Saurabh Chalke, ZkHub',
+        text: 'zkHub - Fast and Privacy-Preserving Zero-Knowledge Proof Generation'
+      },
+      {
+        time: '11.25 - 12.00',
+        title: 'Break',
+        text: ''
+      },
+      {
+        time: '12.00 - 12.30',
+        title: 'Evan Marshall, Demox',
+        text: 'Talk | Optimizing Client-Side Proofs'
+      },
+      {
+        time: '12.30 - 13.10',
+        title: 'ZK Lim, Aleo',
+        text: 'Workshop | Learning Leo'
+      },
+      {
+        time: '13.10 - 13.30',
+        title: 'Matt Wyatt, Puzzle',
+        text: 'Talk | Multiparty Privacy Stack'
+      },
+      {
+        time: '13.30 - 14.30',
+        title: 'Lunch Break',
+        text: ''
+      },
+      {
+        time: '14.30 - 15.20',
+        title: 'Craig Johnson, Aleo',
+        text: 'Workshop | dApp Development on Aleo'
+      },
+      {
+        time: '15.20 - 15.40',
+        title: 'Alp Bassa, Veridise',
+        text: 'Talk | Formal Verification of ZKP Circuits'
+      },
+      {
+        time: '15.40 - 16.00',
+        title: 'Luke Newman, Puzzle',
+        text: 'Workshop | Multiplayer Privacy with Puzzle (Part 1)'
+      },
+      {
+        time: '16.00 - 16.20',
+        title: 'Break',
+        text: ''
+      },
+      {
+        time: '16.20 - 16.50',
+        title: 'Luke Newman, Puzzle',
+        text: 'Workshop | Multiplayer Privacy with Puzzle (Part 2)'
+      },
+      {
+        time: '16.50 - 17.10',
+        title: 'Akın Semih Pur, Aleo',
+        text: 'Aleo Avantajı: Tasarımdan ZK'
+      },
+      {
+        time: '17.10 - 17.50',
+        title: 'Evan Marshall, Demox',
+        text: 'Workshop | Deploying zkNFT Collections'
+      }
     ]
   });
 };

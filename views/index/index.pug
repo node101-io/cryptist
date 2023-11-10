@@ -233,13 +233,26 @@ block content
                         img.all-content-sponsors-card-twitter(src="img/socials/x_logo.svg", alt="")
                 p.all-content-sponsor-type #{partner.type}
       .all-content-schedule-wrapper(id="schedule")
-        .all-content-schedule-text-vector-wrapper
-          img.all-content-schedule-vector-wrapper(src="img/schedule/schedule-vector.png", alt="")
-          .all-content-schedule-text-wrapper
-            p.all-content-schedule-text-1 Schedule
-            p.all-content-schedule-text-2 Check out the schedule of Istanbul's most anticipated zero-knowledge-proof community event day. Do not miss any of the speeches or panels!
-        .all-content-schedule-timeline-container
+        img.all-content-schedule-vector(src="img/schedule/schedule-vector.png", alt="")
+        .all-content-schedule-text-wrapper
+          p.all-content-schedule-text-1 Schedule
+          p.all-content-schedule-text-2 Check out the schedule of Istanbul's most anticipated zero-knowledge-proof community event day. Do not miss any of the speeches or panels!
+        .all-content-schedule-header-wrapper
+          .all-content-schedule-header-each-button.all-content-schedule-header-each-button-selected#schedule-main-button Main Stage
+          .all-content-schedule-header-each-button#schedule-workshops-button Workshops
+        .all-content-schedule-timeline-container#schedule-main-container
           each part in schedule
+            .all-content-schedule-timeline-line-container
+              .all-content-schedule-timeline-time
+                p #{part.time}
+                .all-content-schedule-timeline-dot
+              .all-content-schedule-timeline-event
+                .all-content-schedule-timeline-event-title
+                  p #{part.title}
+                .all-content-schedule-timeline-event-text 
+                  p #{part.text}
+        .all-content-schedule-timeline-container#schedule-workshops-container(style='display: none')
+          each part in workshops_schedule
             .all-content-schedule-timeline-line-container
               .all-content-schedule-timeline-time
                 p #{part.time}
