@@ -837,7 +837,7 @@ module.exports = (req, res) => {
       {
         time: '16.50 - 17.10',
         title: 'Akın Semih Pur, Aleo',
-        text: 'Aleo Avantajı: Tasarımdan ZK'
+        text: 'Aleo Avantajı: Tasarımdan ZK (Turkish)'
       },
       {
         time: '17.10 - 17.50',
