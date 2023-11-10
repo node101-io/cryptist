@@ -37,7 +37,7 @@ module.exports = (req, res) => {
         company: 'Lambda Class',
         title: 'Deep dive into the Stark Platinum Prover',
         linkedin: null,
-        twitter: 'https://twitter.com/zkdiegokingston',
+        twitter: 'https://x.com/zkdiegokingston',
         image: 'diego.png'
       },
       {
@@ -73,7 +73,7 @@ module.exports = (req, res) => {
         company: 'Aleo',
         title: 'Aleo Advantage: ZK by Design',
         linkedin: 'https://www.linkedin.com/in/craigjson/',
-        twitter: 'https://twitter.com/craigjson',
+        twitter: 'https://x.com/craigjson',
         image: 'craig.png'
       },
       {
@@ -82,7 +82,7 @@ module.exports = (req, res) => {
         company: 'Ethereum Foundation',
         title: 'Introducing PSE: Open Source Tooling & Research for the Community',
         linkedin: 'https://www.linkedin.com/in/andyguzmantoledo/',
-        twitter: 'https://twitter.com/AndyGuzmanEth',
+        twitter: 'https://x.com/AndyGuzmanEth',
         image: 'andy.png'
       },
       {
@@ -91,7 +91,7 @@ module.exports = (req, res) => {
         company: 'zkSync',
         title: 'Defending ZK Circuits',
         linkedin: 'https://www.linkedin.com/in/porter-adams-0127b7125/',
-        twitter: 'https://twitter.com/portport255',
+        twitter: 'https://x.com/portport255',
         image: 'porter.png'
       },
       {
@@ -100,7 +100,7 @@ module.exports = (req, res) => {
         company: 'Chainway',
         title: 'The Future of Privacy and Proof of Innocence',
         linkedin: 'https://www.linkedin.com/in/ekrembal/',
-        twitter: 'https://twitter.com/ekrembal_',
+        twitter: 'https://x.com/ekrembal_',
         image: 'ekrem.png'
       },
       {
@@ -109,7 +109,7 @@ module.exports = (req, res) => {
         company: 'Clave',
         title: 'ZK Webauthn Part 1',
         linkedin: 'https://www.linkedin.com/in/doganalpaslan/',
-        twitter: 'https://twitter.com/DoganEth',
+        twitter: 'https://x.com/DoganEth',
         image: 'dogan.png'
       },
       {
@@ -127,7 +127,7 @@ module.exports = (req, res) => {
         company: 'Herodotus',
         title: 'Enhancing L2s with Storage Proofs: Introducing Herodotus',
         linkedin: null,
-        twitter: 'https://twitter.com/d0x471b',
+        twitter: 'https://x.com/d0x471b',
         image: 'deniz.png'
       },
       {
@@ -136,7 +136,7 @@ module.exports = (req, res) => {
         company: 'RedStone',
         title: 'Panel Moderator',
         linkedin: 'https://www.linkedin.com/in/marcin-kazmierczak1/',
-        twitter: 'https://twitter.com/Marcin_Kaz13',
+        twitter: 'https://x.com/Marcin_Kaz13',
         image: 'marcin.png'
       },
       {
@@ -145,9 +145,27 @@ module.exports = (req, res) => {
         company: 'Protokit',
         title: 'ZK App Chain Thesis',
         linkedin: 'https://at.linkedin.com/in/rpanic',
-        twitter: 'https://twitter.com/rpanic46',
+        twitter: 'https://x.com/rpanic46',
         image: 'raphael.png'
       },
+      {
+        color: 'red',
+        name: 'Utku Dördüncü',
+        company: 'Paribu Ventures',
+        title: 'Funding the Path to Mass ZK Adoption: How Much More to Invest in the ZK Space',
+        linkedin: null,
+        twitter: null,
+        image: 'utku.png'
+      },
+      {
+        color: 'green',
+        name: 'Gökhan El',
+        company: 'IOSG Ventures',
+        title: 'Funding the Path to Mass ZK Adoption: How Much More to Invest in the ZK Space',
+        linkedin: '',
+        twitter: 'https://x.com/ergokhaner?s=21',
+        image: 'gokhan.png'
+      }
       // {
       //   color: 'green',
       //   name: 'Eda Akturk',
@@ -244,7 +262,7 @@ module.exports = (req, res) => {
         company: 'Lambda Class',
         title: 'How to use Lambdaworks and the STARK Platinum Prover Part 1',
         linkedin: null,
-        twitter: 'https://twitter.com/MauroToscanoDev',
+        twitter: 'https://x.com/MauroToscanoDev',
         image: 'mauro.png'
       },
       {
@@ -253,7 +271,7 @@ module.exports = (req, res) => {
         company: 'Lambda Class',
         title: 'How to use Lambdaworks and the STARK Platinum Prover Part 2',
         linkedin: null,
-        twitter: 'https://twitter.com/zkdiegokingston',
+        twitter: 'https://x.com/zkdiegokingston',
         image: 'diego.png'
       },
       {
@@ -262,7 +280,7 @@ module.exports = (req, res) => {
         company: 'Proof of Passport',
         title: 'Proof of Passport: Towards ZK Identity Singularity',
         linkedin: 'https://www.linkedin.com/in/florent-tavernier-771aa0180/',
-        twitter: 'https://twitter.com/turboblitzzz',
+        twitter: 'https://x.com/turboblitzzz',
         image: 'florent.png'
       },
       {
@@ -271,7 +289,7 @@ module.exports = (req, res) => {
         company: 'ZkHub',
         title: 'Fast and Privacy - Preserving Zero-Knowledge Proof Generation',
         linkedin: 'https://linkedin.com/in/saurabhchalke',
-        twitter: 'https://twitter.com/saurabhchalke',
+        twitter: 'https://x.com/saurabhchalke',
         image: 'saurabh.png'
       },
       {
@@ -280,7 +298,7 @@ module.exports = (req, res) => {
         company: 'Aleo',
         title: 'Learning Leo',
         linkedin: 'https://www.linkedin.com/in/zklim5389',
-        twitter: 'https://twitter.com/zklim5389',
+        twitter: 'https://x.com/zklim5389',
         image: 'zklim.png'
       },
     ],
@@ -315,6 +333,7 @@ module.exports = (req, res) => {
         {
           image: 'sponsor-6.png',
           name: 'Paribu Ventures',
+          website: 'https://ventures.paribu.com/',
           linkedin: 'https://www.linkedin.com/company/paribu-ventures/',
           twitter: 'https://x.com/ParibuVentures',
           type: 'Platinum Sponsor'
@@ -385,6 +404,7 @@ module.exports = (req, res) => {
       {
         image: 'ytu_blockchain.png',
         name: 'YTU Blockchain',
+        website: 'https://www.yildizblockchain.com/',
         linkedin: null,
         twitter: null,
         type: 'Talent Partner'
@@ -392,6 +412,7 @@ module.exports = (req, res) => {
       {
         image: 'partner-2.png',
         name: 'ITU Blockchain',
+        website: 'https://www.itublockchain.com/',
         linkedin: 'https://www.linkedin.com/company/itublockchain/',
         twitter: 'https://x.com/ITUblockchain',
         type: 'Talent Partner'
@@ -399,6 +420,7 @@ module.exports = (req, res) => {
       {
         image: 'odtu_blockchain.png',
         name: 'ODTU Blockchain',
+        website: 'https://x.com/odtublockchain',
         linkedin: null,
         twitter: null,
         type: 'Talent Partner'
@@ -406,13 +428,15 @@ module.exports = (req, res) => {
       {
         image: 'uzman_coin.png',
         name: 'Uzmancoin',
+        website: 'https://uzmancoin.com/',
         linkedin: null,
         twitter: null,
-        type: 'Talent Partner'
+        type: 'Media Partner'
       },
       {
         image: 'krpt.png',
         name: 'KRPT',
+        website: 'https://krpt.com/tr/',
         linkedin: null,
         twitter: null,
         type: 'Media Partner'
