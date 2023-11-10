@@ -79,7 +79,7 @@ block content
           .all-content-whyCryptist-vector-wrapper
             img.all-content-whyCryptist-vector-left(src="img/cryptist/left.png" alt="")
             img.all-content-whyCryptist-vector-right(src="img/cryptist/right.png" alt="")
-      .all-content-pastEvent-wrapper 
+      .all-content-pastEvent-wrapper(id="past-event") 
         .all-content-pastEvent-text-wrapper
           .all-content-pastEvent-text-1 
             span Past Event:
@@ -126,7 +126,7 @@ block content
               svg.all-content-pastEvent-slide-button-next(viewBox="0 0 14 18" xmlns="http://www.w3.org/2000/svg")
                 path(d="M0.665649 9.06359H13.394M7.65202 17.3523L13.394 11.4896V6.83979L7.65202 0.707495")
             .all-content-pastEvent-slide-text Cryptist 2022
-      .all-content-speakers-wrapper
+      .all-content-speakers-wrapper(id="speakers")
         p.all-content-speakers-title Speakers
         .all-content-speakers-categories-wrapper
           .all-content-speakers-each-category.all-content-speakers-each-category-active#main-speakers Main Stage
@@ -163,7 +163,7 @@ block content
                     if workshop.twitter
                       a(href=workshop.twitter target='_blank')
                         img.all-content-speakers-card-twitter(src="img/socials/x_logo.svg", alt="")
-      .all-content-sponsors-wrapper
+      .all-content-sponsors-wrapper(id="sponsors")
         .all-content-sponsors-image-wrapper
           img.all-content-sponsors-image(src="img/sponsors/vector.png", alt="")
         .all-content-sponsors-upper-wrapper
@@ -232,7 +232,7 @@ block content
                       a(href=partner.twitter target='_blank')
                         img.all-content-sponsors-card-twitter(src="img/socials/x_logo.svg", alt="")
                 p.all-content-sponsor-type #{partner.type}
-      .all-content-schedule-wrapper
+      .all-content-schedule-wrapper(id="schedule")
         .all-content-schedule-text-vector-wrapper
           img.all-content-schedule-vector-wrapper(src="img/schedule/schedule-vector.png", alt="")
           .all-content-schedule-text-wrapper
@@ -250,7 +250,7 @@ block content
                 .all-content-schedule-timeline-event-text 
                   p #{part.text}
           //- .all-content-tba TO BE ANNOUNCED.
-      .all-content-location-wrapper.all-content-grandPera-wrapper 
+      .all-content-location-wrapper.all-content-grandPera-wrapper(id="location") 
         .all-content-grandPera-text-wrapper 
           .all-content-location-text Location
           .all-content-grandPera-text-1 Grand Pera

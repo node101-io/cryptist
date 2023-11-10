@@ -210,7 +210,8 @@
   overflow-x: hidden;
   overflow-y: auto;
   -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth
 }
 .all-content > div {
   scroll-snap-align: start end;
