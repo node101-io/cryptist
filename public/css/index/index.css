@@ -1184,6 +1184,7 @@ p.all-content-sponsors-text-3 {
   padding-bottom: var(--content-padding);
   padding-left: calc(2 * var(--header-padding));
   padding-right: var(--header-padding);
+  flex-shrink: 0;
 }
 
 .all-content-schedule-vector {
