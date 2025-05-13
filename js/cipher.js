@@ -1,10 +1,12 @@
 window.addEventListener('load', () => {
   const elementsToCipher = document.querySelectorAll(".animate-cipher");
+  const elementsToStartCipher = document.querySelectorAll(".animate-cipher-on-start");
+  
   const fullDuration = 700;
   const letterChangeDuration = 50;
   const randomChars = [...'~!@#$%^&*()-_=+[]{}\\|;:\'",.<>/?€£¥¿µabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'];
 
-  elementsToCipher.forEach(element => {
+  const applyCipherAnimation = (element, autoStart = false, enableHover = true) => {
     let interval = null;
     let deciphering = false;
     let elapsedTime = 0;
@@ -38,7 +40,7 @@ window.addEventListener('load', () => {
       availableIndices = [];
     };
 
-    element.addEventListener('mouseover', () => {
+    const startCipherAnimation = () => {
       if (element.dataset.animating === 'true') return;
 
       originalText = element.textContent;
@@ -92,11 +94,39 @@ window.addEventListener('load', () => {
 
         updateText();
       }, letterChangeDuration);
-    });
+    };
 
-    element.addEventListener('mouseout', () => {
-      if (element.dataset.animating === 'true' && interval)
-        startDeciphering();
-    });
+    if (enableHover) {
+      element.addEventListener('mouseover', startCipherAnimation);
+
+      element.addEventListener('mouseout', () => {
+        if (element.dataset.animating === 'true' && interval)
+          startDeciphering();
+      });
+    }
+    
+    if (autoStart) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startCipherAnimation();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      observer.observe(element);
+    }
+  };
+
+  elementsToCipher.forEach(element => {
+    applyCipherAnimation(element, false, true);
+  });
+  
+  elementsToStartCipher.forEach(element => {
+    const enableHover = element.classList.contains('animate-cipher');
+    applyCipherAnimation(element, true, enableHover);
   });
 });
