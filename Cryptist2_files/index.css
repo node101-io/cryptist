@@ -190,6 +190,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-color);
 }
 .all-header-menu-button-icon {
   position: absolute;
