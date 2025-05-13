@@ -3,7 +3,7 @@
     --index-text-font-size: 16px;
     --index-links-gap: 20px;
     --index-links-margin: 20px;
-    --index-each-link-font-size: 16px;
+    --index-each-link-font-size: 13px;
     --index-bottom-date-font-size: 30px;
     --index-columns-blue-color: #9DD5FF;
     --index-columns-each-column-width: 0.3%;
@@ -119,5 +119,11 @@
     :root {
         --index-each-link-font-size: 16px;
         --index-bottom-date-font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    :root {
+        --index-each-link-font-size: 14px;
     }
 }
