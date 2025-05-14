@@ -15,7 +15,6 @@
     font-size: var(--index-text-font-size);
     text-align: center;
     margin: calc(var(--index-title-indent) * 2) 0;
-    margin-bottom: auto;
 }
 
 .index-title-wrapper {
@@ -27,17 +26,12 @@
     width: calc(100dvw + 2 * var(--index-title-indent));
     min-width: calc(100dvw + 2 * var(--index-title-indent));
     margin-left: calc(-1 * var(--page-horizontal-padding) - var(--index-title-indent));
+    margin-top: auto;
 }
 
 .index-title-wrapper svg {
     width: 100%;
     min-width: 100%;
-}
-
-.index-title-wrapper svg:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .index-title-wrapper svg:nth-child(2) {

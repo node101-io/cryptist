@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  const svg = document.querySelector('.index-title-wrapper svg:last-child');
+  const svg = document.querySelector('.index-title-wrapper svg:first-child');
   let isPortrait = window.innerHeight > window.innerWidth;
 
   updateSvgDimensions(svg, isPortrait);
@@ -16,10 +16,10 @@ window.addEventListener('load', () => {
 
 function updateSvgDimensions(svg, isPortrait) {
   if (isPortrait) {
-    svg.setAttribute('viewBox', '-2 -2 1316 854');
+    svg.setAttribute('viewBox', '0 0 1316 854');
     svg.querySelector('image').setAttribute('height', '724');
   } else {
-    svg.setAttribute('viewBox', '-2 -2 1316 454');
-    svg.querySelector('image').setAttribute('height', '324');
+    svg.setAttribute('viewBox', '0 0 1316 454');
+    svg.querySelector('image').setAttribute('height', '454');
   }
 }
