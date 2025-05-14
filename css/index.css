@@ -84,6 +84,7 @@
 .index-bottom-date-responsive {
     display: none;
     font-size: var(--index-bottom-date-font-size);
+    text-align: end;
 }
 
 .index-links-wrapper-responsive {
