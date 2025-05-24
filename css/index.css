@@ -9,6 +9,7 @@
     --index-columns-each-column-width: 0.3%;
     --index-columns-each-wide-column-width: 0.6%;
     --index-columns-column-width-ratio: 2;
+    --index-links-button-gap: 10px;
 }
 
 .index-text-wrapper {
@@ -51,6 +52,28 @@
 .index-links-wrapper a {
     text-decoration: none;
     font-size: var(--index-each-link-font-size);
+}
+
+.index-links-button {
+    display: flex;
+    gap: var(--index-links-button-gap);
+    padding: var(--index-links-button-gap) calc(var(--index-links-button-gap) * 1.5);
+    border: 1px solid var(--text-color);
+}
+
+.index-links-button::after {
+    content: '';
+    width: var(--index-each-link-font-size);
+    min-width: var(--index-each-link-font-size);
+    background-image: url('/img/arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.index-links-button:hover::after {
+    transform: translate(9%, -4%);
 }
 
 .index-bottom-wrapper {
