@@ -6,7 +6,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #11191D;
 
-  font-synthesis: none;
+  /* font-synthesis: none; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,8 +17,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    url('/Geomisans.woff2') format('woff2'),
-    url('/Geomisans.woff') format('woff'),
-    url('/Geomisans.ttf') format('truetype');
+  src: url('/Geomisans.ttf') format('truetype');
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
