@@ -31,7 +31,11 @@
       <a href="/" class="">
         <img src="/logo.svg" alt="logo" class="h-4 max-sm:h-3.5" />
       </a>
-      <label class="select-none cursor-pointer text-xl font-bold max-sm:text-lg" for="menu-toggle" onclick="this.innerHTML = this.innerHTML === 'MENU' ? 'CLOSE' : 'MENU'">MENU</label>
+      <label class="select-none cursor-pointer text-xl font-bold max-sm:text-lg" for="menu-toggle" onclick="
+        this.innerHTML = this.innerHTML === 'MENU' ? 'CLOSE' : 'MENU';
+        if (this.innerHTML === 'CLOSE' && window.innerWidth >= 640)
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      ">MENU</label>
     </header>
     <input type="checkbox" id="menu-toggle" class="peer hidden" />
     <div class="
@@ -218,11 +222,11 @@
       <h2 class="text-5xl font-light text-white leading-[1.2] max-w-180 max-md:text-2xl max-md:max-w-full">CONTACT OUR TEAM, BE A PART OF CRYPTIST'25.</h2>
       <div class="flex gap-8 justify-between text-[#D9D9D9] max-lg:flex-col">
         <div class="flex flex-col gap-2 justify-end">
-          <a href="mailto:mete@node101.io">
+          <a href="mailto:mete@node101.io" class="w-fit">
             <h3 class="text-xl max-lg:text-sm">METE KORAY GERGİN</h3>
             <h2 class="text-4xl max-lg:text-lg">mete@node101.io</h2>
           </a>
-          <a href="mailto:cryptistanbul@gmail.com">
+          <a href="mailto:cryptistanbul@gmail.com" class="w-fit">
             <h3 class="text-xl mt-6 max-lg:text-sm">EMAIL</h3>
             <h2 class="text-4xl max-lg:text-lg">cryptistanbul@gmail.com</h2>
           </a>
