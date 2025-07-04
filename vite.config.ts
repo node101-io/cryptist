@@ -23,6 +23,7 @@ const pageData = {
   },
   '/cryptist-2022.html': {
     title: 'Cryptist I',
+    path: '2022/',
     switchContext: {
       speakers: [
         {
@@ -109,6 +110,7 @@ const pageData = {
   },
   '/cryptist-2023.html': {
     title: 'Cryptist II',
+    path: '2023/',
     switchContext: {
       speakers: [{
         name: "EMRE TEKİŞALP",
@@ -216,7 +218,8 @@ const pageData = {
         "krpto",
         "rise-in"
       ],
-    }
+      gallery: Array.from({ length: 18 }, (_, index) => index + 1),
+    },
   },
 };
 
