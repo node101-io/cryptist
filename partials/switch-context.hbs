@@ -1,0 +1,151 @@
+<input type="radio" name="tab-group" id="tab-speakers" class="hidden peer/speakers" checked="true" />
+<input type="radio" name="tab-group" id="tab-partners" class="hidden peer/partners" />
+<input type="radio" name="tab-group" id="tab-sponsors" class="hidden peer/sponsors" />
+{{#if switchContext.gallery}}
+  <input type="radio" name="tab-group" id="tab-gallery" class="hidden peer/gallery" />
+{{/if}}
+<div class="
+  group flex gap-2 w-full justify-between p-12 max-sm:p-4 text-xl
+  peer-checked/speakers:[&_label[for=tab-speakers]]:text-[#ABDAFF]
+  peer-checked/partners:[&_label[for=tab-partners]]:text-[#ABDAFF]
+  peer-checked/sponsors:[&_label[for=tab-sponsors]]:text-[#ABDAFF]
+  {{#if switchContext.gallery}}
+  peer-checked/gallery:[&_label[for=tab-gallery]]:text-[#ABDAFF]
+  {{/if}}
+">
+  <label class="cursor-pointer" for="tab-speakers">
+    <span class="">SPEAKERS</span>
+  </label>
+  <label class="cursor-pointer" for="tab-partners">
+    <span class="">PARTNERS</span>
+  </label>
+  <label class="cursor-pointer" for="tab-sponsors">
+    <span class="">SPONSORS</span>
+  </label>
+  {{#if switchContext.gallery}}
+    <label class="cursor-pointer" for="tab-gallery">
+      <span class="">GALLERY</span>
+    </label>
+  {{/if}}
+</div>
+<section id="speakers" class="
+  peer-checked/speakers:grid
+  grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+  gap-x-5
+  gap-y-18
+  p-12
+  max-sm:p-4
+  font-[Space_Mono]
+  hidden
+">
+  {{#each switchContext.speakers as |speaker|}}
+    <div class="flex flex-col gap-2">
+      <h3 class="text-base">{{speaker.name}}</h3>
+      <h4 class="text-sm">{{speaker.company}}</h4>
+      <img class="mt-2" src="{{speaker.image}}" alt="{{speaker.name}}" />
+    </div>
+  {{/each}}
+</section>
+<section id="partners" class="
+  peer-checked/partners:grid
+  grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+  gap-5
+  p-12
+  max-sm:p-4
+  font-[Space_Mono]
+  hidden
+">
+  {{#each switchContext.partners as |partner_image|}}
+    <div class="bg-[#404040]">
+      <img class="" src="/partners/{{partner_image}}.webp" />
+    </div>
+  {{/each}}
+</section>
+<section id="sponsors" class="
+  peer-checked/sponsors:grid
+  grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+  gap-5
+  p-12
+  max-sm:p-4
+  font-[Space_Mono]
+  hidden
+">
+  {{#each switchContext.sponsors as |sponsor_image|}}
+    <div class="bg-[#404040]">
+      <img class="" src="/sponsors/{{sponsor_image}}.webp" />
+    </div>
+  {{/each}}
+</section>
+{{#if switchContext.gallery}}
+  <section id="gallery" class="
+    peer-checked/gallery:grid
+    grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+    gap-5
+    p-12
+    max-sm:p-4
+    font-[Space_Mono]
+    hidden
+  ">
+    {{#each switchContext.gallery as |image_index|}}
+      <div class="relative cursor-pointer group">
+        <img class="
+          aspect-square
+          object-cover
+        " src="/gallery/{{image_index}}.webp" />
+        <a
+          class="size-5 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-center bg-no-repeat bg-contain"
+          href="/gallery/{{image_index}}.webp"
+          download="{{image_index}}.webp"
+          style="background-image: url('/download.svg');">
+        </a>
+      </div>
+    {{/each}}
+    <div
+      id="gallery-viewer"
+      class="
+        fixed
+        top-0
+        left-0
+        bottom-0
+        right-0
+        w-full
+        h-full
+        bg-black/50
+        z-50
+        flex
+        p-24
+        justify-center
+        items-center
+        opacity-0
+        transition-opacity
+        duration-300
+        pointer-events-none
+      "
+      onclick="
+        const viewer = document.getElementById('gallery-viewer');
+        viewer.classList.add('opacity-0', 'pointer-events-none');
+      "
+    >
+      <img class="max-w-[80vw] max-h-[80vh] object-contain m-auto" src="" alt="Gallery" />
+    </div>
+  </section>
+  <script>
+    window.addEventListener('load', () => {
+      const viewer = document.getElementById('gallery-viewer');
+
+      document.getElementById('gallery').addEventListener('click', event => {
+        const target = event.target;
+        if (target.tagName !== 'IMG') return;
+
+        viewer.querySelector('img').src = target.src;
+        viewer.classList.remove('opacity-0', 'pointer-events-none');
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          viewer.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+    });
+  </script>
+{{/if}}

@@ -1,0 +1,81 @@
+<header
+  class="sticky top-0 left-0 flex h-24 w-full items-center justify-between bg-[#11191D] px-12 max-sm:h-16 max-sm:px-4 z-20">
+  <a href="/" class="">
+    <img src="/logo.svg" alt="logo" class="h-4 max-sm:h-3.5" />
+  </a>
+  <label class="select-none cursor-pointer text-xl font-bold max-sm:text-lg" for="menu-toggle" onclick="
+    this.innerHTML = this.innerHTML === 'MENU' ? 'CLOSE' : 'MENU';
+    if (this.innerHTML === 'CLOSE' && window.innerWidth >= 640)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    ">MENU</label>
+</header>
+<input type="checkbox" id="menu-toggle" class="peer hidden" />
+<div class="
+    pointer-events-none
+    absolute
+    left-0
+    top-[-30%]
+    ease-in-out
+    z-10
+    flex
+    w-full
+    flex-col
+    items-center
+    justify-center
+    bg-[#11191D]
+    opacity-0
+    transition-all
+    duration-500
+    peer-checked:pointer-events-auto
+    peer-checked:opacity-100
+    peer-checked:top-24
+    max-sm:peer-checked:top-16
+    max-sm:top-16
+    max-sm:bottom-0
+    max-sm:z-30
+    max-sm:fixed
+">
+  <div
+    class="m-auto flex h-fit w-full max-sm:flex-col flex-row max-sm:justify-center gap-8 text-white max-sm:flex-nowrap flex-wrap justify-between max-sm:py-8 px-8 py-16">
+    <a href="#" class="group flex items-center gap-2">
+      <span class="text-4xl font-light md:text-5xl">SPONSORS</span>
+      <img class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg"
+        alt="arrow" />
+    </a>
+    <a href="#" class="group
+    flex items-center gap-2">
+      <span class="text-4xl font-light md:text-5xl">SPEAKERS</span>
+      <img class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg"
+        alt="arrow" />
+    </a>
+    <a href="#" class="group flex items-center gap-2">
+      <span class="text-4xl font-light md:text-5xl">PARTNERS</span>
+      <img class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg"
+        alt="arrow" />
+    </a>
+    <div class="group relative grid cursor-pointer grid-cols-[repeat(2,max-content)] items-center gap-x-2">
+      <input type="checkbox" id="past-events-toggle" class="peer hidden" />
+      <label class="cursor-pointer text-4xl font-light md:text-5xl" for="past-events-toggle">PAST EVENTS</label>
+      <img class="size-5 transition-transform duration-300 ease-in-out group-hover:rotate-15 peer-checked:rotate-90"
+        src="/arrow-blue.svg" alt="arrow" />
+      <a href="/cryptist-2022"
+        class="absolute top-12 translate-y-[-10%] text-xl text-white opacity-0 transition-all duration-300 ease-in-out peer-checked:pointer-events-auto peer-checked:translate-y-0 peer-checked:opacity-100">2022</a>
+      <a href="/cryptist-2023"
+        class="absolute top-22 translate-y-[-10%] text-xl text-white opacity-0 transition-all delay-75 duration-300 ease-in-out peer-checked:pointer-events-auto peer-checked:translate-y-0 peer-checked:opacity-100">2023</a>
+    </div>
+  </div>
+  <div class="my-auto gap-24 max-sm:gap-4 mx-auto max-sm:mx-0 max-sm:ml-auto flex max-sm:flex-col flex-row px-4 py-12 max-sm:py-4 text-end max-sm:w-fit">
+    {{#each headerLinks}}
+      <a href="{{this.url}}" class="transition-colors hover:text-white/80">{{this.name}}</a>
+    {{/each}}
+  </div>
+  <div class="w-full justify-between p-4 text-[8px] text-[#D9D9D9] max-sm:flex hidden">
+    <div>Designed and developed by <a href="https://node101.io" target="_blank" class="text-white">node101</a></div>
+    <div id="copyright">© 2025. All rights reserved.</div>
+    <script>
+      window.addEventListener('load', () => {
+        document.getElementById('copyright').innerHTML = '© ' + new Date().getFullYear() + '. All rights reserved.';
+      });
+    </script>
+  </div>
+</div>
