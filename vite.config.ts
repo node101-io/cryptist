@@ -142,7 +142,7 @@ const pageData = {
           website: "https://node101.io/"
         },
       ],
-      gallery: Array.from({ length: 11 }, (_, index) => index + 1),
+      gallery: Array.from({ length: 10 }, (_, index) => index + 1),
     }
   },
   '/cryptist-2023.html': {
