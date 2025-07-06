@@ -188,6 +188,7 @@
       const hoverFilter = document.getElementById('hover-filter');
       const speakers = document.getElementById('speakers');
       let isPortrait = window.innerWidth < window.innerHeight;
+      let firstCheck = false;
 
       window.addEventListener('resize', () => {
         isPortrait = window.innerWidth < window.innerHeight;
@@ -205,6 +206,12 @@
       });
 
       speakers.addEventListener('mousemove', event => {
+        if (!firstCheck && speakers.contains(document.elementFromPoint(event.x, event.y))) {
+          firstCheck = true;
+          hoverFilter.style.display = 'block';
+          document.body.style.cursor = 'none';
+        }
+
         if (isPortrait) return;
         hoverFilter.style.left = `${event.x - 84}px`;
         hoverFilter.style.top = `${event.y - 84}px`;
