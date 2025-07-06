@@ -275,4 +275,13 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        cryptist2022: "cryptist-2022.html",
+        cryptist2023: "cryptist-2023.html",
+      },
+    },
+  },
 });
