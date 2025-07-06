@@ -1,29 +1,44 @@
-window.addEventListener('load', () => {
-  const elementsToCipher = document.querySelectorAll<HTMLElement>(".animate-cipher-on-hover");
-  const elementsToStartCipher = document.querySelectorAll<HTMLElement>(".animate-cipher-on-start");
-  
+window.addEventListener("load", () => {
+  const elementsToCipher =
+    document.querySelectorAll<HTMLElement>(".animate-cipher-on-hover");
+  const elementsToStartCipher = document.querySelectorAll<HTMLElement>(
+    ".animate-cipher-on-start",
+  );
+
+  const uppercaseLetters = [..."%&?€£¥0123456789@#$!ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+  const lowercaseLetters = [..."=+µ*,.<>-~abcdefghijklmnopqrstuvwxyz"];
+
+  const defaultChars = [
+    ...uppercaseLetters,
+    ...lowercaseLetters,
+  ];
+
   const fullDuration = 700;
   const letterChangeDuration = 50;
-  const randomChars = [...'~!@#$%^&*()-_=+[]{}\\|;:\'",.<>/?€£¥¿µabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'];
 
-  const applyCipherAnimation = (element: HTMLElement, autoStart = false, enableHover = true) => {
+  const applyCipherAnimation = (
+    element: HTMLElement,
+    autoStart = false,
+    enableHover = true,
+  ) => {
     let interval: number = 0;
     let deciphering = false;
     let elapsedTime = 0;
-    let originalText = '';
+    let originalText = "";
     let originalArray: string[] = [];
     let cipheredIndices = new Set<number>();
     let availableIndices: number[] = [];
+    let activeChars: string[] = [];
 
     const updateText = () => {
       if (!originalArray.length) return;
 
       const resultArray = [...originalArray];
-      cipheredIndices.forEach(index => {
-        resultArray[index] = randomChars[Math.floor(Math.random() * randomChars.length)];
+      cipheredIndices.forEach((index) => {
+        resultArray[index] = activeChars[Math.floor(Math.random() * activeChars.length)];
       });
 
-      element.textContent = resultArray.join('');
+      element.textContent = resultArray.join("");
     };
 
     const startDeciphering = () => {
@@ -35,25 +50,33 @@ window.addEventListener('load', () => {
       if (interval) clearInterval(interval);
       interval = 0;
       element.textContent = originalText;
-      element.dataset.animating = 'false';
+      element.dataset.animating = "false";
       cipheredIndices.clear();
       availableIndices = [];
     };
 
     const startCipherAnimation = () => {
-      if (element.dataset.animating === 'true') return;
+      if (element.dataset.animating === "true") return;
 
-      originalText = element.textContent || '';
-      originalArray = originalText.split('');
-      element.dataset.animating = 'true';
+      originalText = element.textContent || "";
+      originalArray = originalText.split("");
+      element.dataset.animating = "true";
       elapsedTime = 0;
       deciphering = false;
       cipheredIndices.clear();
 
+      if (
+        originalText === originalText.toUpperCase() &&
+        originalText.toLowerCase() !== originalText.toUpperCase()
+      ) {
+        activeChars = uppercaseLetters;
+      } else {
+        activeChars = defaultChars;
+      }
+
       availableIndices = [];
       for (let i = 0; i < originalText.length; i++)
-        if (originalText[i] !== ' ')
-          availableIndices.push(i);
+        if (originalText[i] !== " ") availableIndices.push(i);
 
       availableIndices.sort(() => Math.random() - 0.5);
 
@@ -72,17 +95,20 @@ window.addEventListener('load', () => {
         if (!deciphering) {
           const targetCount = Math.floor(progress * textLength);
 
-          while (cipheredIndices.size < targetCount && availableIndices.length > 0)
+          while (
+            cipheredIndices.size < targetCount &&
+            availableIndices.length > 0
+          )
             cipheredIndices.add(availableIndices.pop()!);
 
-          if (progress >= 1)
-            startDeciphering();
+          if (progress >= 1) startDeciphering();
         } else {
           const targetCount = Math.floor((1 - progress) * textLength);
 
           if (cipheredIndices.size > targetCount) {
             const indicesArray = Array.from(cipheredIndices);
-            const indexToRemove = indicesArray[Math.floor(Math.random() * indicesArray.length)];
+            const indexToRemove =
+              indicesArray[Math.floor(Math.random() * indicesArray.length)];
             cipheredIndices.delete(indexToRemove);
           }
 
@@ -97,36 +123,39 @@ window.addEventListener('load', () => {
     };
 
     if (enableHover) {
-      element.addEventListener('mouseover', startCipherAnimation);
+      element.addEventListener("mouseover", startCipherAnimation);
 
-      element.addEventListener('mouseout', () => {
-        if (element.dataset.animating === 'true' && interval)
+      element.addEventListener("mouseout", () => {
+        if (element.dataset.animating === "true" && interval)
           startDeciphering();
       });
     }
-    
+
     if (autoStart) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            startCipherAnimation();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-      
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startCipherAnimation();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        },
+      );
+
       observer.observe(element);
     }
   };
 
-  elementsToCipher.forEach(element => {
+  elementsToCipher.forEach((element) => {
     applyCipherAnimation(element, false, true);
   });
-  
-  elementsToStartCipher.forEach(element => {
-    const enableHover = element.classList.contains('animate-cipher');
+
+  elementsToStartCipher.forEach((element) => {
+    const enableHover = element.classList.contains("animate-cipher");
     applyCipherAnimation(element, true, enableHover);
   });
 });

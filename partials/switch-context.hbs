@@ -7,28 +7,34 @@
 <div class="
   group flex gap-2 w-full justify-between p-12 max-sm:p-4 text-xl max-sm:hidden
   peer-checked/speakers:[&_label[for=tab-speakers]]:text-[#ABDAFF]
+  peer-checked/speakers:[&_label[for=tab-speakers]]:pointer-events-none
   peer-checked/partners:[&_label[for=tab-partners]]:text-[#ABDAFF]
+  peer-checked/partners:[&_label[for=tab-partners]]:pointer-events-none
   peer-checked/sponsors:[&_label[for=tab-sponsors]]:text-[#ABDAFF]
+  peer-checked/sponsors:[&_label[for=tab-sponsors]]:pointer-events-none
   {{#if switchContext.gallery}}
   peer-checked/gallery:[&_label[for=tab-gallery]]:text-[#ABDAFF]
+  peer-checked/gallery:[&_label[for=tab-gallery]]:pointer-events-none
   {{/if}}
+  font-[Space_Mono]
 ">
   <label class="cursor-pointer" for="tab-speakers">
-    <span class="">SPEAKERS</span>
+    <span class="animate-cipher-on-hover">SPEAKERS</span>
   </label>
   <label class="cursor-pointer" for="tab-partners">
-    <span class="">PARTNERS</span>
+    <span class="animate-cipher-on-hover">PARTNERS</span>
   </label>
   <label class="cursor-pointer" for="tab-sponsors">
-    <span class="">SPONSORS</span>
+    <span class="animate-cipher-on-hover">SPONSORS</span>
   </label>
   {{#if switchContext.gallery}}
     <label class="cursor-pointer" for="tab-gallery">
-      <span class="">GALLERY</span>
+      <span class="animate-cipher-on-hover">GALLERY</span>
     </label>
   {{/if}}
 </div>
 <h2 class="text-2xl max-sm:block hidden p-4">SPEAKERS</h2>
+<div class="hidden landscape:cursor-none!">{{!-- to include landscape:cursor-none! in css --}}</div>
 <section id="speakers" class="
   peer-checked/speakers:grid
   grid-cols-5
@@ -196,43 +202,35 @@
     size-42
     fixed
     mix-blend-exclusion
-    hidden
+    opacity-0
     z-50
-    transition-transform
-    duration-300
+    transition-[opacity,scale]
+    duration-250
     origin-center
-    portrait:hidden
+    portrait:opacity-0!
   ">
-  <script>
+  <script defer>
     window.addEventListener('load', () => {
       const hoverFilter = document.getElementById('hover-filter');
       const speakers = document.getElementById('speakers');
-      let isPortrait = window.innerWidth < window.innerHeight;
       let firstCheck = false;
 
-      window.addEventListener('resize', () => {
-        isPortrait = window.innerWidth < window.innerHeight;
-      });
+      speakers.classList.add('landscape:cursor-none!');
 
       speakers.addEventListener('mouseleave', () => {
-        hoverFilter.style.display = 'none';
-        document.body.style.cursor = 'unset';
+        hoverFilter.style.opacity = '0';
       });
 
       speakers.addEventListener('mouseenter', () => {
-        if (isPortrait) return;
-        hoverFilter.style.display = 'block';
-        document.body.style.cursor = 'none';
+        hoverFilter.style.opacity = '1';
       });
 
       speakers.addEventListener('mousemove', event => {
         if (!firstCheck && speakers.contains(document.elementFromPoint(event.x, event.y))) {
           firstCheck = true;
-          hoverFilter.style.display = 'block';
-          document.body.style.cursor = 'none';
+          hoverFilter.style.opacity = '1';
         }
 
-        if (isPortrait) return;
         hoverFilter.style.left = `${event.x - 84}px`;
         hoverFilter.style.top = `${event.y - 84}px`;
 
@@ -244,7 +242,7 @@
       });
     });
   </script>
-  <script>
+  <script defer>
     window.addEventListener('load', () => {
       const viewer = document.getElementById('gallery-viewer');
 

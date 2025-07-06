@@ -36,26 +36,26 @@
     max-sm:fixed
 ">
   <div
-    class="m-auto flex h-fit w-full max-sm:flex-col flex-row max-sm:justify-center gap-8 text-white max-sm:flex-nowrap flex-wrap justify-between max-sm:py-8 px-8 py-16">
+    class="m-auto flex h-fit w-full max-sm:flex-col flex-row max-sm:justify-center gap-8 text-white max-sm:flex-nowrap flex-wrap justify-between max-sm:py-8 px-8 py-16 font-[Space_Mono]">
     <a href="#" class="group flex items-center gap-2">
-      <span class="text-4xl font-light md:text-5xl">SPONSORS</span>
+      <span class="text-4xl font-light animate-cipher-on-hover">SPONSORS</span>
       <img class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg"
         alt="arrow" />
     </a>
     <a href="#" class="group
     flex items-center gap-2">
-      <span class="text-4xl font-light md:text-5xl">SPEAKERS</span>
+      <span class="text-4xl font-light animate-cipher-on-hover">SPEAKERS</span>
       <img class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg"
         alt="arrow" />
     </a>
     <a href="#" class="group flex items-center gap-2">
-      <span class="text-4xl font-light md:text-5xl">PARTNERS</span>
+      <span class="text-4xl font-light animate-cipher-on-hover">PARTNERS</span>
       <img class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg"
         alt="arrow" />
     </a>
     <div class="group relative grid cursor-pointer grid-cols-[repeat(2,max-content)] items-center gap-x-2">
       <input type="checkbox" id="past-events-toggle" class="peer hidden" />
-      <label class="cursor-pointer text-4xl font-light md:text-5xl" for="past-events-toggle">PAST EVENTS</label>
+      <label class="cursor-pointer text-4xl font-light animate-cipher-on-hover" for="past-events-toggle">PAST EVENTS</label>
       <img class="size-5 transition-transform duration-300 ease-in-out group-hover:rotate-15 peer-checked:rotate-90"
         src="/arrow-blue.svg" alt="arrow" />
       <a href="/cryptist-2022"
@@ -64,9 +64,9 @@
         class="absolute top-22 translate-y-[-10%] text-xl text-white opacity-0 transition-all delay-75 duration-300 ease-in-out pointer-events-none peer-checked:pointer-events-auto peer-checked:translate-y-0 peer-checked:opacity-100">2023</a>
     </div>
   </div>
-  <div class="my-auto gap-24 max-sm:gap-4 mx-auto max-sm:mx-0 max-sm:ml-auto flex max-sm:flex-col flex-row px-4 py-12 max-sm:py-4 text-end max-sm:w-fit">
+  <div class="my-auto gap-24 max-sm:gap-4 mx-auto max-sm:mx-0 max-sm:ml-auto flex max-sm:flex-col flex-row px-4 py-12 max-sm:py-4 text-end max-sm:w-fit font-[Space_Mono]">
     {{#each headerLinks}}
-      <a href="{{this.url}}" class="transition-colors hover:text-white/80">{{this.name}}</a>
+      <a href="{{this.url}}" class="transition-colors hover:text-white/80 animate-cipher-on-hover">{{this.name}}</a>
     {{/each}}
   </div>
   <div class="w-full justify-between p-4 text-[8px] text-[#D9D9D9] max-sm:flex hidden">
