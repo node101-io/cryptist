@@ -5,7 +5,7 @@
   <input type="radio" name="tab-group" id="tab-gallery" class="hidden peer/gallery" />
 {{/if}}
 <div class="
-  group flex gap-2 w-full justify-between p-12 max-sm:p-4 text-xl
+  group flex gap-2 w-full justify-between p-12 max-sm:p-4 text-xl max-sm:hidden
   peer-checked/speakers:[&_label[for=tab-speakers]]:text-[#ABDAFF]
   peer-checked/partners:[&_label[for=tab-partners]]:text-[#ABDAFF]
   peer-checked/sponsors:[&_label[for=tab-sponsors]]:text-[#ABDAFF]
@@ -28,33 +28,52 @@
     </label>
   {{/if}}
 </div>
+<h2 class="text-2xl max-sm:block hidden p-4">SPEAKERS</h2>
 <section id="speakers" class="
   peer-checked/speakers:grid
-  grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+  grid-cols-5
+  max-xl:grid-cols-4
+  max-lg:grid-cols-3
   gap-x-5
   gap-y-18
   p-12
   max-sm:p-4
+  max-sm:gap-x-[6px]
+  max-sm:gap-y-6
   font-[Space_Mono]
   hidden
-  cursor-none
+  landscape:cursor-none
+  max-sm:grid
 ">
   {{#each switchContext.speakers as |speaker|}}
-    <div class="flex flex-col gap-2">
-      <h3 class="text-base">{{speaker.name}}</h3>
-      <h4 class="text-sm">{{speaker.company}}</h4>
-      <img class="mt-2" src="{{speaker.image}}" alt="{{speaker.name}}" />
+    <div class="flex flex-col gap-2 max-sm:gap-1 text-end">
+      <h3 class="
+        text-base
+        max-md:text-sm
+        max-sm:text-[10px]
+      ">{{speaker.name}}</h3>
+      <h4 class="
+        text-sm
+        max-md:text-xs
+        max-sm:text-[10px]
+      ">{{speaker.company}}</h4>
+      <img class="mt-2 grayscale" src="{{speaker.image}}" alt="{{speaker.name}}" />
     </div>
   {{/each}}
 </section>
+<h2 class="text-2xl max-sm:block hidden p-4">PARTNERS</h2>
 <section id="partners" class="
   peer-checked/partners:grid
-  grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+  grid-cols-5
+  max-xl:grid-cols-4
+  max-lg:grid-cols-3
   gap-5
   p-12
   max-sm:p-4
   font-[Space_Mono]
   hidden
+  max-sm:grid
+  max-sm:gap-[6px]
 ">
   {{#each switchContext.partners as |partner_image|}}
     <div class="bg-[#404040]">
@@ -62,14 +81,19 @@
     </div>
   {{/each}}
 </section>
+<h2 class="text-2xl max-sm:block hidden p-4">SPONSORS</h2>
 <section id="sponsors" class="
   peer-checked/sponsors:grid
-  grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+  grid-cols-5
+  max-xl:grid-cols-4
+  max-lg:grid-cols-3
   gap-5
   p-12
   max-sm:p-4
   font-[Space_Mono]
   hidden
+  max-sm:grid
+  max-sm:gap-[6px]
 ">
   {{#each switchContext.sponsors as |sponsor_image|}}
     <div class="bg-[#404040]">
@@ -78,14 +102,19 @@
   {{/each}}
 </section>
 {{#if switchContext.gallery}}
+  <h2 class="text-2xl max-sm:block hidden p-4">GALLERY</h2>
   <section id="gallery" class="
     peer-checked/gallery:grid
-    grid-cols-[repeat(auto-fill,minmax(180px,1fr))]
+    grid-cols-5
+    max-xl:grid-cols-4
+    max-lg:grid-cols-3
     gap-5
     p-12
     max-sm:p-4
     font-[Space_Mono]
     hidden
+    max-sm:grid
+    max-sm:gap-[6px]
   ">
     {{#each switchContext.gallery as |image_index|}}
       <div class="relative cursor-pointer group">
@@ -94,10 +123,24 @@
           object-cover
         " src="/gallery/{{../path}}/{{image_index}}.webp" />
         <a
-          class="size-5 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-center bg-no-repeat bg-contain"
+          class="
+            size-5
+            absolute
+            top-2
+            right-2
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            duration-300
+            bg-center
+            bg-no-repeat
+            bg-contain
+            bg-[url(/download.svg)]
+            portrait:hidden
+          "
           href="/gallery/{{../path}}/{{image_index}}.webp"
           download="{{image_index}}.webp"
-          style="background-image: url('/download.svg');">
+        >
         </a>
       </div>
     {{/each}}
@@ -114,7 +157,6 @@
         bg-black/50
         z-50
         flex
-        p-24
         justify-center
         items-center
         opacity-0
@@ -127,7 +169,7 @@
         viewer.classList.add('opacity-0', 'pointer-events-none');
       "
     >
-      <img class="max-w-[80vw] max-h-[80vh] object-contain m-auto" src="" alt="Gallery" />
+      <img class="max-w-[90vw] max-h-[90vh] object-contain m-auto" src="" alt="Gallery" />
     </div>
   </section>
   <img id="hover-filter" src="/hover.webp" alt="hover" class="
@@ -140,21 +182,29 @@
     transition-transform
     duration-300
     origin-center
+    portrait:hidden
   ">
   <script>
     window.addEventListener('load', () => {
       const hoverFilter = document.getElementById('hover-filter');
       const speakers = document.getElementById('speakers');
+      let isPortrait = window.innerWidth < window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        isPortrait = window.innerWidth < window.innerHeight;
+      });
 
       speakers.addEventListener('mouseleave', () => {
         hoverFilter.style.display = 'none';
       });
 
       speakers.addEventListener('mouseenter', () => {
+        if (isPortrait) return;
         hoverFilter.style.display = 'block';
       });
 
       speakers.addEventListener('mousemove', event => {
+        if (isPortrait) return;
         hoverFilter.style.left = `${event.x - 84}px`;
         hoverFilter.style.top = `${event.y - 84}px`;
 

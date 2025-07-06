@@ -114,91 +114,113 @@ const pageData = {
     switchContext: {
       speakers: [{
         name: "EMRE TEKİŞALP",
-        company: "O(1) LABS"
+        company: "O(1) LABS",
+        image: '/speakers/emre.webp'
       },
       {
         name: "DIEGO KINGSTON",
-        company: "LAMBDA CLASS"
+        company: "LAMBDA CLASS",
+        image: '/speakers/diego.webp'
       },
       {
         name: "ANISH MOHAMMED",
-        company: "PANTHER PROTOCOL"
+        company: "PANTHER PROTOCOL",
+        image: '/speakers/anish.webp'
       },
       {
         name: "ÖZGÜR ARMANC YİĞİT",
-        company: "ETHEREUM"
+        company: "ETHEREUM",
+        image: '/speakers/ozgur.webp'
       },
       {
         name: "TOGHRUL MAHARRAMOV",
-        company: "SCROLL"
+        company: "SCROLL",
+        image: '/speakers/toghrul.webp'
       },
       {
         name: "CRAIG JOHNSON",
-        company: "ALEO"
+        company: "ALEO",
+        image: '/speakers/craig.webp'
       },
       {
         name: "ANDY GUZMAN",
-        company: "ETHEREUM"
+        company: "ETHEREUM",
+        image: '/speakers/andy.webp'
       },
       {
         name: "PORTER ADAMS",
-        company: "ZKSYNC"
+        company: "ZKSYNC",
+        image: '/speakers/porter.webp'
       },
       {
         name: "EKREM BAL",
-        company: "CHAINWAY"
+        company: "CHAINWAY",
+        image: '/speakers/ekrem.webp'
       },
       {
         name: "DOĞAN ALPASLAN",
-        company: "CLAVE"
+        company: "CLAVE",
+        image: '/speakers/dogan.webp'
       },
       {
         name: "KAAN UZDOĞAN",
-        company: "ETHEREUM"
+        company: "ETHEREUM",
+        image: '/speakers/kaan.webp'
       },
       {
         name: "DENİZ BAŞ",
-        company: "HERODOTUS"
+        company: "HERODOTUS",
+        image: '/speakers/deniz.webp'
       },
       {
         name: "MARCIN KAŹMIERCZAK",
-        company: "REDSTONE"
+        company: "REDSTONE",
+        image: '/speakers/marcin.webp'
       },
       {
         name: "RAPHAEL PANIC",
-        company: "PROTOKIT"
+        company: "PROTOKIT",
+        image: '/speakers/raphael.webp'
       },
       {
         name: "UTKU DÖRDÜNCÜ",
-        company: "PARIBU VENTURES"
+        company: "PARIBU VENTURES",
+        image: '/speakers/utku.webp'
       },
       {
         name: "GÖKHAN EL",
-        company: "IOSG VENTURES"
+        company: "IOSG VENTURES",
+        image: '/speakers/gokhan.webp'
       },
       {
         name: "GEORG WIESE",
-        company: "POWDR LABS"
+        company: "POWDR LABS",
+        image: '/speakers/georg.webp'
       },
       {
-        name: "CONNOR O HARA ROLLKIT",
-        company: "CELESTIA"
+        name: "CONNOR O'HARA",
+        company: "CELESTIA",
+        image: '/speakers/connor.webp'
       },
       {
         name: "MILICA VULIĆ",
-        company: "ZKM"
+        company: "ZKM",
+        image: '/speakers/milica.webp'
       },
       {
         name: "CLÉMENT WALTER",
-        company: "KAKAROT"
+        company: "KAKAROT",
+        image: '/speakers/clement.webp'
       },
       {
         name: "YE ZANG",
-        company: "SCROLL"
+        company: "SCROLL",
+        image: '/speakers/ye.webp'
       },
       {
         name: "HENRI LIEUTAUD",
-        company: "STARKNET FOUNDATION"
+        company: "STARKNET FOUNDATION",
+        image: '/speakers/henri.webp'
       },
       ],
       sponsors: [
