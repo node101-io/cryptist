@@ -14,12 +14,7 @@ const pageData = {
       'Lattice Based Cryptography',
       'Lightweight Cryptography',
       'ZK Virtual Machines',
-    ],
-    switchContext: {
-      speakers: [],
-      partners: [],
-      sponsors: [],
-    }
+    ]
   },
   '/cryptist-2022.html': {
     title: 'Cryptist I',
@@ -53,7 +48,7 @@ const pageData = {
         },
         {
           name: 'KAAN UZDOĞAN',
-          company: 'ETHEREUM FOUNDATION',
+          company: 'ETHEREUM',
           image: '/speakers/kaan.webp'
         },
         {
@@ -88,22 +83,64 @@ const pageData = {
         }
       ],
       sponsors: [
-        "aleo",
-        "scroll",
-        "dydx",
-        "paribu-ventures",
-        "ethereum-foundation",
-        "o1labs",
-        "mantanetwork",
+        {
+          name: "aleo",
+          website: "https://aleo.org/"
+        },
+        {
+          name: "scroll",
+          website: "https://scroll.io/"
+        },
+        {
+          name: "dydx",
+          website: "https://www.dydx.xyz/"
+        },
+        {
+          name: "paribu-ventures",
+          website: "https://ventures.paribu.com/"
+        },
+        {
+          name: "ethereum-foundation",
+          website: "https://ethereum.foundation/"
+        },
+        {
+          name: "o1labs",
+          website: "https://o1labs.org/"
+        },
+        {
+          name: "mantanetwork",
+          website: "https://www.manta.network/"
+        },
       ],
       partners: [
-        "btc-haber",
-        "l2-planet",
-        "zkape",
-        "ytu-blockchain",
-        "itu-blockchain",
-        "boun-blockchain",
-        "node101"
+        { 
+          name: "btc-haber",
+          website: "https://www.btchaber.com/"
+        },
+        { 
+          name: "l2-planet",
+          website: "https://x.com/layer2planet?lang=en"
+        },
+        { 
+          name: "zkape",
+          website: "https://www.zkape.io/"
+        },
+        { 
+          name: "ytu-blockchain",
+          website: "https://ytublockchain.com/"
+        },
+        { 
+          name: "itu-blockchain",
+          website: "https://www.itublockchain.com/"
+        },
+        { 
+          name: "boun-blockchain",
+          website: "https://buchain.org/"
+        },
+        { 
+          name: "node101",
+          website: "https://node101.io/"
+        },
       ],
       gallery: Array.from({ length: 11 }, (_, index) => index + 1),
     }
@@ -224,21 +261,60 @@ const pageData = {
       },
       ],
       sponsors: [
-        "aleo",
-        "scroll",
-        "zksync",
-        "paribu-ventures",
+        {
+          name: "aleo",
+          website: "https://aleo.org/"
+        },
+        {
+          name: "scroll",
+          website: "https://scroll.io/"
+        },
+        {
+          name: "zksync",
+          website: "https://zksync.io/"
+        },
+        {
+          name: "paribu-ventures",
+          website: "https://ventures.paribu.com/"
+        },
       ],
       partners: [
-        "antalpha-labs",
-        "lambda-class",
-        "hoodies",
-        "ytu-blockchain",
-        "itu-blockchain",
-        "odtu-blockchain",
-        "uzman-coin",
-        "krpto",
-        "rise-in"
+        {
+          name: "antalpha-labs",
+          website: "https://www.antalpha.com/"
+        },
+        {
+          name: "lambda-class",
+          website: "https://lambdaclass.com/"
+        },
+        {
+          name: "hoodies",
+          website: "https://hoodrun.io/"
+        },
+        {
+          name: "ytu-blockchain",
+          website: "https://ytublockchain.com/"
+        },
+        {
+          name: "itu-blockchain",
+          website: "https://www.itublockchain.com/"
+        },
+        {
+          name: "odtu-blockchain",
+          website: "https://x.com/odtublockchain"
+        },
+        {
+          name: "uzman-coin",
+          website: "https://uzmancoin.com/"
+        },
+        {
+          name: "krpto",
+          website: "https://krpt.com/tr/"
+        },
+        {
+          name: "rise-in",
+          website: "https://www.risein.com/"
+        }
       ],
       gallery: Array.from({ length: 18 }, (_, index) => index + 1),
     },

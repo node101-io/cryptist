@@ -39,7 +39,7 @@
   p-12
   max-sm:p-4
   max-sm:gap-x-[6px]
-  max-sm:gap-y-6
+  max-sm:gap-y-12
   font-[Space_Mono]
   hidden
   max-sm:grid
@@ -74,9 +74,11 @@
   max-sm:grid
   max-sm:gap-[6px]
 ">
-  {{#each switchContext.partners as |partner_image|}}
+  {{#each switchContext.partners as |partner|}}
     <div class="bg-[#404040]">
-      <img class="" src="/partners/{{partner_image}}.webp" />
+      <a href="{{partner.website}}" target="_blank">
+        <img class="" src="/partners/{{partner.name}}.webp" />
+      </a>
     </div>
   {{/each}}
 </section>
@@ -94,9 +96,11 @@
   max-sm:grid
   max-sm:gap-[6px]
 ">
-  {{#each switchContext.sponsors as |sponsor_image|}}
+  {{#each switchContext.sponsors as |sponsor|}}
     <div class="bg-[#404040]">
-      <img class="" src="/sponsors/{{sponsor_image}}.webp" />
+      <a href="{{sponsor.website}}" target="_blank">
+        <img class="" src="/sponsors/{{sponsor.name}}.webp" />
+      </a>
     </div>
   {{/each}}
 </section>
@@ -168,7 +172,23 @@
         viewer.classList.add('opacity-0', 'pointer-events-none');
       "
     >
+    <div class="relative">
       <img class="max-w-[90vw] max-h-[90vh] object-contain m-auto" src="" alt="Gallery" />
+      <a
+        class="
+          size-7
+          absolute
+          top-4
+          right-4
+          bg-center
+          bg-no-repeat
+          bg-contain
+          bg-[url(/download.svg)]
+        "
+        href=""
+        download=""
+      >
+      </a>
     </div>
   </section>
   <img id="hover-filter" src="/hover.webp" alt="hover" class="
@@ -233,6 +253,8 @@
         if (target.tagName !== 'IMG') return;
 
         viewer.querySelector('img').src = target.src;
+        viewer.querySelector('a').href = target.src;
+        viewer.querySelector('a').download = target.src.split('/').pop();
         viewer.classList.remove('opacity-0', 'pointer-events-none');
       });
 
