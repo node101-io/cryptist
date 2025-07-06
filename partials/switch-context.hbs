@@ -42,7 +42,6 @@
   max-sm:gap-y-6
   font-[Space_Mono]
   hidden
-  landscape:cursor-none
   max-sm:grid
 ">
   {{#each switchContext.speakers as |speaker|}}
@@ -196,11 +195,13 @@
 
       speakers.addEventListener('mouseleave', () => {
         hoverFilter.style.display = 'none';
+        document.body.style.cursor = 'unset';
       });
 
       speakers.addEventListener('mouseenter', () => {
         if (isPortrait) return;
         hoverFilter.style.display = 'block';
+        document.body.style.cursor = 'none';
       });
 
       speakers.addEventListener('mousemove', event => {
