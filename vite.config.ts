@@ -14,6 +14,32 @@ const pageData = {
       'Lattice Based Cryptography',
       'Lightweight Cryptography',
       'ZK Virtual Machines',
+    ],
+    otherEvents: [
+      {
+        name: 'ETHISTANBUL CONFERENCE',
+        dates: 'September 5-6-7, 2025',
+        type: 'CONFERENCE',
+        link: 'https://ethistanbul.io/'
+      },
+      {
+        name: 'ETHISTANBUL HACKATHON',
+        dates: 'September 5-6-7, 2025',
+        type: 'HACKATHON',
+        link: 'https://ethistanbul.io/'
+      },
+      {
+        name: 'CIPHER DAY',
+        dates: 'September 4, 2025',
+        type: 'INTERACTIVE WORKSHOP',
+        // link: ''
+      },
+      {
+        name: 'TEDX',
+        dates: 'TBA',
+        type: 'CONFERENCE',
+        // link: ''
+      },
     ]
   },
   '/cryptist-2022.html': {
@@ -113,31 +139,31 @@ const pageData = {
         },
       ],
       partners: [
-        { 
+        {
           name: "btc-haber",
           website: "https://www.btchaber.com/"
         },
-        { 
+        {
           name: "l2-planet",
           website: "https://x.com/layer2planet?lang=en"
         },
-        { 
+        {
           name: "zkape",
           website: "https://www.zkape.io/"
         },
-        { 
+        {
           name: "ytu-blockchain",
           website: "https://ytublockchain.com/"
         },
-        { 
+        {
           name: "itu-blockchain",
           website: "https://www.itublockchain.com/"
         },
-        { 
+        {
           name: "boun-blockchain",
           website: "https://buchain.org/"
         },
-        { 
+        {
           name: "node101",
           website: "https://node101.io/"
         },
