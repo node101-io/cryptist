@@ -17,6 +17,7 @@
   peer-checked/gallery:[&_label[for=tab-gallery]]:pointer-events-none
   {{/if}}
   font-[Space_Mono]
+  fade-in-on-scroll
 ">
   <label class="cursor-pointer" for="tab-speakers">
     <span class="animate-cipher-on-hover">SPEAKERS</span>
@@ -48,6 +49,8 @@
   font-[Space_Mono]
   hidden
   max-sm:grid
+  scroll-m-60
+  fade-in-on-scroll
 ">
   {{#if switchContext.speakers}}
   {{#each switchContext.speakers as |speaker|}}
@@ -85,6 +88,8 @@
   hidden
   max-sm:grid
   max-sm:gap-[6px]
+  scroll-m-60
+  fade-in-on-scroll
 ">
   {{#if switchContext.partners}}
     {{#each switchContext.partners as |partner|}}
@@ -114,6 +119,8 @@
   hidden
   max-sm:grid
   max-sm:gap-[6px]
+  scroll-m-60
+  fade-in-on-scroll
 ">
   {{#if switchContext.sponsors}}
     {{#each switchContext.sponsors as |sponsor|}}
@@ -144,6 +151,7 @@
     hidden
     max-sm:grid
     max-sm:gap-[6px]
+    fade-in-on-scroll
   ">
     {{#each switchContext.gallery as |image_index|}}
       <div class="relative cursor-pointer group">
@@ -217,51 +225,6 @@
       </a>
     </div>
   </section>
-  <img id="hover-filter" src="/hover.webp" alt="hover" class="
-    pointer-events-none
-    size-42
-    fixed
-    mix-blend-exclusion
-    opacity-0
-    z-50
-    transition-[opacity,scale]
-    duration-250
-    origin-center
-    portrait:opacity-0!
-  ">
-  <script defer>
-    window.addEventListener('load', () => {
-      const hoverFilter = document.getElementById('hover-filter');
-      const speakers = document.getElementById('speakers');
-      let firstCheck = false;
-
-      speakers.classList.add('landscape:cursor-none!');
-
-      speakers.addEventListener('mouseleave', () => {
-        hoverFilter.style.opacity = '0';
-      });
-
-      speakers.addEventListener('mouseenter', () => {
-        hoverFilter.style.opacity = '1';
-      });
-
-      speakers.addEventListener('mousemove', event => {
-        if (!firstCheck && speakers.contains(document.elementFromPoint(event.x, event.y))) {
-          firstCheck = true;
-          hoverFilter.style.opacity = '1';
-        }
-
-        hoverFilter.style.left = `${event.x - 84}px`;
-        hoverFilter.style.top = `${event.y - 84}px`;
-
-        if (event.target.tagName === 'IMG') {
-          hoverFilter.style.scale = 1;
-        } else {
-          hoverFilter.style.scale = 0.5;
-        }
-      });
-    });
-  </script>
   <script defer>
     window.addEventListener('load', () => {
       const viewer = document.getElementById('gallery-viewer');
@@ -277,9 +240,8 @@
       });
 
       document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') {
+        if (event.key === 'Escape')
           viewer.classList.add('opacity-0', 'pointer-events-none');
-        }
       });
     });
   </script>

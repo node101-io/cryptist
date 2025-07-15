@@ -5,6 +5,7 @@
     <img src="/logo.svg" alt="logo" class="h-4 max-sm:h-3.5" />
   </a>
   <label
+    id="menu-toggle-label"
     class="cursor-pointer text-xl font-bold select-none max-sm:text-lg"
     for="menu-toggle"
     onclick="
@@ -21,7 +22,7 @@
   <div
     class="m-auto flex h-fit w-full flex-row flex-wrap justify-between gap-8 px-8 py-16 font-[Space_Mono] text-white max-sm:flex-col max-sm:flex-nowrap max-sm:justify-center max-sm:py-8"
   >
-    <a href="#" class="group flex items-center gap-2">
+    <a href="#sponsors" class="group flex items-center gap-2" onclick="document.getElementById('tab-sponsors').checked = true; document.getElementById('menu-toggle-label').click()">
       <span class="animate-cipher-on-hover text-4xl font-light">SPONSORS</span>
       <img
         class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
@@ -29,7 +30,7 @@
         alt="arrow"
       />
     </a>
-    <a href="#" class="group flex items-center gap-2">
+    <a href="#speakers" class="group flex items-center gap-2" onclick="document.getElementById('tab-speakers').checked = true; document.getElementById('menu-toggle-label').click()">
       <span class="animate-cipher-on-hover text-4xl font-light">SPEAKERS</span>
       <img
         class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
@@ -37,7 +38,7 @@
         alt="arrow"
       />
     </a>
-    <a href="#" class="group flex items-center gap-2">
+    <a href="#partners" class="group flex items-center gap-2" onclick="document.getElementById('tab-partners').checked = true; document.getElementById('menu-toggle-label').click()">
       <span class="animate-cipher-on-hover text-4xl font-light">PARTNERS</span>
       <img
         class="size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
@@ -75,6 +76,7 @@
       <a
         href="{{this.url}}"
         class="animate-cipher-on-hover transition-colors hover:text-white/80"
+        target="_blank"
       >{{this.name}}</a>
     {{/each}}
   </div>

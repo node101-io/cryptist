@@ -5,10 +5,10 @@
 @source inline("{peer-checked/faq-{1..10}:opacity-100}");
 @source inline("{max-lg:peer-checked/faq-{1..10}:max-h-75}");
 @source inline("{peer-checked/faq-{1..10}:pointer-events-auto}");
-@source inline("landscape:cursor-none!");
 @source inline("{peer/recent-sessions-{1..5}}");
 @source inline("{peer-checked/recent-sessions-{1..5}:text-white}");
-@source inline("{peer-checked/recent-sessions-{1..5}:block}");
+@source inline("{peer-checked/recent-sessions-{1..5}:opacity-100}");
+@source inline("{peer-checked/recent-sessions-{1..5}:pointer-events-auto}");
 
 :root {
   font-family: "Geomisans", sans-serif;
@@ -43,4 +43,16 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s;
+  will-change: opacity, transform;
+}
+
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -113,6 +113,40 @@ All you need is an interest and a willingness to learn.
         alt: "recent cryptography sessions 5",
       },
     ],
+    oldSponsors: [
+      {
+        src: "/sponsors/aleo.webp",
+        alt: "aleo",
+      },
+      {
+        src: "/sponsors/dydx.webp",
+        alt: "dydx",
+      },
+      {
+        src: "/sponsors/ethereum-foundation.webp",
+        alt: "ethereum foundation",
+      },
+      {
+        src: "/sponsors/mantanetwork.webp",
+        alt: "mantanetwork",
+      },
+      {
+        src: "/sponsors/o1labs.webp",
+        alt: "o1labs",
+      },
+      {
+        src: "/sponsors/paribu-ventures.webp",
+        alt: "paribu ventures",
+      },
+      {
+        src: "/sponsors/scroll.webp",
+        alt: "scroll",
+      },
+      {
+        src: "/sponsors/zksync.webp",
+        alt: "zksync",
+      },
+    ],
   },
   "/cryptist-2022.html": {
     title: "Cryptist I",
