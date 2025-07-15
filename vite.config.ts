@@ -91,19 +91,19 @@ All you need is an interest and a willingness to learn.
       {
         label: "II",
         isIframe: true,
-        src: "https://www.youtube.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
         alt: "recent cryptography sessions 2",
       },
       {
         label: "III",
         isIframe: true,
-        src: "https://www.youtube.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
         alt: "recent cryptography sessions 3",
       },
       {
         label: "IV",
         isIframe: true,
-        src: "https://www.youtube.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
         alt: "recent cryptography sessions 4",
       },
       {
