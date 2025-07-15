@@ -81,6 +81,38 @@ All you need is an interest and a willingness to learn.
           "Feel free to reach out! You can contact us via email at <a href='mailto:cryptistanbul@gmail.com' target='_blank'>cryptistanbul@gmail.com</a> or join our <a href='https://t.me/cryptistanbul' target='_blank'>Telegram group</a> and message one of the admins directly.",
       },
     ],
+    recentSessions: [
+      {
+        label: "I",
+        isIframe: false,
+        src: "/recent-sessions/1.webp",
+        alt: "recent cryptography sessions 1",
+      },
+      {
+        label: "II",
+        isIframe: true,
+        src: "https://www.youtube.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        alt: "recent cryptography sessions 2",
+      },
+      {
+        label: "III",
+        isIframe: true,
+        src: "https://www.youtube.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        alt: "recent cryptography sessions 3",
+      },
+      {
+        label: "IV",
+        isIframe: true,
+        src: "https://www.youtube.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        alt: "recent cryptography sessions 4",
+      },
+      {
+        label: "V",
+        isIframe: false,
+        src: "/recent-sessions/5.webp",
+        alt: "recent cryptography sessions 5",
+      },
+    ],
   },
   "/cryptist-2022.html": {
     title: "Cryptist I",

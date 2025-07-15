@@ -35,7 +35,7 @@
         text-transparent
         bg-white
         bg-[radial-gradient(circle_300px_at_var(--x)_var(--y),#8DDFFF_0%,#ffffff_80%)]
-        mt-16
+        mt-32
       ">
         <script>
           window.addEventListener('load', () => {
@@ -133,36 +133,35 @@
         <h2 class="text-xl text-white">RECENT CRYPTOGRAPHY SESSIONS</h2>
         <p class="text-base font-[Space_Mono]">Over the past three years, we've hosted regular monthly meetups and launched the Blackboard Cryptography series, an exploration of cryptography and privacy technologies. Held in both Istanbul and Ankara, this series brings together protocol researchers, academics, and applied cryptographers to share knowledge the old-fashioned way: with chalk, a blackboard, and discussion.</p>
         <div class="flex w-fit justify-center gap-12 text-5xl relative mb-108">
-          <input type="radio" name="recent-sessions" id="recent-sessions-1"
-            class="peer/recent-sessions-1 hidden" checked>
-          <label for="recent-sessions-1"
-            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-1:text-white">I</label>
-          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 1"
-            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-1:block absolute top-20">
-          <input type="radio" name="recent-sessions" id="recent-sessions-2"
-            class="peer/recent-sessions-2 hidden">
-          <label for="recent-sessions-2"
-            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-2:text-white">II</label>
-          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 2"
-            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-2:block absolute top-20">
-          <input type="radio" name="recent-sessions" id="recent-sessions-3"
-            class="peer/recent-sessions-3 hidden">
-          <label for="recent-sessions-3"
-            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-3:text-white">III</label>
-          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 3"
-            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-3:block absolute top-20">
-          <input type="radio" name="recent-sessions" id="recent-sessions-4"
-            class="peer/recent-sessions-4 hidden">
-          <label for="recent-sessions-4"
-            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-4:text-white">IV</label>
-          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 4"
-            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-4:block absolute top-20">
-          <input type="radio" name="recent-sessions" id="recent-sessions-5"
-            class="peer/recent-sessions-5 hidden">
-          <label for="recent-sessions-5"
-            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-5:text-white">V</label>
-          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 5"
-            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-5:block absolute top-20">
+          {{#each recentSessions}}
+            <input
+              type="radio"
+              name="recent-sessions"
+              id="recent-sessions-{{inc @index}}"
+              class="peer/recent-sessions-{{inc @index}} hidden"
+              {{#if @first}}checked{{/if}}
+            />
+            <label
+              for="recent-sessions-{{inc @index}}"
+              class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-{{inc @index}}:text-white"
+            >{{this.label}}</label>
+
+            {{#if this.isIframe}}
+              <iframe
+                src="{{this.src}}"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                class="aspect-video min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-{{inc @index}}:block absolute top-20"
+              ></iframe>
+            {{else}}
+              <img
+                src="{{this.src}}"
+                alt="{{this.alt}}"
+                class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-{{inc @index}}:block absolute top-20"
+              />
+            {{/if}}
+          {{/each}}
         </div>
         <div class="flex gap-18 justify-center text-lg font-[Space_Mono]">
           <a class="animate-cipher-on-hover" target="_blank" href="https://lu.ma/mapalas?k=c&period=past">Luma</a>
@@ -175,7 +174,7 @@
       <div class="flex flex-col gap-24 p-12 max-sm:p-4 mb-40 mt-40 max-lg:gap-4">
         <h2 class="text-xl">FAQ</h2>
         <div class="flex gap-20 w-full relative">
-          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-20 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
+          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-0 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
             {{#each faqs}}
               <input type="radio" name="faq" id="faq-{{inc @index}}" class="peer/faq-{{inc @index}} hidden" {{#if @first}}checked{{/if}}>
               <label for="faq-{{inc @index}}" class="max-lg:my-4
@@ -189,12 +188,14 @@
                 transition-colors
                 duration-300
                 ease-in-out
+                font-[Space_Mono]
               ">
                 <h3>//{{inc @index}}</h3>
-                <p>{{this.question}}</p>
+                <p class="animate-cipher-on-hover">{{this.question}}</p>
               </label>
               <div class="
-                max-w-150
+                max-w-130
+                max-xl:max-w-78
                 flex
                 flex-col
                 gap-4
@@ -233,14 +234,14 @@
         </div>
       </div>
     </section>
-    <!-- {{> switch-context}} -->
     <section id="tba">
       <!-- TODO: Add tba section -->
     </section>
+    {{> switch-context}}
     <section id="navigation">
-      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono]">
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] my-16">
         <h2 class="text-2xl">Navigation</h2>
-        <div class="flex gap-11 w-full justify-between text-base">
+        <div class="flex gap-11 w-full justify-between text-base max-sm:text-sm">
           <div class="flex flex-col gap-5">
             <a href="#about" class="animate-cipher-on-hover">About</a>
             <a href="#venue" class="animate-cipher-on-hover">Venue</a>
@@ -254,9 +255,9 @@
           <div class="flex flex-col gap-5">
             <a href="/cryptist-2022" class="animate-cipher-on-hover">Cryptist 2022</a>
             <a href="/cryptist-2023" class="animate-cipher-on-hover">Cryptist 2023</a>
-            <a href="#recent-cryptography-sessions" class="animate-cipher-on-hover">Recent Cryptography Sessions</a>
+            <a href="#recent-cryptography-sessions" class="animate-cipher-on-hover inline">Cryptography Sessions</a>
           </div>
-          <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-5 max-md:hidden">
             <a href="https://x.com/cryptistanbul" target="_blank" class="animate-cipher-on-hover">X</a>
             <a href="https://t.me/cryptistanbul" target="_blank" class="animate-cipher-on-hover">Telegram</a>
             <a href="https://www.youtube.com/@cryptistanbul" target="_blank" class="animate-cipher-on-hover">YouTube</a>
