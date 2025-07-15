@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Safelist dynamic FAQ peer utilities */
+@source inline("{peer/faq-{1..10},peer-checked/faq-{1..10}:text-white,peer-checked/faq-{1..10}:opacity-100,peer-checked/faq-{1..10}:pointer-events-auto}");
+
 :root {
   font-family: "Geomisans", sans-serif;
 

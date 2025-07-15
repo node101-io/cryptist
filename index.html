@@ -172,46 +172,39 @@
       </div>
     </section>
     <section id="faq">
-      <div class="flex flex-col gap-8 p-12 max-sm:p-4">
+      <div class="flex flex-col gap-24 p-12 max-sm:p-4 mb-40">
         <h2 class="text-xl">FAQ</h2>
-        <div class="flex gap-20 w-full">
-          <div class="w-max">
-            <div class="flex flex-col gap-4">
-              <h3 class="text-xl">What is Cryptist?</h3>
-              <p class="text-base font-[Space_Mono]">Cryptist is an annual community-driven event in Istanbul focused on zero-knowledge, privacy, and cryptography. It brings together researchers, developers, protocols, and curious minds for a full day of technical talks, workshops, and real conversations, right at the intersection of Europe and Asia.</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-6 min-w-max">
-            <input type="radio" name="faq" id="faq-1" class="peer/faq-1 hidden" checked>
-            <label for="faq-1" class="flex gap-8 peer-checked/faq-1:text-white cursor-pointer">
-              <h3 class="text-xl">//1</h3>
-              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
-            </label>
-            <input type="radio" name="faq" id="faq-2" class="peer/faq-2 hidden">
-            <label for="faq-2" class="flex gap-8 peer-checked/faq-2:text-white cursor-pointer">
-              <h3 class="text-xl">//2</h3>
-              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
-            </label>
-            <input type="radio" name="faq" id="faq-3" class="peer/faq-3 hidden">
-            <label for="faq-3" class="flex gap-8 peer-checked/faq-3:text-white cursor-pointer">
-              <h3 class="text-xl">//3</h3>
-              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
-            </label>
-            <input type="radio" name="faq" id="faq-4" class="peer/faq-4 hidden">
-            <label for="faq-4" class="flex gap-8 peer-checked/faq-4:text-white cursor-pointer">
-              <h3 class="text-xl">//4</h3>
-              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
-            </label>
-            <input type="radio" name="faq" id="faq-5" class="peer/faq-5 hidden">
-            <label for="faq-5" class="flex gap-8 peer-checked/faq-5:text-white cursor-pointer">
-              <h3 class="text-xl">//5</h3>
-              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
-            </label>
-            <input type="radio" name="faq" id="faq-6" class="peer/faq-6 hidden">
-            <label for="faq-6" class="flex gap-8 peer-checked/faq-6:text-white cursor-pointer">
-              <h3 class="text-xl">//6</h3>
-              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
-            </label>
+        <div class="flex gap-20 w-full relative">
+          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-20 mr-40 max-lg:m-0">
+            {{#each faqs}}
+              <input type="radio" name="faq" id="faq-{{inc @index}}" class="peer/faq-{{inc @index}} hidden" {{#if @first}}checked{{/if}}>
+              <label for="faq-{{inc @index}}" class="text-base flex gap-8 peer-checked/faq-{{inc @index}}:text-white text-[#D9D9D9] cursor-pointer transition-colors duration-300 ease-in-out">
+                <h3>//{{inc @index}}</h3>
+                <p>{{this.question}}</p>
+              </label>
+              <div class="
+                max-w-150
+                flex
+                flex-col
+                gap-4
+                absolute
+                max-lg:static
+                left-0
+                top-0
+                h-fit
+                pointer-events-none
+                peer-checked/faq-{{inc @index}}:opacity-100
+                peer-checked/faq-{{inc @index}}:pointer-events-auto
+                opacity-0
+                right-[500px]
+                transition-opacity
+                duration-300
+                ease-in-out
+              ">
+                <h3 class="text-5xl text-white max-lg:hidden">{{this.question}}</h3>
+                <p class="text-base font-[Space_Mono] [&_a]:text-[#ACDAFF] [&_a]:hover:opacity-80 [&_a]:transition-opacity [&_a]:duration-300 [&_a]:ease-in-out">{{{this.answer}}}</p>
+              </div>
+            {{/each}}
           </div>
         </div>
       </div>

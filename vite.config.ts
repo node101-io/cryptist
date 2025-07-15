@@ -41,6 +41,42 @@ const pageData = {
         // link: ''
       },
     ],
+    // faqs: Array.from({ length: 6 }, () => 'What is Cryptist?'),
+    faqs: [
+      {
+        question: "What is Cryptist?",
+        answer: "Cryptist is an annual community-driven event in Istanbul focused on zero-knowledge, privacy, and cryptography. It brings together researchers, developers, protocols, and curious minds for a full day of technical talks, workshops, and real conversations, right at the intersection of Europe and Asia."
+      },
+      {
+        question: "Where can I register?",
+        answer: "You can register for Cryptist via Luma <a href='https://lu.ma/cryptist2025' target='_blank'>here</a>."
+      },
+      {
+        question: "I'm new to cryptography. Can I still join?",
+        answer: `Absolutely! Cryptist is open to everyone from complete beginners to experienced researchers.
+
+Whether you're just starting to explore cryptography, zero-knowledge or privacy technologies in general, or already deep into them, you’ll find talks, workshops, and people that match your curiosity.
+
+All you need is an interest and a willingness to learn.
+`
+      },
+      // {
+      //   question: "What is the recent cryptography sessions event?",
+      //   answer: ""
+      // },
+      {
+        question: "Will the event be live-streamed? Where can I follow it?",
+        answer: "There won’t be a livestream, but don't worry, the talks will be recorded and published on our YouTube channel after the event."
+      },
+      // {
+      //   question: "How can I become a volunteer/speaker/sponsor?",
+      //   answer: "We’d love to have you involved! If you're interested in contributing as a volunteer, speaker, or sponsor, just click on the words to submit your application. Our team will review and get back to you as soon as possible."
+      // },
+      {
+        question: "I have another question.",
+        answer: "Feel free to reach out! You can contact us via email at <a href='mailto:cryptistanbul@gmail.com' target='_blank'>cryptistanbul@gmail.com</a> or join our <a href='https://t.me/cryptistanbul' target='_blank'>Telegram group</a> and message one of the admins directly."
+      }
+    ]
   },
   '/cryptist-2022.html': {
     title: 'Cryptist I',
@@ -374,6 +410,9 @@ export default defineConfig({
         };
       },
       partialDirectory: "./partials",
+      helpers: {
+        inc: (value: number) => Number(value) + 1,
+      },
     }),
     tailwindcss(),
   ],
