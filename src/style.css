@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 /* Safelist dynamic FAQ peer utilities */
-@source inline("{peer/faq-{1..10},peer-checked/faq-{1..10}:text-white,peer-checked/faq-{1..10}:opacity-100,peer-checked/faq-{1..10}:pointer-events-auto}");
+@source inline("{peer/faq-{1..10},peer-checked/faq-{1..10}:text-white,peer-checked/faq-{1..10}:opacity-100,max-lg:peer-checked/faq-{1..10}:max-h-75,peer-checked/faq-{1..10}:pointer-events-auto}");
 
 :root {
   font-family: "Geomisans", sans-serif;
 
   color: rgba(255, 255, 255, 0.87);
-  background-color: #11191D;
+  background-color: #11191d;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,11 +15,11 @@
 }
 
 @font-face {
-  font-family: 'Geomisans';
+  font-family: "Geomisans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/Geomisans.ttf') format('truetype');
+  src: url("/Geomisans.ttf") format("truetype");
 }
 
 @layer utilities {

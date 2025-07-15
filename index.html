@@ -172,13 +172,24 @@
       </div>
     </section>
     <section id="faq">
-      <div class="flex flex-col gap-24 p-12 max-sm:p-4 mb-40">
+      <div class="flex flex-col gap-24 p-12 max-sm:p-4 mb-40 mt-40 max-lg:gap-4">
         <h2 class="text-xl">FAQ</h2>
         <div class="flex gap-20 w-full relative">
-          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-20 mr-40 max-lg:m-0">
+          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-20 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
             {{#each faqs}}
               <input type="radio" name="faq" id="faq-{{inc @index}}" class="peer/faq-{{inc @index}} hidden" {{#if @first}}checked{{/if}}>
-              <label for="faq-{{inc @index}}" class="text-base flex gap-8 peer-checked/faq-{{inc @index}}:text-white text-[#D9D9D9] cursor-pointer transition-colors duration-300 ease-in-out">
+              <label for="faq-{{inc @index}}" class="max-lg:my-4
+                text-base
+                flex
+                gap-8
+                max-lg:gap-2
+                peer-checked/faq-{{inc @index}}:text-white
+                text-[#D9D9D9]
+                cursor-pointer
+                transition-colors
+                duration-300
+                ease-in-out
+              ">
                 <h3>//{{inc @index}}</h3>
                 <p>{{this.question}}</p>
               </label>
@@ -197,12 +208,25 @@
                 peer-checked/faq-{{inc @index}}:pointer-events-auto
                 opacity-0
                 right-[500px]
-                transition-opacity
-                duration-300
+                transition-all
+                duration-600
                 ease-in-out
+                max-lg:peer-checked/faq-{{inc @index}}:max-h-75
+                max-lg:max-h-0
+                max-lg:text-[#C9C8C8]
+                overflow-hidden
               ">
                 <h3 class="text-5xl text-white max-lg:hidden">{{this.question}}</h3>
-                <p class="text-base font-[Space_Mono] [&_a]:text-[#ACDAFF] [&_a]:hover:opacity-80 [&_a]:transition-opacity [&_a]:duration-300 [&_a]:ease-in-out">{{{this.answer}}}</p>
+                <p class="
+                  text-base
+                  font-[Space_Mono]
+                  max-lg:italic
+                  [&_a]:text-[#ACDAFF]
+                  [&_a]:hover:opacity-80
+                  [&_a]:transition-opacity
+                  [&_a]:duration-300
+                  [&_a]:ease-in-out
+                ">{{{this.answer}}}</p>
               </div>
             {{/each}}
           </div>

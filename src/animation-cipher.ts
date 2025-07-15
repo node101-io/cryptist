@@ -1,17 +1,17 @@
 window.addEventListener("load", () => {
-  const elementsToCipher =
-    document.querySelectorAll<HTMLElement>(".animate-cipher-on-hover");
+  const elementsToCipher = document.querySelectorAll<HTMLElement>(
+    ".animate-cipher-on-hover",
+  );
   const elementsToStartCipher = document.querySelectorAll<HTMLElement>(
     ".animate-cipher-on-start",
   );
 
-  const uppercaseLetters = [..."%&?€£¥0123456789@#$!ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+  const uppercaseLetters = [
+    ..."%&?€£¥0123456789@#$!ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  ];
   const lowercaseLetters = [..."=+µ*,.<>-~abcdefghijklmnopqrstuvwxyz"];
 
-  const defaultChars = [
-    ...uppercaseLetters,
-    ...lowercaseLetters,
-  ];
+  const defaultChars = [...uppercaseLetters, ...lowercaseLetters];
 
   const fullDuration = 700;
   const letterChangeDuration = 50;
@@ -35,7 +35,8 @@ window.addEventListener("load", () => {
 
       const resultArray = [...originalArray];
       cipheredIndices.forEach((index) => {
-        resultArray[index] = activeChars[Math.floor(Math.random() * activeChars.length)];
+        resultArray[index] =
+          activeChars[Math.floor(Math.random() * activeChars.length)];
       });
 
       element.textContent = resultArray.join("");

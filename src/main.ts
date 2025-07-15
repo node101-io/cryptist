@@ -1,1 +1,1 @@
-import './animation-cipher.ts'
+import "./animation-cipher.ts";
