@@ -97,7 +97,7 @@
     ">
       <div class="flex flex-col px-12 max-sm:px-4 gap-8">
         <h2 class="text-xl">VENUE</h2>
-        <div class="flex gap-8 max-lg:flex-col-reverse">
+        <div class="flex gap-8 max-lg:flex-col-reverse text-[#D9D9D9]">
           <img src="/venue/rami-library.webp" alt="rami library inside" class="w-2/5 h-auto object-cover max-lg:w-full">
           <div class="flex flex-col gap-8 max-lg:gap-4">
             <h3 class="text-xl leading-4 max-lg:text-lg">RAMI LIBRARY</h3>
@@ -129,10 +129,92 @@
       </div>
     </section>
     <section id="recent-sessions">
-      <!-- TODO: Add recent sessions section -->
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 items-center">
+        <h2 class="text-xl text-white">RECENT CRYPTOGRAPHY SESSIONS</h2>
+        <p class="text-base font-[Space_Mono]">Over the past three years, we've hosted regular monthly meetups and launched the Blackboard Cryptography series, an exploration of cryptography and privacy technologies. Held in both Istanbul and Ankara, this series brings together protocol researchers, academics, and applied cryptographers to share knowledge the old-fashioned way: with chalk, a blackboard, and discussion.</p>
+        <div class="flex w-fit justify-center gap-12 text-5xl relative mb-108">
+          <input type="radio" name="recent-sessions" id="recent-sessions-1"
+            class="peer/recent-sessions-1 hidden" checked>
+          <label for="recent-sessions-1"
+            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-1:text-white">I</label>
+          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 1"
+            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-1:block absolute top-20">
+          <input type="radio" name="recent-sessions" id="recent-sessions-2"
+            class="peer/recent-sessions-2 hidden">
+          <label for="recent-sessions-2"
+            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-2:text-white">II</label>
+          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 2"
+            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-2:block absolute top-20">
+          <input type="radio" name="recent-sessions" id="recent-sessions-3"
+            class="peer/recent-sessions-3 hidden">
+          <label for="recent-sessions-3"
+            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-3:text-white">III</label>
+          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 3"
+            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-3:block absolute top-20">
+          <input type="radio" name="recent-sessions" id="recent-sessions-4"
+            class="peer/recent-sessions-4 hidden">
+          <label for="recent-sessions-4"
+            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-4:text-white">IV</label>
+          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 4"
+            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-4:block absolute top-20">
+          <input type="radio" name="recent-sessions" id="recent-sessions-5"
+            class="peer/recent-sessions-5 hidden">
+          <label for="recent-sessions-5"
+            class="transition-colors ease-in-out duration-300 cursor-pointer text-[#8B8B8B] peer-checked/recent-sessions-5:text-white">V</label>
+          <img src="/recent-sessions/1.webp" alt="recent cryptography sessions 5"
+            class="min-w-3/2 w-3/2 max-md:min-w-4/3 max-md:w-4/3 max-sm:min-w-[calc(100dvw-8*(var(--spacing)))] max-sm:w-[calc(100dvw-8*(var(--spacing)))] h-auto object-cover hidden peer-checked/recent-sessions-5:block absolute top-20">
+        </div>
+        <div class="flex gap-18 justify-center text-lg font-[Space_Mono]">
+          <a class="animate-cipher-on-hover" target="_blank" href="https://lu.ma/mapalas?k=c&period=past">Luma</a>
+          <a class="animate-cipher-on-hover" target="_blank" href="https://drive.google.com/drive/folders/18ARXSvtiIg3-wBNQ48a6UOXsdme4Kk0C?usp=sharing">Gallery</a>
+          <a class="animate-cipher-on-hover" target="_blank" href="https://x.com/modapalas">X</a>
+        </div>
+      </div>
     </section>
     <section id="faq">
-      <!-- TODO: Add faq section -->
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4">
+        <h2 class="text-xl">FAQ</h2>
+        <div class="flex gap-20 w-full">
+          <div class="w-max">
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl">What is Cryptist?</h3>
+              <p class="text-base font-[Space_Mono]">Cryptist is an annual community-driven event in Istanbul focused on zero-knowledge, privacy, and cryptography. It brings together researchers, developers, protocols, and curious minds for a full day of technical talks, workshops, and real conversations, right at the intersection of Europe and Asia.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-6 min-w-max">
+            <input type="radio" name="faq" id="faq-1" class="peer/faq-1 hidden" checked>
+            <label for="faq-1" class="flex gap-8 peer-checked/faq-1:text-white cursor-pointer">
+              <h3 class="text-xl">//1</h3>
+              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
+            </label>
+            <input type="radio" name="faq" id="faq-2" class="peer/faq-2 hidden">
+            <label for="faq-2" class="flex gap-8 peer-checked/faq-2:text-white cursor-pointer">
+              <h3 class="text-xl">//2</h3>
+              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
+            </label>
+            <input type="radio" name="faq" id="faq-3" class="peer/faq-3 hidden">
+            <label for="faq-3" class="flex gap-8 peer-checked/faq-3:text-white cursor-pointer">
+              <h3 class="text-xl">//3</h3>
+              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
+            </label>
+            <input type="radio" name="faq" id="faq-4" class="peer/faq-4 hidden">
+            <label for="faq-4" class="flex gap-8 peer-checked/faq-4:text-white cursor-pointer">
+              <h3 class="text-xl">//4</h3>
+              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
+            </label>
+            <input type="radio" name="faq" id="faq-5" class="peer/faq-5 hidden">
+            <label for="faq-5" class="flex gap-8 peer-checked/faq-5:text-white cursor-pointer">
+              <h3 class="text-xl">//5</h3>
+              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
+            </label>
+            <input type="radio" name="faq" id="faq-6" class="peer/faq-6 hidden">
+            <label for="faq-6" class="flex gap-8 peer-checked/faq-6:text-white cursor-pointer">
+              <h3 class="text-xl">//6</h3>
+              <p class="text-base font-[Space_Mono]">What is Cryptist?</p>
+            </label>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- {{> switch-context}} -->
     <section id="tba">

@@ -40,7 +40,7 @@ const pageData = {
         type: 'CONFERENCE',
         // link: ''
       },
-    ]
+    ],
   },
   '/cryptist-2022.html': {
     title: 'Cryptist I',
