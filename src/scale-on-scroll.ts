@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const minScale = 0.95;
   const maxScale = 1.0;
-  const elementsToScaleOnScroll = document.querySelectorAll('.scale-on-scroll');
-  console.log(elementsToScaleOnScroll);
+  const elementsToScaleOnScroll = document.querySelectorAll<HTMLElement>('.scale-on-scroll');
 
   let ticking = false;
 
