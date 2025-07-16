@@ -32,6 +32,37 @@
       </h2>
     </section>
     {{> switch-context}}
+    <section id="navigation">
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] my-16">
+        <h2 class="text-2xl fade-in-on-scroll">Navigation</h2>
+        <div class="flex gap-11 w-full justify-between text-base max-sm:text-sm fade-in-on-scroll">
+          <div class="flex flex-col gap-5">
+            <a href="/cryptist-2023" class="animate-cipher-on-hover">Cryptist 2023</a>
+            <a href="/" class="animate-cipher-on-hover">Cryptist 2025</a>
+          </div>
+          <div class="flex flex-col gap-5">
+            <a href="https://x.com/cryptistanbul" target="_blank" class="animate-cipher-on-hover">X</a>
+            <a href="https://t.me/cryptistanbul" target="_blank" class="animate-cipher-on-hover">Telegram</a>
+          </div>
+          <div class="flex flex-col gap-5">
+            <a href="https://www.youtube.com/playlist?list=PL5c21nTlaW9ODGy_XOOUTFzZZbrlSO2d7" target="_blank" class="animate-cipher-on-hover">YouTube</a>
+            <a href="https://www.linkedin.com/company/cryptistanbul" target="_blank" class="animate-cipher-on-hover">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <img id="hover-filter" src="/hover.webp" alt="hover" class="
+      pointer-events-none
+      size-42
+      fixed
+      mix-blend-exclusion
+      opacity-0
+      z-50
+      transition-[opacity,scale]
+      duration-250
+      origin-center
+      portrait:opacity-0!
+    ">
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -28,12 +28,12 @@ const pageData = {
         type: "HACKATHON",
         link: "https://ethistanbul.io/",
       },
-      {
-        name: "CIPHER DAY",
-        dates: "September 4, 2025",
-        type: "INTERACTIVE WORKSHOP",
-        // link: ''
-      },
+      // {
+      //   name: "CIPHER DAY",
+      //   dates: "September 4, 2025",
+      //   type: "INTERACTIVE WORKSHOP",
+      //   // link: ''
+      // },
       {
         name: "TEDX",
         dates: "TBA",
@@ -429,10 +429,6 @@ All you need is an interest and a willingness to learn.
           website: "https://ytublockchain.com/",
         },
         {
-          name: "itu-blockchain",
-          website: "https://www.itublockchain.com/",
-        },
-        {
           name: "odtu-blockchain",
           website: "https://x.com/odtublockchain",
         },
@@ -466,7 +462,11 @@ const commonData = {
     },
     {
       name: "Brand Kit",
-      url: "/",
+      url: "https://drive.google.com/drive/folders/1p8-Y30vvZ7E-tUL7VWSQMeNWsfRLpLv-?usp=drive_link",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/company/cryptistanbul/",
     },
   ],
 };
