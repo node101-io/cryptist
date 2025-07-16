@@ -9,6 +9,7 @@
 @source inline("{peer-checked/recent-sessions-{1..5}:text-white}");
 @source inline("{peer-checked/recent-sessions-{1..5}:opacity-100}");
 @source inline("{peer-checked/recent-sessions-{1..5}:pointer-events-auto}");
+@source inline("{bg-[#ACDAFF],bg-[#FFF3A4],bg-[#90FFC9]}");
 
 :root {
   font-family: "Geomisans", sans-serif;

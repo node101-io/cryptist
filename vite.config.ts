@@ -20,12 +20,14 @@ const pageData = {
         name: "ETHISTANBUL CONFERENCE",
         dates: "September 5-6-7, 2025",
         type: "CONFERENCE",
+        typeColor: "#ACDAFF",
         link: "https://ethistanbul.io/",
       },
       {
         name: "ETHISTANBUL HACKATHON",
         dates: "September 5-6-7, 2025",
         type: "HACKATHON",
+        typeColor: "#FFF3A4",
         link: "https://ethistanbul.io/",
       },
       // {
@@ -38,6 +40,7 @@ const pageData = {
         name: "TEDX",
         dates: "TBA",
         type: "CONFERENCE",
+        typeColor: "#90FFC9",
         // link: ''
       },
     ],

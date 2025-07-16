@@ -166,10 +166,10 @@
         <h2 class="px-12 max-sm:px-4 text-xl fade-in-on-scroll">OTHER BLOCKCHAIN EVENTS IN RAMI LIBRARY</h2>
         <div class="flex w-full h-fit gap-5 px-12 max-sm:px-4 overflow-x-auto scrollbar-hidden dragscroll fade-in-on-scroll">
           {{#each otherEvents}}
-            <a {{#if this.link}}href="{{this.link}}"{{else}}{{/if}} target="_blank" class="flex flex-col gap-3 justify-between p-3 bg-[#544F4F] w-full min-w-70 max-sm:min-w-64">
+            <a {{#if this.link}}href="{{this.link}}"{{else}}{{/if}} target="_blank" class="flex flex-col gap-3 justify-between p-3 bg-[#343434] w-full min-w-70 max-sm:min-w-64">
               <h3 class="text-xl max-sm:text-lg">{{this.name}}</h3>
               <p class="text-sm">{{this.dates}}</p>
-              <p class="text-xs mt-6 max-sm:mt-4 bg-[#ABDAFF] text-black px-2 py-1 w-fit">{{this.type}}</p>
+              <p class="text-xs mt-6 max-sm:mt-4 bg-[{{this.typeColor}}] text-black px-2 pt-1 w-fit">{{this.type}}</p>
             </a>
           {{/each}}
         </div>

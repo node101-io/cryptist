@@ -6,17 +6,51 @@
         <div href="mailto:mete@node101.io" class="w-1/2 flex flex-col gap-2 max-sm:w-full">
           <h3 class="text-xl max-lg:text-sm">METE KORAY GERGİN</h3>
           <a href="mailto:mete@node101.io" class="animate-cipher-on-hover text-2xl max-lg:text-lg">mete@node101.io</a>
-          <a href="https://t.me/gergin_101" class="animate-cipher-on-hover text-2xl max-lg:text-lg">// @gergin_101</a>
+          <a href="https://t.me/gergin_101" class="animate-cipher-on-hover text-2xl max-lg:text-lg">TG// @gergin_101</a>
         </div>
         <div href="mailto:yunus@node101.io" class="w-1/2 flex flex-col gap-2 max-sm:w-full">
           <h3 class="text-xl max-lg:text-sm">YUNUS GÜRLEK</h3>
           <a href="mailto:yunus@node101.io" class="animate-cipher-on-hover text-2xl max-lg:text-lg">yunus@node101.io</a>
-          <a href="https://t.me/ygurlek" class="animate-cipher-on-hover text-2xl max-lg:text-lg">// @ygurlek</a>
+          <a href="https://t.me/ygurlek" class="animate-cipher-on-hover text-2xl max-lg:text-lg">TG// @ygurlek</a>
         </div>
       </div>
       <div href="mailto:cryptistanbul@gmail.com" class="w-fit flex flex-col gap-2 mb-auto fade-in-on-scroll">
         <h3 class="animate-cipher-on-hover mt-6 text-xl max-lg:text-sm">EMAIL</h3>
-        <a href="mailto:cryptistanbul@gmail.com" class="animate-cipher-on-hover text-2xl max-lg:text-lg">cryptistanbul@gmail.com</a>
+        <div class="
+          relative
+          text-2xl
+          max-lg:text-lg
+        ">
+          <a href="mailto:cryptistanbul@gmail.com" class="animate-cipher-on-hover">cryptistanbul@gmail.com</a>
+          <img
+            src="/icons/copy.svg"
+            alt="copy"
+            class="
+              cursor-pointer
+              absolute
+              left-[calc(100%+10px)]
+              bottom-0
+              top-0
+              size-6
+              my-auto
+              max-lg:size-4.5
+            "
+          />
+          <img src="/icons/copy-done.svg" alt="copy-done" class="absolute left-[calc(100%+10px)] bottom-0 top-0 size-6 my-auto hidden max-lg:size-4.5" />
+          <script>
+            const copy = document.querySelector('img[alt="copy"]');
+            const copyDone = document.querySelector('img[alt="copy-done"]');
+            copy.addEventListener('click', () => {
+              navigator.clipboard.writeText('cryptistanbul@gmail.com');
+              copy.classList.add('hidden');
+              copyDone.classList.remove('hidden');
+              setTimeout(() => {
+                copy.classList.remove('hidden');
+                copyDone.classList.add('hidden');
+              }, 2000);
+            });
+          </script>
+        </div>
       </div>
     </div>
     <a
