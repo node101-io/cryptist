@@ -491,6 +491,7 @@ export default defineConfig({
       partialDirectory: "./partials",
       helpers: {
         inc: (value: number) => Number(value) + 1,
+        equals: (value: number, target: number) => value === target,
       },
     }),
     tailwindcss(),
