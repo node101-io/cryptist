@@ -1,88 +1,388 @@
 <!doctype html>
-<html>
+<html lang="en" class="scrollbar-hidden">
+  <head>
+    {{> head}}
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
-  <link rel="stylesheet" href="css/general.css">
-  <link rel="stylesheet" href="css/index.css">
-  <script type="module" src="/js/index.js"></script>
-  <script type="module" src="/js/cipher.js"></script>
-  <title>Cryptist</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="description"
-    content="Cryptist is an annual, day-long, zero-knowledge community event in Istanbul to learn, connect, and share amongst the Turkish ZK community.">
-  <meta property="og:url" content="https://cryptist.org">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Cryptist">
-  <meta property="og:description"
-    content="Cryptist is an annual, day-long, zero-knowledge community event in Istanbul to learn, connect, and share amongst the Turkish ZK community.">
-  <meta property="og:image" content="https://cryptist.org/img/meta.webp">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="cryptist.org">
-  <meta property="twitter:url" content="https://cryptist.org">
-  <meta name="twitter:title" content="Cryptist">
-  <meta name="twitter:description"
-    content="Cryptist is an annual, day-long, zero-knowledge community event in Istanbul to learn, connect, and share amongst the Turkish ZK community.">
-  <meta name="twitter:image" content="https://cryptist.org/img/meta.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <h3 class="index-text-wrapper animate-cipher-on-start">The 3rd Edition will be here soon. [:)]</h2>
-    <div class="index-title-wrapper">
-      <svg viewBox="0 0 1316 454" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <mask id="mask0" maskUnits="userSpaceOnUse" x="0" y="0" width="1316" height="196">
-          <path
-            d="M1076.01 1.46289C1112.18 1.46289 1138.9 23.2137 1142.23 55.9736L1142.33 56.8818L1141.43 57.0566L1119.99 61.2266L1118.86 61.4453L1118.8 60.2998C1118.21 49.6953 1113.72 40.8726 1106.31 34.6904C1098.89 28.5003 1088.48 24.9072 1076.01 24.9072C1053.63 24.9072 1037.26 35.776 1034.4 51.4883C1033 61.1395 1037.8 69.585 1046.84 72.9932L1102.48 88.1699C1132.33 95.7131 1150.05 118.133 1147 144.353V144.359L1147 144.367C1143.04 174.507 1115.36 194.381 1078.1 194.381C1040.47 194.381 1011.39 172.372 1005.63 139.345L1005.46 138.382L1006.42 138.192L1027.57 134.022L1028.58 133.822L1028.75 134.844C1032.22 156.273 1051.94 170.639 1078.1 170.639C1103.5 170.639 1121.27 158.86 1123.27 141.442L1123.27 141.433L1123.34 140.796C1124.64 127.453 1114.23 115.576 1096.61 110.952L1096.6 110.949L1039.71 95.4619L1039.67 95.4521L1039.64 95.4395C1018.93 88.1307 1007.63 68.9004 1011.29 47.5664C1015.86 19.8418 1042.03 1.46289 1076.01 1.46289ZM96.0831 2.05859C130.106 2.05871 163.503 21.9161 179.762 51.7236L180.239 52.6006L179.363 53.0801L160.301 63.5049L159.419 63.9873L158.942 63.1025C146.906 40.7934 121.632 25.8009 96.0831 25.8008C74.5669 25.8008 56.7401 32.9446 44.295 45.3896C31.85 57.8347 24.7062 75.6615 24.7062 97.1777C24.7063 118.694 31.85 136.521 44.295 148.966C56.7401 161.411 74.5671 168.554 96.0831 168.554C121.638 168.554 146.906 153.855 158.939 131.258L159.414 130.365L160.301 130.85L179.363 141.274L180.239 141.754L179.762 142.631C163.503 172.438 130.106 192.296 96.0831 192.296C67.7095 192.296 43.9863 182.833 27.3546 166.164C10.7233 149.495 1.26191 125.698 1.26184 97.1777C1.26184 68.8045 10.7236 45.0082 27.3536 28.3027C43.9842 11.5967 67.7073 2.05859 96.0831 2.05859ZM299.548 5.33496C314.664 5.335 327.366 10.328 336.292 19.2158C345.219 28.1044 350.288 40.8076 350.288 56.0752C350.288 71.1958 345.218 83.8974 336.294 92.8213C327.569 101.546 315.233 106.583 300.556 106.804L356.662 187.748L357.75 189.317H329.109L328.81 188.89L271.623 106.814H234.128V189.317H210.684V5.33496H299.548ZM387.96 5.33496L388.226 5.92285L425.786 89.0293H441.172L478.436 5.92578L478.7 5.33496H503.825L503.194 6.74316L457.326 109.202L457.062 109.793H445.202V189.317H421.46V109.793H409.899L409.633 109.202L363.766 6.74316L363.135 5.33496H387.96ZM617.329 5.33496C634.233 5.33497 648.351 10.9234 658.245 20.8174C668.139 30.7115 673.729 44.8301 673.729 61.7344C673.729 78.6384 668.139 92.7563 658.245 102.65C648.351 112.544 634.233 118.133 617.329 118.133H557.568V189.317H534.124V5.33496H617.329ZM844.411 5.03711V28.7793H781.269V189.317H757.526V28.7793H694.681V5.03711H844.411ZM974.709 5.33496V28.7793H936.585V165.575H974.709V189.317H875.017V165.575H913.141V28.7793H875.017V5.33496H974.709ZM1314.74 5.03711V28.7793H1251.59V189.317H1227.85V28.7793H1165.01V5.03711H1314.74ZM557.568 94.6885H617.329C627.224 94.6885 635.37 91.3462 641.041 85.6035C646.713 79.8596 649.985 71.6362 649.985 61.7344C649.985 51.8323 646.713 43.6083 641.041 37.8643C635.37 32.1216 627.224 28.7793 617.329 28.7793H557.568V94.6885ZM234.128 83.0723H299.548C307.808 83.0722 314.539 80.3235 319.203 75.624C323.868 70.9234 326.545 64.1905 326.545 56.0752C326.545 47.8063 323.865 40.9987 319.2 36.2627C314.537 31.5284 307.808 28.7793 299.548 28.7793H234.128V83.0723Z"
-            fill="#FFF" />
-          <path
-            d="M1076.01 1.46289C1112.18 1.46289 1138.9 23.2137 1142.23 55.9736L1142.33 56.8818L1141.43 57.0566L1119.99 61.2266L1118.86 61.4453L1118.8 60.2998C1118.21 49.6953 1113.72 40.8726 1106.31 34.6904C1098.89 28.5003 1088.48 24.9072 1076.01 24.9072C1053.63 24.9072 1037.26 35.776 1034.4 51.4883C1033 61.1395 1037.8 69.585 1046.84 72.9932L1102.48 88.1699C1132.33 95.7131 1150.05 118.133 1147 144.353V144.359L1147 144.367C1143.04 174.507 1115.36 194.381 1078.1 194.381C1040.47 194.381 1011.39 172.372 1005.63 139.345L1005.46 138.382L1006.42 138.192L1027.57 134.022L1028.58 133.822L1028.75 134.844C1032.22 156.273 1051.94 170.639 1078.1 170.639C1103.5 170.639 1121.27 158.86 1123.27 141.442L1123.27 141.433L1123.34 140.796C1124.64 127.453 1114.23 115.576 1096.61 110.952L1096.6 110.949L1039.71 95.4619L1039.67 95.4521L1039.64 95.4395C1018.93 88.1307 1007.63 68.9004 1011.29 47.5664C1015.86 19.8418 1042.03 1.46289 1076.01 1.46289ZM96.0831 2.05859C130.106 2.05871 163.503 21.9161 179.762 51.7236L180.239 52.6006L179.363 53.0801L160.301 63.5049L159.419 63.9873L158.942 63.1025C146.906 40.7934 121.632 25.8009 96.0831 25.8008C74.5669 25.8008 56.7401 32.9446 44.295 45.3896C31.85 57.8347 24.7062 75.6615 24.7062 97.1777C24.7063 118.694 31.85 136.521 44.295 148.966C56.7401 161.411 74.5671 168.554 96.0831 168.554C121.638 168.554 146.906 153.855 158.939 131.258L159.414 130.365L160.301 130.85L179.363 141.274L180.239 141.754L179.762 142.631C163.503 172.438 130.106 192.296 96.0831 192.296C67.7095 192.296 43.9863 182.833 27.3546 166.164C10.7233 149.495 1.26191 125.698 1.26184 97.1777C1.26184 68.8045 10.7236 45.0082 27.3536 28.3027C43.9842 11.5967 67.7073 2.05859 96.0831 2.05859ZM299.548 5.33496C314.664 5.335 327.366 10.328 336.292 19.2158C345.219 28.1044 350.288 40.8076 350.288 56.0752C350.288 71.1958 345.218 83.8974 336.294 92.8213C327.569 101.546 315.233 106.583 300.556 106.804L356.662 187.748L357.75 189.317H329.109L328.81 188.89L271.623 106.814H234.128V189.317H210.684V5.33496H299.548ZM387.96 5.33496L388.226 5.92285L425.786 89.0293H441.172L478.436 5.92578L478.7 5.33496H503.825L503.194 6.74316L457.326 109.202L457.062 109.793H445.202V189.317H421.46V109.793H409.899L409.633 109.202L363.766 6.74316L363.135 5.33496H387.96ZM617.329 5.33496C634.233 5.33497 648.351 10.9234 658.245 20.8174C668.139 30.7115 673.729 44.8301 673.729 61.7344C673.729 78.6384 668.139 92.7563 658.245 102.65C648.351 112.544 634.233 118.133 617.329 118.133H557.568V189.317H534.124V5.33496H617.329ZM844.411 5.03711V28.7793H781.269V189.317H757.526V28.7793H694.681V5.03711H844.411ZM974.709 5.33496V28.7793H936.585V165.575H974.709V189.317H875.017V165.575H913.141V28.7793H875.017V5.33496H974.709ZM1314.74 5.03711V28.7793H1251.59V189.317H1227.85V28.7793H1165.01V5.03711H1314.74ZM557.568 94.6885H617.329C627.224 94.6885 635.37 91.3462 641.041 85.6035C646.713 79.8596 649.985 71.6362 649.985 61.7344C649.985 51.8323 646.713 43.6083 641.041 37.8643C635.37 32.1216 627.224 28.7793 617.329 28.7793H557.568V94.6885ZM234.128 83.0723H299.548C307.808 83.0722 314.539 80.3235 319.203 75.624C323.868 70.9234 326.545 64.1905 326.545 56.0752C326.545 47.8063 323.865 40.9987 319.2 36.2627C314.537 31.5284 307.808 28.7793 299.548 28.7793H234.128V83.0723Z"
-            fill="none" stroke="#FFF" stroke-width="2" />
-        </mask>
-        <path mask="url(#mask0)" fill="var(--secondary-color)" d="M -94 -42 h 1446 v 171 h -1446 Z M -125 2 h 178 v 445 h -178 Z" />
-        <image href="/img/background.webp" x="53" y="129" width="1211" height="324"
-          preserveAspectRatio="xMidYMid slice"></image>
-      </svg>
-      <svg viewBox="-2 -2 1316 454" xmlns="http://www.w3.org/2000/svg">
-        <mask id="mask1" maskUnits="userSpaceOnUse" x="-2" y="-2" width="1316" height="196">
-          <path
-            d="M1074.01 -0.537109C1110.18 -0.537109 1136.9 21.2137 1140.23 53.9736L1140.33 54.8818L1139.43 55.0566L1117.99 59.2266L1116.86 59.4453L1116.8 58.2998C1116.21 47.6953 1111.72 38.8726 1104.31 32.6904C1096.89 26.5003 1086.48 22.9072 1074.01 22.9072C1051.63 22.9072 1035.26 33.776 1032.4 49.4883C1031 59.1395 1035.8 67.585 1044.84 70.9932L1100.48 86.1699C1130.33 93.7131 1148.05 116.133 1145 142.353V142.359L1145 142.367C1141.04 172.507 1113.36 192.381 1076.1 192.381C1038.47 192.381 1009.39 170.372 1003.63 137.345L1003.46 136.382L1004.42 136.192L1025.57 132.022L1026.58 131.822L1026.75 132.844C1030.22 154.273 1049.94 168.639 1076.1 168.639C1101.5 168.639 1119.27 156.86 1121.27 139.442L1121.27 139.433L1121.34 138.796C1122.64 125.453 1112.23 113.576 1094.61 108.952L1094.6 108.949L1037.71 93.4619L1037.67 93.4521L1037.64 93.4395C1016.93 86.1307 1005.63 66.9004 1009.29 45.5664C1013.86 17.8418 1040.03 -0.537108 1074.01 -0.537109ZM94.0831 0.0585938C128.106 0.058713 161.503 19.9161 177.762 49.7236L178.239 50.6006L177.363 51.0801L158.301 61.5049L157.419 61.9873L156.942 61.1025C144.906 38.7934 119.632 23.8009 94.0831 23.8008C72.5669 23.8008 54.7401 30.9446 42.295 43.3896C29.85 55.8347 22.7062 73.6615 22.7062 95.1777C22.7063 116.694 29.85 134.521 42.295 146.966C54.7401 159.411 72.5671 166.554 94.0831 166.554C119.638 166.554 144.906 151.855 156.939 129.258L157.414 128.365L158.301 128.85L177.363 139.274L178.239 139.754L177.762 140.631C161.503 170.438 128.106 190.296 94.0831 190.296C65.7095 190.296 41.9863 180.833 25.3546 164.164C8.7233 147.495 -0.738085 123.698 -0.738159 95.1777C-0.738159 66.8045 8.72361 43.0082 25.3536 26.3027C41.9842 9.59673 65.7073 0.0585938 94.0831 0.0585938ZM297.548 3.33496C312.664 3.335 325.366 8.32798 334.292 17.2158C343.219 26.1044 348.288 38.8076 348.288 54.0752C348.288 69.1958 343.218 81.8974 334.294 90.8213C325.569 99.5462 313.233 104.583 298.556 104.804L354.662 185.748L355.75 187.317H327.109L326.81 186.89L269.623 104.814H232.128V187.317H208.684V3.33496H297.548ZM385.96 3.33496L386.226 3.92285L423.786 87.0293H439.172L476.436 3.92578L476.7 3.33496H501.825L501.194 4.74316L455.326 107.202L455.062 107.793H443.202V187.317H419.46V107.793H407.899L407.633 107.202L361.766 4.74316L361.135 3.33496H385.96ZM615.329 3.33496C632.233 3.33497 646.351 8.92341 656.245 18.8174C666.139 28.7115 671.729 42.8301 671.729 59.7344C671.729 76.6384 666.139 90.7563 656.245 100.65C646.351 110.544 632.233 116.133 615.329 116.133H555.568V187.317H532.124V3.33496H615.329ZM842.411 3.03711V26.7793H779.269V187.317H755.526V26.7793H692.681V3.03711H842.411ZM972.709 3.33496V26.7793H934.585V163.575H972.709V187.317H873.017V163.575H911.141V26.7793H873.017V3.33496H972.709ZM1312.74 3.03711V26.7793H1249.59V187.317H1225.85V26.7793H1163.01V3.03711H1312.74ZM555.568 92.6885H615.329C625.224 92.6885 633.37 89.3462 639.041 83.6035C644.713 77.8596 647.985 69.6362 647.985 59.7344C647.985 49.8323 644.713 41.6083 639.041 35.8643C633.37 30.1216 625.224 26.7793 615.329 26.7793H555.568V92.6885ZM232.128 81.0723H297.548C305.808 81.0722 312.539 78.3235 317.203 73.624C321.868 68.9234 324.545 62.1905 324.545 54.0752C324.545 45.8063 321.865 38.9987 317.2 34.2627C312.537 29.5284 305.808 26.7793 297.548 26.7793H232.128V81.0723Z"
-            fill="#fff" />
-          <path
-            d="M1074.01 -0.537109C1110.18 -0.537109 1136.9 21.2137 1140.23 53.9736L1140.33 54.8818L1139.43 55.0566L1117.99 59.2266L1116.86 59.4453L1116.8 58.2998C1116.21 47.6953 1111.72 38.8726 1104.31 32.6904C1096.89 26.5003 1086.48 22.9072 1074.01 22.9072C1051.63 22.9072 1035.26 33.776 1032.4 49.4883C1031 59.1395 1035.8 67.585 1044.84 70.9932L1100.48 86.1699C1130.33 93.7131 1148.05 116.133 1145 142.353V142.359L1145 142.367C1141.04 172.507 1113.36 192.381 1076.1 192.381C1038.47 192.381 1009.39 170.372 1003.63 137.345L1003.46 136.382L1004.42 136.192L1025.57 132.022L1026.58 131.822L1026.75 132.844C1030.22 154.273 1049.94 168.639 1076.1 168.639C1101.5 168.639 1119.27 156.86 1121.27 139.442L1121.27 139.433L1121.34 138.796C1122.64 125.453 1112.23 113.576 1094.61 108.952L1094.6 108.949L1037.71 93.4619L1037.67 93.4521L1037.64 93.4395C1016.93 86.1307 1005.63 66.9004 1009.29 45.5664C1013.86 17.8418 1040.03 -0.537108 1074.01 -0.537109ZM94.0831 0.0585938C128.106 0.058713 161.503 19.9161 177.762 49.7236L178.239 50.6006L177.363 51.0801L158.301 61.5049L157.419 61.9873L156.942 61.1025C144.906 38.7934 119.632 23.8009 94.0831 23.8008C72.5669 23.8008 54.7401 30.9446 42.295 43.3896C29.85 55.8347 22.7062 73.6615 22.7062 95.1777C22.7063 116.694 29.85 134.521 42.295 146.966C54.7401 159.411 72.5671 166.554 94.0831 166.554C119.638 166.554 144.906 151.855 156.939 129.258L157.414 128.365L158.301 128.85L177.363 139.274L178.239 139.754L177.762 140.631C161.503 170.438 128.106 190.296 94.0831 190.296C65.7095 190.296 41.9863 180.833 25.3546 164.164C8.7233 147.495 -0.738085 123.698 -0.738159 95.1777C-0.738159 66.8045 8.72361 43.0082 25.3536 26.3027C41.9842 9.59673 65.7073 0.0585938 94.0831 0.0585938ZM297.548 3.33496C312.664 3.335 325.366 8.32798 334.292 17.2158C343.219 26.1044 348.288 38.8076 348.288 54.0752C348.288 69.1958 343.218 81.8974 334.294 90.8213C325.569 99.5462 313.233 104.583 298.556 104.804L354.662 185.748L355.75 187.317H327.109L326.81 186.89L269.623 104.814H232.128V187.317H208.684V3.33496H297.548ZM385.96 3.33496L386.226 3.92285L423.786 87.0293H439.172L476.436 3.92578L476.7 3.33496H501.825L501.194 4.74316L455.326 107.202L455.062 107.793H443.202V187.317H419.46V107.793H407.899L407.633 107.202L361.766 4.74316L361.135 3.33496H385.96ZM615.329 3.33496C632.233 3.33497 646.351 8.92341 656.245 18.8174C666.139 28.7115 671.729 42.8301 671.729 59.7344C671.729 76.6384 666.139 90.7563 656.245 100.65C646.351 110.544 632.233 116.133 615.329 116.133H555.568V187.317H532.124V3.33496H615.329ZM842.411 3.03711V26.7793H779.269V187.317H755.526V26.7793H692.681V3.03711H842.411ZM972.709 3.33496V26.7793H934.585V163.575H972.709V187.317H873.017V163.575H911.141V26.7793H873.017V3.33496H972.709ZM1312.74 3.03711V26.7793H1249.59V187.317H1225.85V26.7793H1163.01V3.03711H1312.74ZM555.568 92.6885H615.329C625.224 92.6885 633.37 89.3462 639.041 83.6035C644.713 77.8596 647.985 69.6362 647.985 59.7344C647.985 49.8323 644.713 41.6083 639.041 35.8643C633.37 30.1216 625.224 26.7793 615.329 26.7793H555.568V92.6885ZM232.128 81.0723H297.548C305.808 81.0722 312.539 78.3235 317.203 73.624C321.868 68.9234 324.545 62.1905 324.545 54.0752C324.545 45.8063 321.865 38.9987 317.2 34.2627C312.537 29.5284 305.808 26.7793 297.548 26.7793H232.128V81.0723Z"
-            fill="none" stroke="#fff" stroke-width="2" />
-        </mask>
-        <rect x="51" y="127" width="1211" height="100" fill="var(--secondary-color)" mask="url(#mask1)" />
-      </svg>
-    </div>
-    <div class="index-links-wrapper">
-      <a class="index-links-button animate-cipher animate-cipher-on-start" target="_blank" href="https://2023.cryptist.org">Past Events</a>
-      <!-- <a class="animate-cipher" target="_blank" href="" style="margin-left: auto;">Do you want to be sponsor?</a> -->
-      <div class="index-links-wrapper-responsive">
-        <a class="animate-cipher" target="_blank" href="https://x.com/cryptistanbul">X</a>
-        <a class="animate-cipher animate-cipher-on-start" target="_blank"
-          href="https://www.youtube.com/playlist?list=PL5c21nTlaW9ODGy_XOOUTFzZZbrlSO2d7">YouTube</a>
+  <body class="overscroll-none">
+    {{> header}}
+    <section class="transition-margin duration-500 ease-in-out peer-checked:mt-98 max-sm:peer-checked:mt-0 mb-16">
+      <h2 class="m-4 text-center text-4xl max-sm:text-lg scale-on-scroll fade-in-on-scroll">4 SEPTEMBER 2025, ISTANBUL</h2>
+      <img src="/banner-text.svg" alt="the meeting point of cryptographers of europe and asia" class="relative z-10 m-12 mix-blend-difference max-sm:m-6 scale-on-scroll fade-in-on-scroll" />
+      <img src="/banner.webp" alt="banner" class="mt-[calc((65vw-2*12*var(--spacing))/-20-12*var(--spacing))] max-h-96 min-h-72 min-w-full object-cover max-sm:mt-[calc((65vw-2*6*var(--spacing))/-20-6*var(--spacing))]" />
+      <div class="flex items-end justify-between gap-8 p-12 max-sm:flex-col max-sm:items-start max-sm:p-4 fade-in-on-scroll">
+        <p class="max-w-140 font-[Space_Mono] leading-6 max-sm:w-full max-sm:text-sm max-sm:leading-5">For more than 3 years, Cryptist has been gathering cryptographers from all around the world in Istanbul, the bridge between Europe and Asia.</p>
+        {{> button-get-tickets}}
       </div>
-    </div>
-    <h2 class="index-bottom-date animate-cipher-on-start">SEPTEMBER 2025, ISTANBUL</h2>
-    <div class="index-bottom-wrapper">
-      <a class="animate-cipher animate-cipher-on-start" target="_blank"
-        href="mailto:cryptistanbul@gmail.com">cryptistanbul@gmail.com</a>
-      <h2 class="index-bottom-date-responsive animate-cipher-on-start">SEPTEMBER 2025, ISTANBUL</h2>
-      <div class="index-bottom-links-wrapper-responsive">
-        <a target="_blank" href="https://x.com/cryptistanbul">X</a>
-        <a class="animate-cipher-on-start" target="_blank"
-          href="https://www.youtube.com/playlist?list=PL5c21nTlaW9ODGy_XOOUTFzZZbrlSO2d7">YouTube</a>
+    </section>
+    <section class="mb-16">
+      <div id="community-text" class="
+        flex
+        flex-wrap
+        text-7xl
+        max-md:text-5xl
+        max-sm:text-2xl
+        gap-x-5
+        gap-y-4
+        max-md:gap-y-3
+        max-sm:gap-y-0
+        font-semibold
+        p-12
+        max-sm:p-4
+        max-w-[1600px]
+        select-none
+        bg-clip-text
+        text-transparent
+        bg-white
+        bg-[radial-gradient(circle_300px_at_var(--x)_var(--y),#8DDFFF_0%,#ffffff_80%)]
+        mt-32
+        fade-in-on-scroll
+      ">
+        <script>
+          window.addEventListener('load', () => {
+            document.getElementById('community-text').addEventListener('mousemove', event => {
+              const rect = document.getElementById('community-text').getBoundingClientRect();
+              document.getElementById('community-text').style.setProperty('--x', `${event.clientX - rect.left}px`);
+              document.getElementById('community-text').style.setProperty('--y', `${event.clientY - rect.top}px`);
+            });
+          });
+        </script>
+        <span>THE</span>
+        <span>CRYPTIST</span>
+        <span>COMMUNITY</span>
+        <span>IS</span>
+        <span>COMING</span>
+        <span>TOGETHER</span>
+        <span class="text-[#20FF93]">[:)]</span>
+        <span>ONCE</span>
+        <span>MORE</span>
+        <img src="/text-inline-image.webp" alt="colors" class="w-64 max-md:w-44 max-sm:w-24 h-auto object-cover">
+        <span>TO</span>
+        <span>SET</span>
+        <span>THE</span>
+        <span>NEW</span>
+        <span>BOUNDARY</span>
+        <span>OF</span>
+        <span>MODERN</span>
+        <span>DAY</span>
+        <span>CRYPTOGRAPHY.</span>
       </div>
-    </div>
-</body>
+      <div class="w-full overflow-hidden py-12 fade-in-on-scroll">
+        <div class="flex gap-16 w-fit pl-16 animate-[scroll_80s_linear_infinite] text-nowrap font-[Space_Mono] text-white">
+          {{#each slidingTexts}}
+            <h3>{{this}}</h3>
+          {{/each}}
+          {{#each slidingTexts}}
+            <h3>{{this}}</h3>
+          {{/each}}
+          {{#each slidingTexts}}
+            <h3>{{this}}</h3>
+          {{/each}}
+          {{#each slidingTexts}}
+            <h3>{{this}}</h3>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    <section id="about" class="scroll-m-60">
+      <div class="flex px-12 max-sm:px-4 gap-30 text-[#D9D9D9] my-30 max-lg:flex-col max-lg:gap-12 max-sm:my-12">
+        <div class="flex flex-col gap-8 max-lg:gap-6">
+          <h2 class="text-xl fade-in-on-scroll">THIS ISN'T JUST ANOTHER ZK EVENT.</h2>
+          <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll">Cryptist is where builders, researchers, and curious minds come together to explore real-world applications of zero-knowledge, privacy, and cryptography.<br><br>We bridge academia, protocols, and local talent across Europe and Asia through workshops, technical talks, and networking opportunities.</p>
+          <div class="flex gap-4 fade-in-on-scroll">
+            <a href="/cryptist-2022" class="group flex items-center gap-2">
+              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">CRYPTIST 2022</span>
+              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
+            </a>
+            <a href="/cryptist-2023" class="group flex items-center gap-2">
+              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">2023</span>
+              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+        <video src="https://storage.cryptist.org/cRAAUUV74fa4IYhk.mp4" controls muted playsinline class="
+          aspect-video
+          object-contain
+          w-[45dvw]
+          min-w-[45dvw]
+          h-[calc(45dvw/16*9)]
+          max-lg:w-full
+          max-lg:h-auto
+        ">
+      </div>
+    </section>
+    <section id="old-sponsors" class="flex flex-col mb-32">
+      <h2 class="text-xl px-12 max-sm:px-4 fade-in-on-scroll">2022-2023 Sponsors</h2>
+      <div class="w-full overflow-hidden fade-in-on-scroll">
+        <div class="
+          flex
+          w-fit
+          animate-[scroll_80s_linear_infinite]
+        ">
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    <section id="venue" class="
+      flex
+      flex-col
+      gap-16
+      mb-32
+      scroll-m-40
+    ">
+      <div class="flex flex-col px-12 max-sm:px-4 gap-8">
+        <h2 class="text-xl fade-in-on-scroll">VENUE</h2>
+        <div class="flex gap-8 max-lg:flex-col-reverse text-[#D9D9D9]">
+          <a href="https://ramikutuphanesi.gov.tr/en" class="min-w-2/5 h-auto object-cover max-lg:min-w-full aspect-video fade-in-on-scroll bg-[url(/venue/rami-library.webp)] bg-cover bg-center bg-no-repeat" target="_blank"></a>
+          <div class="flex flex-col gap-8 max-lg:gap-4">
+            <h3 class="text-xl leading-4 max-lg:text-lg fade-in-on-scroll">RAMI LIBRARY</h3>
+            <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll">Located in the heart of old Istanbul, the Rami Library is a one-of-a-kind cultural venue that blends centuries of history with a modern vision for learning and community.<br><br>Originally built as military complex in the 18th century and recently restored, the complex now serves as Türkiye's largest library and one of the largest in Europe.</p>
+            <a class="mt-auto items-center group fade-in-on-scroll" href="https://maps.app.goo.gl/3HRL5gGKpJ53Hh3z6" target="_blank">
+              <span class="text-base font-[Space_Mono] animate-cipher-on-hover max-lg:text-sm">Rami Library, Yeni Rami Mahallesi, Rami Kışla Cd. 98/1, 34055 Eyüpsultan / İstanbul</span>
+              <img class="inline transition-transform duration-300 ease-in-out bg-[url(/arrow-blue.svg)] bg-no-repeat bg-center bg-contain size-4 ml-2 group-hover:translate-x-0.5 max-lg:hidden" src="/arrow-blue.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-8">
+        <h2 class="px-12 max-sm:px-4 text-xl fade-in-on-scroll">OTHER BLOCKCHAIN EVENTS IN RAMI LIBRARY</h2>
+        <div class="flex w-full h-fit gap-5 px-12 max-sm:px-4 overflow-x-auto scrollbar-hidden dragscroll fade-in-on-scroll">
+          {{#each otherEvents}}
+            <a {{#if this.link}}href="{{this.link}}"{{else}}{{/if}} target="_blank" class="flex flex-col gap-3 justify-between p-3 bg-[#343434] w-full min-w-70 max-sm:min-w-64">
+              <h3 class="text-xl max-sm:text-lg">{{this.name}}</h3>
+              <p class="text-sm">{{this.dates}}</p>
+              <p class="text-xs mt-6 max-sm:mt-4 bg-[{{this.typeColor}}] text-black px-2 pt-1 w-fit">{{this.type}}</p>
+            </a>
+          {{/each}}
+        </div>
+      </div>
+      <div class="flex items-center gap-4 px-12 max-sm:px-4 justify-end font-[Space_Mono] fade-in-on-scroll">
+        <a href="https://www.buildersweek.com/#schedule" target="_blank" class="group flex items-center gap-2">
+          <span class="text-xl font-light animate-cipher-on-hover">BUILDERS WEEK SCHEDULE</span>
+          <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
+        </a>
+      </div>
+    </section>
+    <section id="recent-cryptography-sessions" class="scroll-m-20">
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 items-center">
+        <h2 class="text-xl text-white fade-in-on-scroll">RECENT CRYPTOGRAPHY SESSIONS</h2>
+        <p class="text-base font-[Space_Mono] fade-in-on-scroll">Over the past three years, we've hosted regular monthly meetups and launched the Blackboard Cryptography series, an exploration of cryptography and privacy technologies. Held in both Istanbul and Ankara, this series brings together protocol researchers, academics, and applied cryptographers to share knowledge the old-fashioned way: with chalk, a blackboard, and discussion.</p>
+        <div class="flex w-fit justify-center gap-12 text-5xl max-sm:text-4xl max-sm:gap-8 relative mb-[calc(60dvw/16*9+12*var(--spacing))] max-sm:mb-[calc(100dvw/16*9+8*var(--spacing))] fade-in-on-scroll">
+          {{#each recentSessions}}
+            <input
+              type="radio"
+              name="recent-sessions"
+              id="recent-sessions-{{inc @index}}"
+              class="peer/recent-sessions-{{inc @index}} hidden"
+              {{#if @first}}checked{{/if}}
+            />
+            <label
+              for="recent-sessions-{{inc @index}}"
+              class="
+                transition-colors
+                ease-in-out
+                duration-300
+                cursor-pointer
+                text-[#8B8B8B]
+                peer-checked/recent-sessions-{{inc @index}}:text-white
+              "
+            >{{this.label}}</label>
 
+            {{#if this.isIframe}}
+              <iframe
+                src="{{this.src}}"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                class="
+                  aspect-video
+                  w-[60dvw]
+                  min-w-[60dvw]
+                  max-sm:w-[calc(100dvw-8*var(--spacing))]
+                  max-sm:min-w-[calc(100dvw-8*var(--spacing))]
+                  object-cover
+                  peer-checked/recent-sessions-{{inc @index}}:opacity-100
+                  peer-checked/recent-sessions-{{inc @index}}:pointer-events-auto
+                  pointer-events-none
+                  opacity-0
+                  absolute
+                  top-22
+                  max-sm:top-16
+                  transition-opacity
+                  ease-in-out
+                  duration-300
+                "
+              >
+              </iframe>
+            {{else}}
+              <img
+                src="{{this.src}}"
+                alt="{{this.alt}}"
+                class="
+                  aspect-video
+                  w-[60dvw]
+                  min-w-[60dvw]
+                  max-sm:w-[calc(100dvw-8*var(--spacing))]
+                  max-sm:min-w-[calc(100dvw-8*var(--spacing))]
+                  object-cover
+                  peer-checked/recent-sessions-{{inc @index}}:opacity-100
+                  peer-checked/recent-sessions-{{inc @index}}:pointer-events-auto
+                  pointer-events-none
+                  opacity-0
+                  transition-opacity
+                  ease-in-out
+                  duration-300
+                  absolute
+                  top-22
+                  max-sm:top-16
+                "
+              />
+            {{/if}}
+          {{/each}}
+        </div>
+        <div class="flex gap-18 justify-center text-lg font-[Space_Mono] max-sm:gap-8 fade-in-on-scroll">
+          <a class="animate-cipher-on-hover" target="_blank" href="https://lu.ma/modapalas?k=c&period=past">Luma</a>
+          <a class="animate-cipher-on-hover" target="_blank" href="https://drive.google.com/drive/folders/18ARXSvtiIg3-wBNQ48a6UOXsdme4Kk0C?usp=sharing">Gallery</a>
+          <a class="animate-cipher-on-hover" target="_blank" href="https://x.com/modapalas">X</a>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="scroll-m-40">
+      <div class="flex flex-col gap-24 p-12 max-sm:p-4 mt-20 mb-40 max-lg:gap-4 max-sm:mb-20">
+        <h2 class="text-xl fade-in-on-scroll">FAQ</h2>
+        <div class="flex gap-20 w-full relative fade-in-on-scroll">
+          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-0 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
+            {{#each faqs}}
+              <input type="radio" name="faq" id="faq-{{inc @index}}" class="peer/faq-{{inc @index}} hidden" {{#if @first}}checked{{/if}}>
+              <label for="faq-{{inc @index}}" class="max-lg:my-4
+                text-base
+                flex
+                gap-8
+                max-lg:gap-2
+                peer-checked/faq-{{inc @index}}:text-white
+                {{#if @last}}max-lg:peer-checked/faq-3:mb-0 peer-checked/faq-3:mb-50{{/if}}
+                text-[#D9D9D9]
+                cursor-pointer
+                transition-colors,margin
+                duration-300
+                ease-in-out
+                font-[Space_Mono]
+              ">
+                <h3>//{{inc @index}}</h3>
+                <p class="animate-cipher-on-hover">{{this.question}}</p>
+              </label>
+              <div class="
+                max-w-130
+                max-lg:max-w-full
+                max-xl:max-w-78
+                flex
+                flex-col
+                gap-4
+                absolute
+                max-lg:static
+                left-0
+                top-0
+                h-fit
+                pointer-events-none
+                peer-checked/faq-{{inc @index}}:opacity-100
+                peer-checked/faq-{{inc @index}}:pointer-events-auto
+                opacity-0
+                right-[500px]
+                transition-all
+                duration-600
+                ease-in-out
+                max-lg:peer-checked/faq-{{inc @index}}:max-h-120
+                max-lg:max-h-0
+                max-lg:text-[#C9C8C8]
+                overflow-hidden
+              ">
+                <h3 class="text-5xl text-white max-lg:hidden">{{this.question}}</h3>
+                <p class="
+                  text-base
+                  font-[Space_Mono]
+                  max-lg:italic
+                  [&_a]:text-[#ACDAFF]
+                  [&_a]:hover:opacity-80
+                  [&_a]:transition-opacity
+                  [&_a]:duration-300
+                  [&_a]:ease-in-out
+                ">{{{this.answer}}}</p>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </section>
+    {{> switch-context}}
+    <section id="navigation">
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] mb-16 mt-44">
+        <h2 class="text-2xl fade-in-on-scroll">Navigation</h2>
+        <div class="flex gap-11 w-full justify-between text-base max-sm:text-sm fade-in-on-scroll">
+          <div class="flex flex-col gap-5">
+            <a href="#about" class="animate-cipher-on-hover">About</a>
+            <a href="#venue" class="animate-cipher-on-hover">Venue</a>
+            <a href="#faq" class="animate-cipher-on-hover">FAQ</a>
+          </div>
+          <div class="flex flex-col gap-5">
+            <a href="#speakers" class="animate-cipher-on-hover" onclick="document.getElementById('tab-speakers').checked = true">Speakers</a>
+            <a href="#sponsors" class="animate-cipher-on-hover" onclick="document.getElementById('tab-sponsors').checked = true">Sponsors</a>
+            <a href="#partners" class="animate-cipher-on-hover" onclick="document.getElementById('tab-partners').checked = true">Partners</a>
+          </div>
+          <div class="flex flex-col gap-5">
+            <a href="/cryptist-2022" class="animate-cipher-on-hover">Cryptist 2022</a>
+            <a href="/cryptist-2023" class="animate-cipher-on-hover">Cryptist 2023</a>
+            <a href="#recent-cryptography-sessions" class="animate-cipher-on-hover inline">Cryptography Sessions</a>
+          </div>
+          <div class="flex flex-col gap-5 max-md:hidden">
+            <a href="https://x.com/cryptistanbul" target="_blank" class="animate-cipher-on-hover">X</a>
+            <a href="https://t.me/cryptistanbul" target="_blank" class="animate-cipher-on-hover">Telegram</a>
+            <a href="https://www.youtube.com/playlist?list=PL5c21nTlaW9ODGy_XOOUTFzZZbrlSO2d7" target="_blank" class="animate-cipher-on-hover">YouTube</a>
+            <a href="https://www.linkedin.com/company/cryptistanbul" target="_blank" class="animate-cipher-on-hover">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{> footer}}
+    <img id="hover-filter" src="/hover.webp" alt="hover" class="
+      pointer-events-none
+      size-42
+      fixed
+      mix-blend-exclusion
+      opacity-0
+      z-50
+      transition-[opacity,scale]
+      duration-250
+      origin-center
+      portrait:opacity-0!
+    ">
+    <script type="module" src="/src/main.ts"></script>
+    <script defer>
+      // dragscroll.js
+      !(function (e, n) {
+      "function" == typeof define && define.amd? define(["exports"], n): n("undefined" != typeof exports ? exports : (e.dragscroll = {}));
+      })(this, function (e) {
+      var n,t,o = window,l = document,c = "mousemove",r = "mouseup",i = "mousedown",m = "EventListener",d = "add" + m,s = "remove" + m,f = [],u = function (e, m) {for (e = 0; e < f.length; )(m = f[e++]),(m = m.container || m),m[s](i, m.md, 0),o[s](r, m.mu, 0),o[s](c, m.mm, 0);for (f = [].slice.call(l.getElementsByClassName("dragscroll")), e = 0;e < f.length;
+      )!(function (e, m, s, f, u, a) {(a = e.container || e)[d](i,(a.md = function (n) {if (n.button !== 0) {return;}(e.hasAttribute("nochilddrag") &&l.elementFromPoint(n.pageX, n.pageY) != a) ||((f = 1),(m = n.clientX),(s = n.clientY),n.preventDefault());}),0),o[d](r,(a.mu = function () {f = 0;}),0),o[d](c,(a.mm = function (o) {f &&(((u = e.scroller || e).scrollLeft -= n =-m + (m = o.clientX)),(u.scrollTop -= t = -s + (s = o.clientY)),e == l.body &&((u = l.documentElement).scrollLeft -= n),(u.scrollTop -= t));}),0);})(f[e++]);};
+      "complete" == l.readyState ? u() : o[d]("load", u, 0), (e.reset = u);});
+      !(function () {var f = 0,x,y,t = 3;
+      document.addEventListener("mousedown", function (e) {x = e.clientX;y = e.clientY;f = 0;
+      });
+      document.addEventListener("mousemove", function (e) {if (!f &&(Math.abs(e.clientX - x) > t || Math.abs(e.clientY - y) > t))f = 1;
+      });
+      document.addEventListener("click",function (e) {if (f && e.target.tagName === "A") {e.preventDefault();e.stopPropagation();}},1
+      );
+      })();
+    </script>
+  </body>
 </html>

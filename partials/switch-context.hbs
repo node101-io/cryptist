@@ -1,0 +1,263 @@
+<input type="radio" name="tab-group" id="tab-speakers" class="hidden peer/speakers" checked="true" />
+<input type="radio" name="tab-group" id="tab-partners" class="hidden peer/partners" />
+<input type="radio" name="tab-group" id="tab-sponsors" class="hidden peer/sponsors" />
+{{#if switchContext.gallery}}
+  <input type="radio" name="tab-group" id="tab-gallery" class="hidden peer/gallery" />
+{{/if}}
+<div class="
+  group flex gap-2 w-full justify-between p-12 max-sm:p-4 text-xl max-sm:hidden
+  peer-checked/speakers:[&_label[for=tab-speakers]]:text-[#ABDAFF]
+  peer-checked/speakers:[&_label[for=tab-speakers]]:pointer-events-none
+  peer-checked/partners:[&_label[for=tab-partners]]:text-[#ABDAFF]
+  peer-checked/partners:[&_label[for=tab-partners]]:pointer-events-none
+  peer-checked/sponsors:[&_label[for=tab-sponsors]]:text-[#ABDAFF]
+  peer-checked/sponsors:[&_label[for=tab-sponsors]]:pointer-events-none
+  {{#if switchContext.gallery}}
+  peer-checked/gallery:[&_label[for=tab-gallery]]:text-[#ABDAFF]
+  peer-checked/gallery:[&_label[for=tab-gallery]]:pointer-events-none
+  {{/if}}
+  font-[Space_Mono]
+  fade-in-on-scroll
+">
+  <label class="cursor-pointer" for="tab-speakers">
+    <span class="animate-cipher-on-hover">SPEAKERS</span>
+  </label>
+  <label class="cursor-pointer" for="tab-partners">
+    <span class="animate-cipher-on-hover">PARTNERS</span>
+  </label>
+  <label class="cursor-pointer" for="tab-sponsors">
+    <span class="animate-cipher-on-hover">SPONSORS</span>
+  </label>
+  {{#if switchContext.gallery}}
+    <label class="cursor-pointer" for="tab-gallery">
+      <span class="animate-cipher-on-hover">GALLERY</span>
+    </label>
+  {{/if}}
+</div>
+<h2 class="text-2xl max-sm:block hidden p-4">SPEAKERS</h2>
+<section id="speakers" class="
+  grid-cols-5
+  max-xl:grid-cols-4
+  max-lg:grid-cols-3
+  gap-x-5
+  gap-y-18
+  p-12
+  max-sm:p-4
+  max-sm:gap-x-[6px]
+  max-sm:gap-y-12
+  font-[Space_Mono]
+  hidden
+  scroll-m-60
+  fade-in-on-scroll
+  {{#if switchContext.speakers}}
+    peer-checked/speakers:grid
+    max-sm:grid
+  {{else}}
+    peer-checked/speakers:flex!
+    max-sm:flex!
+  {{/if}}
+">
+  {{#if switchContext.speakers}}
+  {{#each switchContext.speakers as |speaker|}}
+    <div class="flex flex-col gap-2 max-sm:gap-1 text-end">
+      <h3 class="
+        text-base
+        max-md:text-sm
+        max-sm:text-[10px]
+      ">{{speaker.name}}</h3>
+      <h4 class="
+        text-sm
+        max-md:text-xs
+        max-sm:text-[10px]
+      ">{{speaker.company}}</h4>
+      <img class="mt-2 grayscale" src="{{speaker.image}}" alt="{{speaker.name}}" />
+    </div>
+    {{/each}}
+  {{else}}
+    <div class="flex flex-col gap-13 max-sm:gap-1 {{#if switchContext.speakers}}text-nowrap{{else}}{{/if}} w-full text-[#D9D9D9]">
+      <h1 class="text-5xl max-sm:text-3xl">TO BE ANNOUNCED.</h1>
+      <p class="">Are you interested in speaking? <a href="https://form.cryptist.org" class="animate-cipher-on-hover text-[#ABDAFF]">Apply here.</a></p>
+    </div>
+  {{/if}}
+</section>
+<h2 class="text-2xl max-sm:block hidden p-4">PARTNERS</h2>
+<section id="partners" class="
+  grid-cols-5
+  max-xl:grid-cols-4
+  max-lg:grid-cols-3
+  gap-5
+  p-12
+  max-sm:p-4
+  font-[Space_Mono]
+  hidden
+  max-sm:gap-[6px]
+  scroll-m-60
+  fade-in-on-scroll
+  {{#if switchContext.partners}}
+    peer-checked/partners:grid
+    max-sm:grid
+  {{else}}
+    peer-checked/partners:flex!
+    max-sm:flex!
+  {{/if}}
+">
+  {{#if switchContext.partners}}
+    {{#each switchContext.partners as |partner|}}
+      <div class="bg-[#404040]">
+        <a href="{{partner.website}}" target="_blank">
+          <img class="" src="/partners/{{partner.name}}.webp" />
+        </a>
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="flex flex-col gap-13 max-sm:gap-1 {{#if switchContext.partners}}text-nowrap{{else}}{{/if}} w-full text-[#D9D9D9]">
+      <h1 class="text-5xl max-sm:text-3xl">TO BE ANNOUNCED.</h1>
+      <p class="">Want to partner with us? Join our <a href="https://t.me/cryptistanbul" class="animate-cipher-on-hover text-[#ABDAFF]">Telegram group</a> to reach us easily.</p>
+    </div>
+  {{/if}}
+</section>
+<h2 class="text-2xl max-sm:block hidden p-4">SPONSORS</h2>
+<section id="sponsors" class="
+  grid-cols-5
+  max-xl:grid-cols-4
+  max-lg:grid-cols-3
+  gap-5
+  p-12
+  max-sm:p-4
+  font-[Space_Mono]
+  hidden
+  max-sm:gap-[6px]
+  scroll-m-60
+  fade-in-on-scroll
+  {{#if switchContext.sponsors}}
+    peer-checked/sponsors:grid
+    max-sm:grid
+  {{else}}
+    peer-checked/sponsors:flex!
+    max-sm:flex!
+  {{/if}}
+">
+  {{#if switchContext.sponsors}}
+    {{#each switchContext.sponsors as |sponsor|}}
+      <div class="bg-[#404040]">
+        <a href="{{sponsor.website}}" target="_blank">
+          <img class="" src="/sponsors/{{sponsor.name}}.webp" />
+        </a>
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="flex flex-col gap-13 max-sm:gap-1 {{#if switchContext.sponsors}}text-nowrap{{else}}{{/if}} w-full text-[#D9D9D9]">
+      <h1 class="text-5xl max-sm:text-3xl">TO BE ANNOUNCED.</h1>
+      <p class="">Considering sponsoring? DM <a href="https://t.me/ygurlek" class="animate-cipher-on-hover text-[#ABDAFF]">@ygurlek</a> or <a href="https://t.me/gergin_101" class="animate-cipher-on-hover text-[#ABDAFF]">@gergin_101</a> on Telegram for faster communication.</p>
+    </div>
+  {{/if}}
+</section>
+{{#if switchContext.gallery}}
+  <h2 class="text-2xl max-sm:block hidden p-4">GALLERY</h2>
+  <section id="gallery" class="
+    peer-checked/gallery:grid
+    grid-cols-5
+    max-xl:grid-cols-4
+    max-lg:grid-cols-3
+    gap-5
+    p-12
+    max-sm:p-4
+    font-[Space_Mono]
+    hidden
+    max-sm:grid
+    max-sm:gap-[6px]
+    fade-in-on-scroll
+  ">
+    {{#each switchContext.gallery as |image_index|}}
+      <div class="relative cursor-pointer group">
+        <img class="
+          aspect-square
+          object-cover
+        " src="/gallery/{{../path}}/{{image_index}}.webp" />
+        <a
+          class="
+            size-5
+            absolute
+            top-2
+            right-2
+            opacity-0
+            group-hover:opacity-100
+            transition-opacity
+            duration-300
+            bg-center
+            bg-no-repeat
+            bg-contain
+            bg-[url(/download.svg)]
+            portrait:hidden
+          "
+          href="/gallery/{{../path}}/{{image_index}}.webp"
+          download="{{image_index}}.webp"
+        >
+        </a>
+      </div>
+    {{/each}}
+    <div
+      id="gallery-viewer"
+      class="
+        fixed
+        top-0
+        left-0
+        bottom-0
+        right-0
+        w-full
+        h-full
+        bg-black/50
+        z-50
+        flex
+        justify-center
+        items-center
+        opacity-0
+        transition-opacity
+        duration-300
+        pointer-events-none
+      "
+      onclick="
+        const viewer = document.getElementById('gallery-viewer');
+        viewer.classList.add('opacity-0', 'pointer-events-none');
+      "
+    >
+    <div class="relative">
+      <img class="max-w-[90vw] max-h-[90vh] object-contain m-auto" src="" alt="Gallery" />
+      <a
+        class="
+          size-7
+          absolute
+          top-4
+          right-4
+          bg-center
+          bg-no-repeat
+          bg-contain
+          bg-[url(/download.svg)]
+        "
+        href=""
+        download=""
+      >
+      </a>
+    </div>
+  </section>
+  <script defer>
+    window.addEventListener('load', () => {
+      const viewer = document.getElementById('gallery-viewer');
+
+      document.getElementById('gallery').addEventListener('click', event => {
+        const target = event.target;
+        if (target.tagName !== 'IMG') return;
+
+        viewer.querySelector('img').src = target.src;
+        viewer.querySelector('a').href = target.src;
+        viewer.querySelector('a').download = target.src.split('/').pop();
+        viewer.classList.remove('opacity-0', 'pointer-events-none');
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape')
+          viewer.classList.add('opacity-0', 'pointer-events-none');
+      });
+    });
+  </script>
+{{/if}}

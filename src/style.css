@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@source inline("{peer/faq-{1..10}}");
+@source inline("{peer-checked/faq-{1..10}:text-white}");
+@source inline("{peer-checked/faq-{1..10}:opacity-100}");
+@source inline("{max-lg:peer-checked/faq-{1..10}:max-h-120}");
+@source inline("{peer-checked/faq-{1..10}:pointer-events-auto}");
+@source inline("{peer/recent-sessions-{1..5}}");
+@source inline("{peer-checked/recent-sessions-{1..5}:text-white}");
+@source inline("{peer-checked/recent-sessions-{1..5}:opacity-100}");
+@source inline("{peer-checked/recent-sessions-{1..5}:pointer-events-auto}");
+@source inline("{bg-[#ACDAFF],bg-[#FFF3A4],bg-[#90FFC9]}");
+
+:root {
+  font-family: "Geomisans", sans-serif;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #11191d;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Geomisans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/Geomisans.ttf") format("truetype");
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s;
+  will-change: opacity, transform;
+}
+
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
