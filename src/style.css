@@ -3,7 +3,7 @@
 @source inline("{peer/faq-{1..10}}");
 @source inline("{peer-checked/faq-{1..10}:text-white}");
 @source inline("{peer-checked/faq-{1..10}:opacity-100}");
-@source inline("{max-lg:peer-checked/faq-{1..10}:max-h-75}");
+@source inline("{max-lg:peer-checked/faq-{1..10}:max-h-120}");
 @source inline("{peer-checked/faq-{1..10}:pointer-events-auto}");
 @source inline("{peer/recent-sessions-{1..5}}");
 @source inline("{peer-checked/recent-sessions-{1..5}:text-white}");

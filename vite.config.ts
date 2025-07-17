@@ -58,11 +58,10 @@ const pageData = {
       },
       {
         question: "I'm new to cryptography. Can I still join?",
-        answer: `Absolutely! Cryptist is open to everyone from complete beginners to experienced researchers.
-
-Whether you're just starting to explore cryptography, zero-knowledge or privacy technologies in general, or already deep into them, you’ll find talks, workshops, and people that match your curiosity.
-
-All you need is an interest and a willingness to learn.
+        answer: `
+          Cryptist is a technically-focused event, best suited for those with at least a basic understanding of cryptography, zero-knowledge, or related privacy technologies.<br><br>
+          If you're early in your journey but already exploring the space (through study, research, or hands-on experimentation) you will likely find sessions that resonate with you.<br><br>
+          It's not an entry-level conference, but a great place to deepen your learning and connect with others who are actively building and researching.
 `,
       },
       // {
@@ -93,20 +92,26 @@ All you need is an interest and a willingness to learn.
       },
       {
         label: "II",
-        isIframe: true,
-        src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        isIframe: false,
+        src: "/recent-sessions/2.webp",
+        // isIframe: true,
+        // src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
         alt: "recent cryptography sessions 2",
       },
       {
         label: "III",
-        isIframe: true,
-        src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        isIframe: false,
+        src: "/recent-sessions/3.webp",
+        // isIframe: true,
+        // src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
         alt: "recent cryptography sessions 3",
       },
       {
         label: "IV",
-        isIframe: true,
-        src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
+        isIframe: false,
+        src: "/recent-sessions/4.webp",
+        // isIframe: true,
+        // src: "https://www.youtube-nocookie.com/embed/y3M0KictJwI?rel=0&modestbranding=1&controls=1&showinfo=0",
         alt: "recent cryptography sessions 4",
       },
       {
