@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
     autoStart = false,
     enableHover = true,
   ) => {
-    let interval: number = 0;
+    let interval: NodeJS.Timeout | null = null;
     let deciphering = false;
     let elapsedTime = 0;
     let originalText = "";
@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
 
     const resetAnimation = () => {
       if (interval) clearInterval(interval);
-      interval = 0;
+      interval = null;
       element.textContent = originalText;
       element.dataset.animating = "false";
       cipheredIndices.clear();

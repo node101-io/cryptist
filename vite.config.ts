@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 import tailwindcss from "@tailwindcss/vite";
+import { loadSpeakers, convertSpeakersForConfig } from "./src/data/speakers-loader.js";
 
 const pageData = {
   "/index.html": {
@@ -44,7 +45,6 @@ const pageData = {
         // link: ''
       },
     ],
-    // faqs: Array.from({ length: 6 }, () => 'What is Cryptist?'),
     faqs: [
       {
         question: "What is Cryptist?",
@@ -155,6 +155,9 @@ const pageData = {
         alt: "zksync",
       },
     ],
+    switchContext: {
+      speakers: convertSpeakersForConfig(loadSpeakers()),
+    }
   },
   "/cryptist-2022.html": {
     title: "Cryptist I",
