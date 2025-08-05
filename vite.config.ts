@@ -157,6 +157,12 @@ const pageData = {
     ],
     switchContext: {
       speakers: convertSpeakersForConfig(loadSpeakers()),
+      // partners: [
+      //   {
+      //     name: "coinzonia",
+      //     website: "https://www.coinzonia.com/",
+      //   },
+      // ],
     }
   },
   "/cryptist-2022.html": {
