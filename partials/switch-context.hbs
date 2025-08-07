@@ -5,18 +5,21 @@
   <input type="radio" name="tab-group" id="tab-gallery" class="hidden peer/gallery" />
 {{/if}}
 <div class="
+  sticky
+  top-24
+  z-10
   group flex gap-2 w-full justify-between my-12 max-sm:p-4 text-xl max-sm:hidden bg-[#E3F4FE] text-[#11191D]
-  peer-checked/speakers:[&_label[for=tab-speakers]]:bg-[#121212]
+  peer-checked/speakers:[&_label[for=tab-speakers]]:bg-[#11191D]
   peer-checked/speakers:[&_label[for=tab-speakers]]:text-[#E3F4FE]
   peer-checked/speakers:[&_label[for=tab-speakers]]:pointer-events-none
-  peer-checked/partners:[&_label[for=tab-partners]]:bg-[#121212]
+  peer-checked/partners:[&_label[for=tab-partners]]:bg-[#11191D]
   peer-checked/partners:[&_label[for=tab-partners]]:text-[#E3F4FE]
   peer-checked/partners:[&_label[for=tab-partners]]:pointer-events-none
-  peer-checked/sponsors:[&_label[for=tab-sponsors]]:bg-[#121212]
+  peer-checked/sponsors:[&_label[for=tab-sponsors]]:bg-[#11191D]
   peer-checked/sponsors:[&_label[for=tab-sponsors]]:text-[#E3F4FE]
   peer-checked/sponsors:[&_label[for=tab-sponsors]]:pointer-events-none
   {{#if switchContext.gallery}}
-  peer-checked/gallery:[&_label[for=tab-gallery]]:bg-[#121212]
+  peer-checked/gallery:[&_label[for=tab-gallery]]:bg-[#11191D]
   peer-checked/gallery:[&_label[for=tab-gallery]]:text-[#E3F4FE]
   peer-checked/gallery:[&_label[for=tab-gallery]]:pointer-events-none
   {{/if}}
@@ -26,11 +29,11 @@
   <label class="cursor-pointer px-12 max-sm:px-4 py-2 transition-colors duration-300" for="tab-speakers">
     <span class="animate-cipher-on-hover">SPEAKERS</span>
   </label>
-  <label class="cursor-pointer px-12 max-sm:px-4 py-2 transition-colors duration-300" for="tab-partners">
-    <span class="animate-cipher-on-hover">PARTNERS</span>
-  </label>
   <label class="cursor-pointer px-12 max-sm:px-4 py-2 transition-colors duration-300" for="tab-sponsors">
     <span class="animate-cipher-on-hover">SPONSORS</span>
+  </label>
+  <label class="cursor-pointer px-12 max-sm:px-4 py-2 transition-colors duration-300" for="tab-partners">
+    <span class="animate-cipher-on-hover">PARTNERS</span>
   </label>
   {{#if switchContext.gallery}}
     <label class="cursor-pointer px-12 max-sm:px-4 py-2 transition-colors duration-300" for="tab-gallery">
@@ -40,7 +43,7 @@
 </div>
 <h2 class="text-[96px] leading-none pb-0 max-sm:text-2xl peer-checked/speakers:block max-sm:block! hidden p-12 max-sm:p-4 fade-in-on-scroll">SPEAKERS</h2>
 {{#if switchContext.speakers}}
-  <p class="peer-checked/speakers:block max-sm:block! hidden cursor-default px-12 max-sm:px-4 py-4 fade-in-on-scroll text-xl max-sm:text-base">Are you interested in speaking? <a href="https://form.cryptist.org" class="animate-cipher-on-hover text-[#ABDAFF]">Apply here.</a></p>
+  <p class="peer-checked/speakers:block max-sm:block! hidden cursor-default px-12 max-sm:px-4 py-4 fade-in-on-scroll text-xl max-sm:text-base font-[Space_Mono]">Are you interested in speaking? <a href="https://form.cryptist.org" class="animate-cipher-on-hover text-[#ABDAFF]">Apply here.</a></p>
 {{/if}}
 <section id="speakers" class="
   grid-cols-6
@@ -94,7 +97,7 @@
 </section>
 <h2 class="text-[96px] leading-none pb-0 max-sm:text-2xl peer-checked/partners:block max-sm:block! hidden p-12 max-sm:p-4 fade-in-on-scroll">PARTNERS</h2>
 {{#if switchContext.partners}}
-  <p class="peer-checked/partners:block max-sm:block! hidden cursor-default px-12 max-sm:px-4 py-4 fade-in-on-scroll text-xl max-sm:text-base">Want to partner with us? Join our <a href="https://t.me/cryptistanbul" class="animate-cipher-on-hover text-[#ABDAFF]">Telegram group</a> to reach us easily.</p>
+  <p class="peer-checked/partners:block max-sm:block! hidden cursor-default px-12 max-sm:px-4 py-4 fade-in-on-scroll text-xl max-sm:text-base font-[Space_Mono]">Want to partner with us? Join our <a href="https://t.me/cryptistanbul" class="animate-cipher-on-hover text-[#ABDAFF]">Telegram group</a> to reach us easily.</p>
 {{/if}}
 <section id="partners" class="
   grid-cols-6
@@ -134,7 +137,7 @@
 </section>
 <h2 class="text-[96px] leading-none pb-0 max-sm:text-2xl peer-checked/sponsors:block max-sm:block! hidden p-12 max-sm:p-4 fade-in-on-scroll">SPONSORS</h2>
 {{#if switchContext.sponsors}}
-  <p class="peer-checked/sponsors:block max-sm:block! hidden cursor-default px-12 max-sm:px-4 py-4 fade-in-on-scroll text-xl max-sm:text-base">Considering sponsoring? DM <a href="https://t.me/ygurlek" class="animate-cipher-on-hover text-[#ABDAFF]">@ygurlek</a> or <a href="https://t.me/gergin_101" class="animate-cipher-on-hover text-[#ABDAFF]">@gergin_101</a> on Telegram for faster communication.</p>
+  <p class="peer-checked/sponsors:block max-sm:block! hidden cursor-default px-12 max-sm:px-4 py-4 fade-in-on-scroll text-xl max-sm:text-base font-[Space_Mono]">Considering sponsoring? DM <a href="https://t.me/ygurlek" class="animate-cipher-on-hover text-[#ABDAFF]">@ygurlek</a> or <a href="https://t.me/gergin_101" class="animate-cipher-on-hover text-[#ABDAFF]">@gergin_101</a> on Telegram for faster communication.</p>
 {{/if}}
 <section id="sponsors" class="
   grid-cols-6
