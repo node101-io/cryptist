@@ -7,8 +7,7 @@ interface Speaker {
   image: string;
   type: "Speakers";
   presentationTitle?: string;
-  twitter?: string;
-  linkedin?: string;
+  url?: string;
 }
 
 interface SpeakersApiResponse {
@@ -19,15 +18,15 @@ interface SpeakersApiResponse {
 export function loadSpeakers(): Speaker[] {
   try {
     const speakersPath = path.join(process.cwd(), 'src', 'data', 'speakers.json');
-    
+
     if (!fs.existsSync(speakersPath)) {
       console.warn('⚠️  speakers.json not found, using empty array');
       return [];
     }
-    
+
     const data = fs.readFileSync(speakersPath, 'utf-8');
     const speakersData: SpeakersApiResponse = JSON.parse(data);
-    
+
     console.log(`✅ Loaded ${speakersData.speakers.length} speakers from JSON`);
     return speakersData.speakers;
   } catch (error) {
@@ -41,5 +40,6 @@ export function convertSpeakersForConfig(speakers: Speaker[]) {
     name: speaker.name,
     company: speaker.company,
     image: speaker.image,
+    url: speaker.url,
   }));
-} 
+}

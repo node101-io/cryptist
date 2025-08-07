@@ -1,4 +1,40 @@
 {
-  "speakers": [],
-  "lastUpdated": "2025-08-05T08:23:00.203Z"
+  "speakers": [
+    {
+      "name": "Abdullah Talayhan",
+      "company": "‎",
+      "image": "/speakers/abdullah.webp",
+      "type": "Speakers",
+      "url": "https://x.com/talayhan_a"
+    },
+    {
+      "name": "Furkan Boyraz",
+      "company": "Ava Labs",
+      "image": "/speakers/furkan.webp",
+      "type": "Speakers",
+      "url": "http://x.com/furkanrypt"
+    },
+    {
+      "name": "Hunter Beast",
+      "company": "Anduro / BIP360 Author",
+      "image": "/speakers/hunter.webp",
+      "type": "Speakers",
+      "url": "https://x.com/cryptoquick"
+    },
+    {
+      "name": "Robin Linus",
+      "company": "ZeroSync / Stanford",
+      "image": "/speakers/robin.webp",
+      "type": "Speakers",
+      "url": "https://x.com/robin_linus"
+    },
+    {
+      "name": "Dan Mills",
+      "company": "Avail",
+      "image": "/speakers/dan.webp",
+      "type": "Speakers",
+      "url": "https://x.com/thunder"
+    }
+  ],
+  "lastUpdated": "2025-08-07T13:12:50.147Z"
 }
