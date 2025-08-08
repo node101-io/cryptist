@@ -163,6 +163,24 @@ const pageData = {
           website: "https://www.coinzonia.com/",
         },
       ],
+      sponsors: [
+        {
+          name: "base",
+          website: "https://www.base.org/",
+        },
+        {
+          name: "avalanche",
+          website: "https://www.avax.network/",
+        },
+        {
+          name: "paribu-ventures-white",
+          website: "https://ventures.paribu.com/",
+        },
+        {
+          name: "rise",
+          website: "https://risechain.com/",
+        },
+      ],
     }
   },
   "/cryptist-2022.html": {

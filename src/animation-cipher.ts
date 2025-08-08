@@ -29,9 +29,22 @@ window.addEventListener("load", () => {
     let cipheredIndices = new Set<number>();
     let availableIndices: number[] = [];
     let activeChars: string[] = [];
+    // Track pointer state to work around Safari bug that cancels clicks when
+    // the target element's text changes between pointerdown and pointerup.
+    let pointerDown = false;
+
+    element.addEventListener("pointerdown", () => {
+      pointerDown = true;
+    });
+    element.addEventListener("pointerup", () => {
+      pointerDown = false;
+    });
+    element.addEventListener("pointercancel", () => {
+      pointerDown = false;
+    });
 
     const updateText = () => {
-      if (!originalArray.length) return;
+      if (!originalArray.length || pointerDown) return;
 
       const resultArray = [...originalArray];
       cipheredIndices.forEach((index) => {
