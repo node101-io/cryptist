@@ -23,18 +23,32 @@
     },
     {
       "name": "Robin Linus",
-      "company": "ZeroSync / Stanford",
+      "company": "ZeroSync / Stanford ",
       "image": "/speakers/robin.webp",
       "type": "Speakers",
       "url": "https://x.com/robin_linus"
     },
     {
-      "name": "Dan Mills",
-      "company": "Avail",
-      "image": "/speakers/dan.webp",
+      "name": "Toghrul Maharramov",
+      "company": "Fluent",
+      "image": "/speakers/toghrul.webp",
       "type": "Speakers",
-      "url": "https://x.com/thunder"
+      "url": "https://x.com/toghrulmaharram"
+    },
+    {
+      "name": "David TSE",
+      "company": "Babylon /  Co-founder",
+      "image": "/speakers/david.webp",
+      "type": "Speakers",
+      "url": "https://x.com/dntse?s=11&t=_622jfOfGQKD0pLPsXnjKg"
+    },
+    {
+      "name": "Alp Bassa",
+      "company": "Veridise",
+      "image": "/speakers/alp.webp",
+      "type": "Speakers",
+      "url": "https://www.linkedin.com/in/alp-bassa-8b655420/"
     }
   ],
-  "lastUpdated": "2025-08-07T13:12:50.147Z"
+  "lastUpdated": "2025-08-09T10:35:25.780Z"
 }
