@@ -67,7 +67,7 @@
         <span>DAY</span>
         <span>CRYPTOGRAPHY.</span>
       </div>
-      <div class="w-full overflow-hidden py-12 fade-in-on-scroll">
+      <div class="w-full overflow-hidden pt-12 pb-36 fade-in-on-scroll">
         <div class="flex gap-16 w-fit pl-16 animate-[scroll_80s_linear_infinite] text-nowrap font-[Space_Mono] text-white cursor-default">
           {{#each slidingTexts}}
             <h3>{{this}}</h3>
@@ -84,64 +84,16 @@
         </div>
       </div>
     </section>
-    <section id="about" class="scroll-m-60">
-      <div class="flex px-12 max-sm:px-4 gap-30 text-[#D9D9D9] my-30 max-lg:flex-col max-lg:gap-12 max-sm:my-12">
-        <div class="flex flex-col gap-8 max-lg:gap-6">
-          <h2 class="text-xl fade-in-on-scroll cursor-default">THIS ISN'T JUST ANOTHER ZK EVENT.</h2>
-          <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll cursor-default">Cryptist is where builders, researchers, and curious minds come together to explore real-world applications of zero-knowledge, privacy, and cryptography.<br><br>We bridge academia, protocols, and local talent across Europe and Asia through workshops, technical talks, and networking opportunities.</p>
-          <div class="flex gap-4 fade-in-on-scroll">
-            <a href="/cryptist-2022" class="group flex items-center gap-2">
-              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">CRYPTIST 2022</span>
-              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
-            </a>
-            <a href="/cryptist-2023" class="group flex items-center gap-2">
-              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">2023</span>
-              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
-            </a>
-          </div>
-        </div>
-        <video src="https://storage.cryptist.org/cRAAUUV74fa4IYhk.mp4" controls muted playsinline class="
-          aspect-video
-          object-contain
-          w-[45dvw]
-          min-w-[45dvw]
-          h-[calc(45dvw/16*9)]
-          max-lg:w-full
-          max-lg:h-auto
-        ">
-      </div>
-    </section>
-    <section id="old-sponsors" class="flex flex-col mb-32">
-      <h2 class="text-xl px-12 max-sm:px-4 fade-in-on-scroll cursor-default">2022-2023 Sponsors</h2>
-      <div class="w-full overflow-hidden fade-in-on-scroll">
-        <div class="
-          flex
-          w-fit
-          animate-[scroll_80s_linear_infinite]
-        ">
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-        </div>
-      </div>
-    </section>
+    {{> switch-context}}
     <section id="venue" class="
       flex
       flex-col
       gap-16
-      mb-32
+      pb-32
       scroll-m-40
+      bg-[#11191D] z-20 relative
     ">
-      <div class="flex flex-col px-12 max-sm:px-4 gap-8">
+      <div class="flex flex-col px-12 pt-40 max-sm:px-4 gap-8">
         <h2 class="text-xl fade-in-on-scroll cursor-default">VENUE</h2>
         <div class="flex gap-8 max-lg:flex-col-reverse text-[#D9D9D9]">
           <a href="https://ramikutuphanesi.gov.tr/en" class="min-w-2/5 h-auto object-cover max-lg:min-w-full aspect-video fade-in-on-scroll bg-[url(/venue/rami-library.webp)] bg-cover bg-center bg-no-repeat" target="_blank"></a>
@@ -155,12 +107,12 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-8 mt-10">
         <h2 class="px-12 max-sm:px-4 text-xl fade-in-on-scroll cursor-default">OTHER BLOCKCHAIN EVENTS IN RAMI LIBRARY</h2>
         <div class="flex w-full h-fit gap-5 px-12 max-sm:px-4 overflow-x-auto scrollbar-hidden dragscroll fade-in-on-scroll">
           {{#each otherEvents}}
-            <a {{#if this.link}}href="{{this.link}}"{{else}}{{/if}} target="_blank" class="flex flex-col gap-3 justify-between p-3 bg-[#343434] w-full min-w-70 max-sm:min-w-64">
-              <h3 class="text-xl max-sm:text-lg">{{this.name}}</h3>
+            <a {{#if this.link}}href="{{this.link}}"{{else}}{{/if}} target="_blank" class="flex flex-col gap-3 justify-between p-3 bg-[#343434] w-full min-w-74 max-sm:min-w-64">
+              <h3 class="text-xl max-sm:text-lg font-[Space_Mono]">{{this.name}}</h3>
               <p class="text-sm">{{this.dates}}</p>
               <p class="text-xs mt-6 max-sm:mt-4 bg-[{{this.typeColor}}] text-black px-2 pt-1 w-fit">{{this.type}}</p>
             </a>
@@ -174,7 +126,7 @@
         </a>
       </div>
     </section>
-    <section id="recent-cryptography-sessions" class="scroll-m-20">
+    <section id="recent-cryptography-sessions" class="scroll-m-20 bg-[#11191D] z-20 relative">
       <div class="flex flex-col gap-8 p-12 max-sm:p-4 items-center">
         <h2 class="text-xl text-white fade-in-on-scroll cursor-default">RECENT CRYPTOGRAPHY SESSIONS</h2>
         <p class="text-base font-[Space_Mono] fade-in-on-scroll cursor-default">Over the past three years, we've hosted regular monthly meetups and launched the Blackboard Cryptography series, an exploration of cryptography and privacy technologies. Held in both Istanbul and Ankara, this series brings together protocol researchers, academics, and applied cryptographers to share knowledge the old-fashioned way: with chalk, a blackboard, and discussion.</p>
@@ -258,8 +210,8 @@
         </div>
       </div>
     </section>
-    <section id="faq" class="scroll-m-40">
-      <div class="flex flex-col gap-24 p-12 max-sm:p-4 mt-20 mb-60 max-lg:gap-4 max-sm:mb-20">
+    <section id="faq" class="scroll-m-40 bg-[#11191D] z-20 relative">
+      <div class="flex flex-col gap-24 px-12 max-sm:px-4 pt-20 pb-80 max-lg:gap-4 max-sm:pb-20">
         <h2 class="text-xl fade-in-on-scroll cursor-default">FAQ</h2>
         <div class="flex gap-20 w-full relative fade-in-on-scroll">
           <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-0 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
@@ -325,9 +277,59 @@
         </div>
       </div>
     </section>
-    {{> switch-context}}
-    <section id="navigation">
-      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] pb-16 pt-44 bg-[#11191D] z-20 relative">
+    <section id="about" class="scroll-m-60 bg-[#11191D] z-20 relative pt-20">
+      <h1 class="text-[96px] leading-none pb-0 max-sm:text-3xl p-12 max-sm:p-4 fade-in-on-scroll">PAST EVENTS</h1>
+      <div class="flex px-12 max-sm:px-4 gap-30 text-[#D9D9D9] py-30 max-sm:py-12 max-lg:flex-col max-lg:gap-12">
+        <div class="flex flex-col gap-8 max-lg:gap-6">
+          <h2 class="text-xl fade-in-on-scroll cursor-default">THIS ISN'T JUST ANOTHER ZK EVENT.</h2>
+          <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll cursor-default">Cryptist is where builders, researchers, and curious minds come together to explore real-world applications of zero-knowledge, privacy, and cryptography.<br><br>We bridge academia, protocols, and local talent across Europe and Asia through workshops, technical talks, and networking opportunities.</p>
+          <div class="flex gap-4 fade-in-on-scroll">
+            <a href="/cryptist-2022" class="group flex items-center gap-2">
+              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">CRYPTIST 2022</span>
+              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
+            </a>
+            <a href="/cryptist-2023" class="group flex items-center gap-2">
+              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">2023</span>
+              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
+            </a>
+          </div>
+        </div>
+        <video src="https://storage.cryptist.org/cRAAUUV74fa4IYhk.mp4" controls muted playsinline class="
+          aspect-video
+          object-contain
+          w-[45dvw]
+          min-w-[45dvw]
+          h-[calc(45dvw/16*9)]
+          max-lg:w-full
+          max-lg:h-auto
+        ">
+      </div>
+    </section>
+    <section id="old-sponsors" class="flex flex-col pb-32 bg-[#11191D] z-20 relative">
+      <h2 class="text-xl px-12 max-sm:px-4 fade-in-on-scroll cursor-default">2022-2023 Sponsors</h2>
+      <div class="w-full overflow-hidden fade-in-on-scroll">
+        <div class="
+          flex
+          w-fit
+          animate-[scroll_80s_linear_infinite]
+        ">
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+          {{#each oldSponsors}}
+            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    <section id="navigation" class="pb-16">
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] pt-44 bg-[#11191D] z-20 relative">
         <h2 class="text-2xl fade-in-on-scroll cursor-default">Navigation</h2>
         <div class="flex gap-11 w-full justify-between text-base max-sm:text-sm fade-in-on-scroll cursor-default">
           <div class="flex flex-col gap-5">

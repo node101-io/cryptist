@@ -18,6 +18,13 @@ const pageData = {
     ],
     otherEvents: [
       {
+        name: "CRYPTANKARA",
+        dates: "September 4, 2025",
+        type: "CRYPTOGRAPHY WORKSHOP",
+        typeColor: "#90FFC9",
+        // link: ''
+      },
+      {
         name: "ETHISTANBUL CONFERENCE",
         dates: "September 5-6-7, 2025",
         type: "CONFERENCE",
@@ -31,18 +38,12 @@ const pageData = {
         typeColor: "#FFF3A4",
         link: "https://ethistanbul.io/",
       },
-      // {
-      //   name: "CIPHER DAY",
-      //   dates: "September 4, 2025",
-      //   type: "INTERACTIVE WORKSHOP",
-      //   // link: ''
-      // },
       {
-        name: "TEDX",
-        dates: "TBA",
-        type: "CONFERENCE",
+        name: "TÜBİTAK BİLGEM DAY",
+        dates: "September 5, 2025",
+        type: "CRYPTOGRAPHY WORKSHOP",
         typeColor: "#90FFC9",
-        // link: ''
+        link: "https://lu.ma/yhv362ie"
       },
     ],
     faqs: [
@@ -173,8 +174,8 @@ const pageData = {
           website: "https://www.avax.network/",
         },
         {
-          name: "paribu-ventures-white",
-          website: "https://ventures.paribu.com/",
+          name: "paribu-custody",
+          website: "https://www.paribucustody.com/",
         },
         {
           name: "rise",
