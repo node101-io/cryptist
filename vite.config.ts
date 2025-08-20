@@ -163,6 +163,18 @@ const pageData = {
           name: "coinzonia",
           website: "https://www.coinzonia.com/",
         },
+        {
+          name: "ayware",
+          website: "",
+        },
+        {
+          name: "famecrypt",
+          website: "https://famecrypt.com.tr/en/"
+        },
+        {
+          name: "tubitak",
+          website: "https://en.bilgem.tubitak.gov.tr/en/"
+        }
       ],
       sponsors: [
         {
@@ -308,7 +320,7 @@ const pageData = {
         {
           name: "node101",
           website: "https://node101.io/",
-        },
+        }
       ],
       gallery: Array.from({ length: 10 }, (_, index) => index + 1),
     },
