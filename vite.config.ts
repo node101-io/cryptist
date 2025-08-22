@@ -174,6 +174,14 @@ const pageData = {
         {
           name: "tubitak",
           website: "https://en.bilgem.tubitak.gov.tr/en/"
+        },
+        {
+          name: "btc-haber",
+          website: "https://www.btchaber.com/",
+        },
+        {
+          name: "house-of-zk",
+          website: "https://www.hozk.io/",
         }
       ],
       sponsors: [
