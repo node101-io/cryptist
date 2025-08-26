@@ -186,8 +186,8 @@ const pageData = {
       ],
       sponsors: [
         {
-          name: "base",
-          website: "https://www.base.org/",
+          name: "citrea",
+          website: "https://citrea.xyz/",
         },
         {
           name: "avalanche",
