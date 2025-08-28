@@ -201,6 +201,10 @@ const pageData = {
           name: "rise",
           website: "https://risechain.com/",
         },
+        {
+          name: "babylon",
+          website: "https://babylonlabs.io/",
+        }
       ],
     }
   },

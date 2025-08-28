@@ -24,6 +24,7 @@ const speakerImageMap: Record<string, string> = {
   "Toghrul Maharramov": "/speakers/toghrul.webp",
   "Alp Bassa": "/speakers/alp.webp",
   "David TSE": "/speakers/david.webp",
+  "Erhan Tezcan": "/speakers/erhan.webp",
 };
 
 export async function fetchSpeakersData(spreadsheetId: string): Promise<SpeakersApiResponse> {
