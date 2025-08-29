@@ -84,6 +84,32 @@
         </div>
       </div>
     </section>
+    <section id="schedule" class="scroll-m-40 z-20 relative text-[#FAFAFA]">
+      <div class="flex flex-col gap-8 p-12 max-sm:p-4 mb-40">
+        <h2 class="text-7xl leading-none pb-0 max-sm:text-6xl peer-checked/speakers:block max-sm:block! fade-in-on-scroll">SCHEDULE</h2>
+        <div class="w-full">
+          <div class="grid grid-cols-[1fr_2fr_2fr] text-sm mb-4 max-sm:hidden fade-in-on-scroll font-[Space_Mono] max-lg:hidden">
+            <span>/DATE</span>
+            <span>/TOPIC</span>
+            <span>/SPEAKER</span>
+          </div>
+          <div class="flex flex-col fade-in-on-scroll font-[Space_Mono]">
+            {{#each schedule}}
+              <div class="group grid grid-cols-[1fr_2fr_2fr] max-lg:grid-cols-1 gap-2 items-center border-t border-[#C6C6C6] py-4 relative overflow-hidden">
+                <div class="flex items-center gap-3 lg:group-hover:translate-x-2 transition-transform duration-300 ease-in-out mix-blend-difference">
+                  <span class="size-2 rounded-full bg-[#C6C6C6]"></span>
+                  <span>{{this.time}}</span>
+                </div>
+                <div class="text-lg tracking-wide mix-blend-difference">{{this.topic}}</div>
+                <div class="text-base mix-blend-difference">{{this.speaker}}</div>
+                <div class="lg:group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out bg-[url(/schedule/background.webp)] absolute inset-0 -z-10 bg-no-repeat bg-center bg-cover"></div>
+              </div>
+            {{/each}}
+            <div class="w-full h-px bg-[#C6C6C6]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     {{> switch-context}}
     <section id="venue" class="
       flex

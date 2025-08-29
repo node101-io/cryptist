@@ -122,6 +122,48 @@ const pageData = {
         alt: "recent cryptography sessions 5",
       },
     ],
+    schedule: [
+      {
+        time: "09.00-09.30",
+        topic: "OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+      {
+        time: "09.00-09.30",
+        topic: "OPENING",
+        speaker: "Mete Koray Gergin // Node101",
+      },
+],
     oldSponsors: [
       {
         src: "/sponsors/aleo.webp",
