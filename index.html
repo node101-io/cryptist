@@ -1,22 +1,29 @@
 <!doctype html>
 <html lang="en" class="scrollbar-hidden">
-  <head>
-    {{> head}}
-  </head>
 
-  <body class="overscroll-none">
-    {{> header}}
-    <section class="transition-margin duration-500 ease-in-out peer-checked:mt-98 max-sm:peer-checked:mt-0 mb-16">
-      <h2 class="m-4 text-center text-4xl max-sm:text-lg scale-on-scroll fade-in-on-scroll cursor-default">4 SEPTEMBER 2025, ISTANBUL</h2>
-      <img src="/banner-text.svg" alt="the meeting point of cryptographers of europe and asia" class="relative z-10 m-12 mix-blend-difference max-sm:m-6 scale-on-scroll fade-in-on-scroll" />
-      <img src="/banner.webp" alt="banner" class="mt-[calc((65vw-2*12*var(--spacing))/-20-12*var(--spacing))] max-h-96 min-h-72 min-w-full object-cover max-sm:mt-[calc((65vw-2*6*var(--spacing))/-20-6*var(--spacing))]" />
-      <div class="flex items-end justify-between gap-8 p-12 max-sm:flex-col max-sm:items-start max-sm:p-4 fade-in-on-scroll">
-        <p class="max-w-140 font-[Space_Mono] leading-6 max-sm:w-full max-sm:text-sm max-sm:leading-5 cursor-default">For more than 3 years, Cryptist has been gathering cryptographers from all around the world in Istanbul, the bridge between Europe and Asia.</p>
-        {{> button-get-tickets}}
-      </div>
-    </section>
-    <section class="mb-16">
-      <div id="community-text" class="
+<head>
+  {{> head}}
+</head>
+
+<body class="overscroll-none">
+  {{> header}}
+  <section class="transition-margin duration-500 ease-in-out peer-checked:mt-98 max-sm:peer-checked:mt-0 mb-16">
+    <h2 class="m-4 text-center text-4xl max-sm:text-lg scale-on-scroll fade-in-on-scroll cursor-default">4 SEPTEMBER
+      2025, ISTANBUL</h2>
+    <img src="/banner-text.svg" alt="the meeting point of cryptographers of europe and asia"
+      class="relative z-10 m-12 mix-blend-difference max-sm:m-6 scale-on-scroll fade-in-on-scroll" />
+    <img src="/banner.webp" alt="banner"
+      class="mt-[calc((65vw-2*12*var(--spacing))/-20-12*var(--spacing))] max-h-96 min-h-72 min-w-full object-cover max-sm:mt-[calc((65vw-2*6*var(--spacing))/-20-6*var(--spacing))]" />
+    <div
+      class="flex items-end justify-between gap-8 p-12 max-sm:flex-col max-sm:items-start max-sm:p-4 fade-in-on-scroll">
+      <p class="max-w-140 font-[Space_Mono] leading-6 max-sm:w-full max-sm:text-sm max-sm:leading-5 cursor-default">For
+        more than 3 years, Cryptist has been gathering cryptographers from all around the world in Istanbul, the bridge
+        between Europe and Asia.</p>
+      {{> button-get-tickets}}
+    </div>
+  </section>
+  <section class="mb-16">
+    <div id="community-text" class="
         flex
         flex-wrap
         text-7xl
@@ -38,80 +45,106 @@
         mt-32
         fade-in-on-scroll
       ">
-        <script>
-          window.addEventListener('load', () => {
-            document.getElementById('community-text').addEventListener('mousemove', event => {
-              const rect = document.getElementById('community-text').getBoundingClientRect();
-              document.getElementById('community-text').style.setProperty('--x', `${event.clientX - rect.left}px`);
-              document.getElementById('community-text').style.setProperty('--y', `${event.clientY - rect.top}px`);
-            });
+      <script>
+        window.addEventListener('load', () => {
+          document.getElementById('community-text').addEventListener('mousemove', event => {
+            const rect = document.getElementById('community-text').getBoundingClientRect();
+            document.getElementById('community-text').style.setProperty('--x', `${event.clientX - rect.left}px`);
+            document.getElementById('community-text').style.setProperty('--y', `${event.clientY - rect.top}px`);
           });
-        </script>
-        <span>THE</span>
-        <span>CRYPTIST</span>
-        <span>COMMUNITY</span>
-        <span>IS</span>
-        <span>COMING</span>
-        <span>TOGETHER</span>
-        <span class="text-[#20FF93]">[:)]</span>
-        <span>ONCE</span>
-        <span>MORE</span>
-        <img src="/text-inline-image.webp" alt="colors" class="w-64 max-md:w-44 max-sm:w-24 h-auto object-cover">
-        <span>TO</span>
-        <span>SET</span>
-        <span>THE</span>
-        <span>NEW</span>
-        <span>BOUNDARY</span>
-        <span>OF</span>
-        <span>MODERN</span>
-        <span>DAY</span>
-        <span>CRYPTOGRAPHY.</span>
+        });
+      </script>
+      <span>THE</span>
+      <span>CRYPTIST</span>
+      <span>COMMUNITY</span>
+      <span>IS</span>
+      <span>COMING</span>
+      <span>TOGETHER</span>
+      <span class="text-[#20FF93]">[:)]</span>
+      <span>ONCE</span>
+      <span>MORE</span>
+      <img src="/text-inline-image.webp" alt="colors" class="w-64 max-md:w-44 max-sm:w-24 h-auto object-cover">
+      <span>TO</span>
+      <span>SET</span>
+      <span>THE</span>
+      <span>NEW</span>
+      <span>BOUNDARY</span>
+      <span>OF</span>
+      <span>MODERN</span>
+      <span>DAY</span>
+      <span>CRYPTOGRAPHY.</span>
+    </div>
+    <div class="w-full overflow-hidden pt-12 pb-36 fade-in-on-scroll">
+      <div
+        class="flex gap-16 w-fit pl-16 animate-[scroll_80s_linear_infinite] text-nowrap font-[Space_Mono] text-white cursor-default">
+        {{#each slidingTexts}}
+        <h3>{{this}}</h3>
+        {{/each}}
+        {{#each slidingTexts}}
+        <h3>{{this}}</h3>
+        {{/each}}
+        {{#each slidingTexts}}
+        <h3>{{this}}</h3>
+        {{/each}}
+        {{#each slidingTexts}}
+        <h3>{{this}}</h3>
+        {{/each}}
       </div>
-      <div class="w-full overflow-hidden pt-12 pb-36 fade-in-on-scroll">
-        <div class="flex gap-16 w-fit pl-16 animate-[scroll_80s_linear_infinite] text-nowrap font-[Space_Mono] text-white cursor-default">
-          {{#each slidingTexts}}
-            <h3>{{this}}</h3>
+    </div>
+  </section>
+  <section id="schedule" class="scroll-m-40 z-20 relative text-[#FAFAFA]">
+    <script>
+      function computeMaxWidth(elements) {
+        let max = 0;
+        elements.forEach((el) => {
+          const width = el.getBoundingClientRect().width;
+          if (width > max) max = width;
+        });
+        return max;
+      }
+
+      window.addEventListener('load', () => {
+        const scheduleEl = document.getElementById("schedule");
+
+        const speakerEls = scheduleEl.querySelectorAll("[data-schedule-speaker]");
+
+        scheduleEl.style.setProperty("--schedule-speaker-col", `${Math.ceil(computeMaxWidth(speakerEls))}px`);
+      });
+    </script>
+    <div class="flex flex-col gap-8 p-12 max-sm:p-4 mb-40">
+      <h2
+        class="text-7xl leading-none pb-0 max-sm:text-6xl peer-checked/speakers:block max-sm:block! fade-in-on-scroll">
+        SCHEDULE</h2>
+      <div class="w-full">
+        <div data-schedule-header
+          class="grid grid-cols-[var(--schedule-date-col,_max-content)_1fr_var(--schedule-speaker-col,_max-content)] gap-31 justify-items-start text-sm mb-4 max-sm:hidden fade-in-on-scroll font-[Space_Mono] max-lg:hidden">
+          <span>/DATE</span>
+          <span>/TOPIC</span>
+          <span class="justify-self-start text-left">/SPEAKER</span>
+        </div>
+        <div class="flex flex-col fade-in-on-scroll font-[Space_Mono]">
+          {{#each schedule}}
+          <div data-schedule-row
+            class="group grid grid-cols-[var(--schedule-date-col,_max-content)_1fr_var(--schedule-speaker-col,_max-content)] justify-items-start max-lg:grid-cols-1 items-center border-t border-[#C6C6C6] py-4 relative overflow-hidden">
+            <div data-schedule-date
+              class="flex mr-10 items-center gap-3 lg:group-hover:translate-x-2 transition-transform duration-300 ease-in-out mix-blend-difference">
+              <span class="size-2 min-w-2 rounded-full bg-[#C6C6C6]"></span>
+              <span>{{this.time}}</span>
+            </div>
+            <div class="text-lg tracking-wide mix-blend-difference mr-10">{{this.topic}}</div>
+            <div data-schedule-speaker class="text-base mix-blend-difference">{{this.speaker}}</div>
+            <div
+              class="lg:group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out bg-[url(/schedule/background.webp)] absolute inset-0 -z-10 bg-no-repeat bg-center bg-cover">
+            </div>
+          </div>
           {{/each}}
-          {{#each slidingTexts}}
-            <h3>{{this}}</h3>
-          {{/each}}
-          {{#each slidingTexts}}
-            <h3>{{this}}</h3>
-          {{/each}}
-          {{#each slidingTexts}}
-            <h3>{{this}}</h3>
-          {{/each}}
+          <div class="w-full h-px bg-[#C6C6C6]"></div>
         </div>
       </div>
-    </section>
-    <section id="schedule" class="scroll-m-40 z-20 relative text-[#FAFAFA]">
-      <div class="flex flex-col gap-8 p-12 max-sm:p-4 mb-40">
-        <h2 class="text-7xl leading-none pb-0 max-sm:text-6xl peer-checked/speakers:block max-sm:block! fade-in-on-scroll">SCHEDULE</h2>
-        <div class="w-full">
-          <div class="grid grid-cols-[1fr_2fr_2fr] text-sm mb-4 max-sm:hidden fade-in-on-scroll font-[Space_Mono] max-lg:hidden">
-            <span>/DATE</span>
-            <span>/TOPIC</span>
-            <span>/SPEAKER</span>
-          </div>
-          <div class="flex flex-col fade-in-on-scroll font-[Space_Mono]">
-            {{#each schedule}}
-              <div class="group grid grid-cols-[1fr_2fr_2fr] max-lg:grid-cols-1 gap-2 items-center border-t border-[#C6C6C6] py-4 relative overflow-hidden">
-                <div class="flex items-center gap-3 lg:group-hover:translate-x-2 transition-transform duration-300 ease-in-out mix-blend-difference">
-                  <span class="size-2 rounded-full bg-[#C6C6C6]"></span>
-                  <span>{{this.time}}</span>
-                </div>
-                <div class="text-lg tracking-wide mix-blend-difference">{{this.topic}}</div>
-                <div class="text-base mix-blend-difference">{{this.speaker}}</div>
-                <div class="lg:group-hover:opacity-100 opacity-0 transition-opacity duration-300 ease-in-out bg-[url(/schedule/background.webp)] absolute inset-0 -z-10 bg-no-repeat bg-center bg-cover"></div>
-              </div>
-            {{/each}}
-            <div class="w-full h-px bg-[#C6C6C6]"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    {{> switch-context}}
-    <section id="venue" class="
+    </div>
+  </section>
+  {{> switch-context}}
+  <section id="venue" class="
       flex
       flex-col
       gap-16
@@ -119,71 +152,77 @@
       scroll-m-40
       bg-[#11191D] z-20 relative
     ">
-      <div class="flex flex-col px-12 pt-40 max-sm:px-4 gap-8">
-        <h2 class="text-xl fade-in-on-scroll cursor-default">VENUE</h2>
-        <div class="flex gap-8 max-lg:flex-col-reverse text-[#D9D9D9]">
-          <a href="https://ramikutuphanesi.gov.tr/en" class="min-w-2/5 h-auto object-cover max-lg:min-w-full aspect-video fade-in-on-scroll bg-[url(/venue/rami-library.webp)] bg-cover bg-center bg-no-repeat" target="_blank"></a>
-          <div class="flex flex-col gap-8 max-lg:gap-4">
-            <h3 class="text-xl leading-4 max-lg:text-lg fade-in-on-scroll cursor-default">RAMI LIBRARY</h3>
-            <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll cursor-default">Located in the heart of old Istanbul, the Rami Library is a one-of-a-kind cultural venue that blends centuries of history with a modern vision for learning and community.<br><br>Originally built as military complex in the 18th century and recently restored, the complex now serves as Türkiye's largest library and one of the largest in Europe.</p>
-            <a class="mt-auto items-center group fade-in-on-scroll" href="https://maps.app.goo.gl/3HRL5gGKpJ53Hh3z6" target="_blank">
-              <span class="text-base font-[Space_Mono] animate-cipher-on-hover max-lg:text-sm">Rami Library, Yeni Rami Mahallesi, Rami Kışla Cd. 98/1, 34055 Eyüpsultan / İstanbul</span>
-              <img class="inline transition-transform duration-300 ease-in-out bg-[url(/arrow-blue.svg)] bg-no-repeat bg-center bg-contain size-4 ml-2 group-hover:translate-x-0.5 max-lg:hidden" src="/arrow-blue.svg" alt="arrow" />
-            </a>
-          </div>
+    <div class="flex flex-col px-12 pt-40 max-sm:px-4 gap-8">
+      <h2 class="text-xl fade-in-on-scroll cursor-default">VENUE</h2>
+      <div class="flex gap-8 max-lg:flex-col-reverse text-[#D9D9D9]">
+        <a href="https://ramikutuphanesi.gov.tr/en"
+          class="min-w-2/5 h-auto object-cover max-lg:min-w-full aspect-video fade-in-on-scroll bg-[url(/venue/rami-library.webp)] bg-cover bg-center bg-no-repeat"
+          target="_blank"></a>
+        <div class="flex flex-col gap-8 max-lg:gap-4">
+          <h3 class="text-xl leading-4 max-lg:text-lg fade-in-on-scroll cursor-default">RAMI LIBRARY</h3>
+          <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll cursor-default">Located in the heart of
+            old Istanbul, the Rami Library is a one-of-a-kind cultural venue that blends centuries of history with a
+            modern vision for learning and community.<br><br>Originally built as military complex in the 18th century
+            and recently restored, the complex now serves as Türkiye's largest library and one of the largest in Europe.
+          </p>
+          <a class="mt-auto items-center group fade-in-on-scroll" href="https://maps.app.goo.gl/3HRL5gGKpJ53Hh3z6"
+            target="_blank">
+            <span class="text-base font-[Space_Mono] animate-cipher-on-hover max-lg:text-sm">Rami Library, Yeni Rami
+              Mahallesi, Rami Kışla Cd. 98/1, 34055 Eyüpsultan / İstanbul</span>
+            <img
+              class="inline transition-transform duration-300 ease-in-out bg-[url(/arrow-blue.svg)] bg-no-repeat bg-center bg-contain size-4 ml-2 group-hover:translate-x-0.5 max-lg:hidden"
+              src="/arrow-blue.svg" alt="arrow" />
+          </a>
         </div>
       </div>
-      <div class="flex flex-col gap-8 mt-10">
-        <h2 class="px-12 max-sm:px-4 text-xl fade-in-on-scroll cursor-default">OTHER BLOCKCHAIN EVENTS IN RAMI LIBRARY</h2>
-        <div class="flex w-full h-fit gap-5 px-12 max-sm:px-4 overflow-x-auto scrollbar-hidden dragscroll fade-in-on-scroll">
-          {{#each otherEvents}}
-            <a {{#if this.link}}href="{{this.link}}"{{else}}{{/if}} target="_blank" class="flex flex-col gap-3 justify-between p-3 bg-[#343434] w-full min-w-74 max-sm:min-w-64">
-              <h3 class="text-xl max-sm:text-lg font-[Space_Mono]">{{this.name}}</h3>
-              <p class="text-sm">{{this.dates}}</p>
-              <p class="text-xs mt-6 max-sm:mt-4 bg-[{{this.typeColor}}] text-black px-2 pt-1 w-fit">{{this.type}}</p>
-            </a>
-          {{/each}}
-        </div>
-      </div>
-      <div class="flex items-center gap-4 px-12 max-sm:px-4 justify-end font-[Space_Mono] fade-in-on-scroll">
-        <a href="https://www.buildersweek.com/#schedule" target="_blank" class="group flex items-center gap-2">
-          <span class="text-xl font-light animate-cipher-on-hover">BUILDERS WEEK SCHEDULE</span>
-          <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
+    </div>
+    <div class="flex flex-col gap-8 mt-10">
+      <h2 class="px-12 max-sm:px-4 text-xl fade-in-on-scroll cursor-default">OTHER BLOCKCHAIN EVENTS IN RAMI LIBRARY
+      </h2>
+      <div
+        class="flex w-full h-fit gap-5 px-12 max-sm:px-4 overflow-x-auto scrollbar-hidden dragscroll fade-in-on-scroll">
+        {{#each otherEvents}}
+        <a {{#if this.link}}href="{{this.link}}" {{else}}{{/if}} target="_blank"
+          class="flex flex-col gap-3 justify-between p-3 bg-[#343434] w-full min-w-74 max-sm:min-w-64">
+          <h3 class="text-xl max-sm:text-lg font-[Space_Mono]">{{this.name}}</h3>
+          <p class="text-sm">{{this.dates}}</p>
+          <p class="text-xs mt-6 max-sm:mt-4 bg-[{{this.typeColor}}] text-black px-2 pt-1 w-fit">{{this.type}}</p>
         </a>
+        {{/each}}
       </div>
-    </section>
-    <section id="recent-cryptography-sessions" class="scroll-m-20 bg-[#11191D] z-20 relative">
-      <div class="flex flex-col gap-8 p-12 max-sm:p-4 items-center">
-        <h2 class="text-xl text-white fade-in-on-scroll cursor-default">RECENT CRYPTOGRAPHY SESSIONS</h2>
-        <p class="text-base font-[Space_Mono] fade-in-on-scroll cursor-default">Over the past three years, we've hosted regular monthly meetups and launched the Blackboard Cryptography series, an exploration of cryptography and privacy technologies. Held in both Istanbul and Ankara, this series brings together protocol researchers, academics, and applied cryptographers to share knowledge the old-fashioned way: with chalk, a blackboard, and discussion.</p>
-        <div class="flex w-fit justify-center gap-12 text-5xl max-sm:text-4xl max-sm:gap-8 relative mb-[calc(60dvw/16*9+12*var(--spacing))] max-sm:mb-[calc(100dvw/16*9+8*var(--spacing))] fade-in-on-scroll">
-          {{#each recentSessions}}
-            <input
-              type="radio"
-              name="recent-sessions"
-              id="recent-sessions-{{inc @index}}"
-              class="peer/recent-sessions-{{inc @index}} hidden"
-              {{#if @first}}checked{{/if}}
-            />
-            <label
-              for="recent-sessions-{{inc @index}}"
-              class="
+    </div>
+    <div class="flex items-center gap-4 px-12 max-sm:px-4 justify-end font-[Space_Mono] fade-in-on-scroll">
+      <a href="https://www.buildersweek.com/#schedule" target="_blank" class="group flex items-center gap-2">
+        <span class="text-xl font-light animate-cipher-on-hover">BUILDERS WEEK SCHEDULE</span>
+        <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+          src="/arrow-blue.svg" alt="arrow" />
+      </a>
+    </div>
+  </section>
+  <section id="recent-cryptography-sessions" class="scroll-m-20 bg-[#11191D] z-20 relative">
+    <div class="flex flex-col gap-8 p-12 max-sm:p-4 items-center">
+      <h2 class="text-xl text-white fade-in-on-scroll cursor-default">RECENT CRYPTOGRAPHY SESSIONS</h2>
+      <p class="text-base font-[Space_Mono] fade-in-on-scroll cursor-default">Over the past three years, we've hosted
+        regular monthly meetups and launched the Blackboard Cryptography series, an exploration of cryptography and
+        privacy technologies. Held in both Istanbul and Ankara, this series brings together protocol researchers,
+        academics, and applied cryptographers to share knowledge the old-fashioned way: with chalk, a blackboard, and
+        discussion.</p>
+      <div
+        class="flex w-fit justify-center gap-12 text-5xl max-sm:text-4xl max-sm:gap-8 relative mb-[calc(60dvw/16*9+12*var(--spacing))] max-sm:mb-[calc(100dvw/16*9+8*var(--spacing))] fade-in-on-scroll">
+        {{#each recentSessions}}
+        <input type="radio" name="recent-sessions" id="recent-sessions-{{inc @index}}"
+          class="peer/recent-sessions-{{inc @index}} hidden" {{#if @first}}checked{{/if}} />
+        <label for="recent-sessions-{{inc @index}}" class="
                 transition-colors
                 ease-in-out
                 duration-300
                 cursor-pointer
                 text-[#8B8B8B]
                 peer-checked/recent-sessions-{{inc @index}}:text-white
-              "
-            >{{this.label}}</label>
+              ">{{this.label}}</label>
 
-            {{#if this.isIframe}}
-              <iframe
-                src="{{this.src}}"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen
-                class="
+        {{#if this.isIframe}}
+        <iframe src="{{this.src}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="
                   aspect-video
                   w-[60dvw]
                   min-w-[60dvw]
@@ -200,14 +239,10 @@
                   transition-opacity
                   ease-in-out
                   duration-300
-                "
-              >
-              </iframe>
-            {{else}}
-              <img
-                src="{{this.src}}"
-                alt="{{this.alt}}"
-                class="
+                ">
+        </iframe>
+        {{else}}
+        <img src="{{this.src}}" alt="{{this.alt}}" class="
                   aspect-video
                   w-[60dvw]
                   min-w-[60dvw]
@@ -224,26 +259,28 @@
                   absolute
                   top-22
                   max-sm:top-16
-                "
-              />
-            {{/if}}
-          {{/each}}
-        </div>
-        <div class="flex gap-18 justify-center text-lg font-[Space_Mono] max-sm:gap-8 fade-in-on-scroll">
-          <a class="animate-cipher-on-hover" target="_blank" href="https://lu.ma/modapalas?k=c&period=past">Luma</a>
-          <a class="animate-cipher-on-hover" target="_blank" href="https://drive.google.com/drive/folders/18ARXSvtiIg3-wBNQ48a6UOXsdme4Kk0C?usp=sharing">Gallery</a>
-          <a class="animate-cipher-on-hover" target="_blank" href="https://x.com/modapalas">X</a>
-        </div>
+                " />
+        {{/if}}
+        {{/each}}
       </div>
-    </section>
-    <section id="faq" class="scroll-m-40 bg-[#11191D] z-20 relative">
-      <div class="flex flex-col gap-24 px-12 max-sm:px-4 pt-20 pb-80 max-lg:gap-4 max-sm:pb-20">
-        <h2 class="text-xl fade-in-on-scroll cursor-default">FAQ</h2>
-        <div class="flex gap-20 w-full relative fade-in-on-scroll">
-          <div class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-0 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
-            {{#each faqs}}
-              <input type="radio" name="faq" id="faq-{{inc @index}}" class="peer/faq-{{inc @index}} hidden" {{#if @first}}checked{{/if}}>
-              <label for="faq-{{inc @index}}" class="max-lg:my-4
+      <div class="flex gap-18 justify-center text-lg font-[Space_Mono] max-sm:gap-8 fade-in-on-scroll">
+        <a class="animate-cipher-on-hover" target="_blank" href="https://lu.ma/modapalas?k=c&period=past">Luma</a>
+        <a class="animate-cipher-on-hover" target="_blank"
+          href="https://drive.google.com/drive/folders/18ARXSvtiIg3-wBNQ48a6UOXsdme4Kk0C?usp=sharing">Gallery</a>
+        <a class="animate-cipher-on-hover" target="_blank" href="https://x.com/modapalas">X</a>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="scroll-m-40 bg-[#11191D] z-20 relative">
+    <div class="flex flex-col gap-24 px-12 max-sm:px-4 pt-20 pb-80 max-lg:gap-4 max-sm:pb-20">
+      <h2 class="text-xl fade-in-on-scroll cursor-default">FAQ</h2>
+      <div class="flex gap-20 w-full relative fade-in-on-scroll">
+        <div
+          class="flex flex-col gap-6 min-w-max ml-auto max-xl:mr-0 max-2xl:mr-0 mr-40 max-lg:m-0 max-lg:min-w-full max-lg:gap-0">
+          {{#each faqs}}
+          <input type="radio" name="faq" id="faq-{{inc @index}}" class="peer/faq-{{inc @index}} hidden" {{#if
+            @first}}checked{{/if}}>
+          <label for="faq-{{inc @index}}" class="max-lg:my-4
                 text-base
                 flex
                 gap-8
@@ -257,10 +294,10 @@
                 ease-in-out
                 font-[Space_Mono]
               ">
-                <h3>//{{inc @index}}</h3>
-                <p class="animate-cipher-on-hover">{{this.question}}</p>
-              </label>
-              <div class="
+            <h3>//{{inc @index}}</h3>
+            <p class="animate-cipher-on-hover">{{this.question}}</p>
+          </label>
+          <div class="
                 max-w-130
                 max-lg:max-w-full
                 max-xl:max-w-78
@@ -286,8 +323,8 @@
                 overflow-hidden
                 cursor-default
               ">
-                <h3 class="text-5xl text-white max-lg:hidden">{{this.question}}</h3>
-                <p class="
+            <h3 class="text-5xl text-white max-lg:hidden">{{this.question}}</h3>
+            <p class="
                   text-base
                   font-[Space_Mono]
                   max-lg:italic
@@ -297,30 +334,35 @@
                   [&_a]:duration-300
                   [&_a]:ease-in-out
                 ">{{{this.answer}}}</p>
-              </div>
-            {{/each}}
           </div>
+          {{/each}}
         </div>
       </div>
-    </section>
-    <section id="about" class="scroll-m-60 bg-[#11191D] z-20 relative pt-20">
-      <h1 class="text-[96px] leading-none pb-0 max-sm:text-3xl p-12 max-sm:p-4 fade-in-on-scroll">PAST EVENTS</h1>
-      <div class="flex px-12 max-sm:px-4 gap-30 text-[#D9D9D9] py-30 max-sm:py-12 max-lg:flex-col max-lg:gap-12">
-        <div class="flex flex-col gap-8 max-lg:gap-6">
-          <h2 class="text-xl fade-in-on-scroll cursor-default">THIS ISN'T JUST ANOTHER ZK EVENT.</h2>
-          <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll cursor-default">Cryptist is where builders, researchers, and curious minds come together to explore real-world applications of zero-knowledge, privacy, and cryptography.<br><br>We bridge academia, protocols, and local talent across Europe and Asia through workshops, technical talks, and networking opportunities.</p>
-          <div class="flex gap-4 fade-in-on-scroll">
-            <a href="/cryptist-2022" class="group flex items-center gap-2">
-              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">CRYPTIST 2022</span>
-              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
-            </a>
-            <a href="/cryptist-2023" class="group flex items-center gap-2">
-              <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">2023</span>
-              <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" src="/arrow-blue.svg" alt="arrow" />
-            </a>
-          </div>
+    </div>
+  </section>
+  <section id="about" class="scroll-m-60 bg-[#11191D] z-20 relative pt-20">
+    <h1 class="text-[96px] leading-none pb-0 max-sm:text-3xl p-12 max-sm:p-4 fade-in-on-scroll">PAST EVENTS</h1>
+    <div class="flex px-12 max-sm:px-4 gap-30 text-[#D9D9D9] py-30 max-sm:py-12 max-lg:flex-col max-lg:gap-12">
+      <div class="flex flex-col gap-8 max-lg:gap-6">
+        <h2 class="text-xl fade-in-on-scroll cursor-default">THIS ISN'T JUST ANOTHER ZK EVENT.</h2>
+        <p class="text-base font-[Space_Mono] leading-[1.3] fade-in-on-scroll cursor-default">Cryptist is where
+          builders, researchers, and curious minds come together to explore real-world applications of zero-knowledge,
+          privacy, and cryptography.<br><br>We bridge academia, protocols, and local talent across Europe and Asia
+          through workshops, technical talks, and networking opportunities.</p>
+        <div class="flex gap-4 fade-in-on-scroll">
+          <a href="/cryptist-2022" class="group flex items-center gap-2">
+            <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">CRYPTIST 2022</span>
+            <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+              src="/arrow-blue.svg" alt="arrow" />
+          </a>
+          <a href="/cryptist-2023" class="group flex items-center gap-2">
+            <span class="text-xl font-light animate-cipher-on-hover text-white font-[Space_Mono]">2023</span>
+            <img class="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
+              src="/arrow-blue.svg" alt="arrow" />
+          </a>
         </div>
-        <video src="https://storage.cryptist.org/cRAAUUV74fa4IYhk.mp4" controls muted playsinline class="
+      </div>
+      <video src="https://storage.cryptist.org/cRAAUUV74fa4IYhk.mp4" controls muted playsinline class="
           aspect-video
           object-contain
           w-[45dvw]
@@ -329,61 +371,71 @@
           max-lg:w-full
           max-lg:h-auto
         ">
-      </div>
-    </section>
-    <section id="old-sponsors" class="flex flex-col pb-32 bg-[#11191D] z-20 relative">
-      <h2 class="text-xl px-12 max-sm:px-4 fade-in-on-scroll cursor-default">2022-2023 Sponsors</h2>
-      <div class="w-full overflow-hidden fade-in-on-scroll">
-        <div class="
+    </div>
+  </section>
+  <section id="old-sponsors" class="flex flex-col pb-32 bg-[#11191D] z-20 relative">
+    <h2 class="text-xl px-12 max-sm:px-4 fade-in-on-scroll cursor-default">2022-2023 Sponsors</h2>
+    <div class="w-full overflow-hidden fade-in-on-scroll">
+      <div class="
           flex
           w-fit
           animate-[scroll_80s_linear_infinite]
         ">
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
-          {{#each oldSponsors}}
-            <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat"></div>
-          {{/each}}
+        {{#each oldSponsors}}
+        <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat">
+        </div>
+        {{/each}}
+        {{#each oldSponsors}}
+        <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat">
+        </div>
+        {{/each}}
+        {{#each oldSponsors}}
+        <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat">
+        </div>
+        {{/each}}
+        {{#each oldSponsors}}
+        <div style="background-image: url({{this.src}});" class="w-45 max-sm:w-30 h-28 bg-cover bg-center bg-no-repeat">
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="pb-16">
+    <div
+      class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] pt-44 bg-[#11191D] z-20 relative">
+      <h2 class="text-2xl fade-in-on-scroll cursor-default">Navigation</h2>
+      <div class="flex gap-11 w-full justify-between text-base max-sm:text-sm fade-in-on-scroll cursor-default">
+        <div class="flex flex-col gap-5">
+          <a href="#about" class="animate-cipher-on-hover">About</a>
+          <a href="#venue" class="animate-cipher-on-hover">Venue</a>
+          <a href="#faq" class="animate-cipher-on-hover">FAQ</a>
+        </div>
+        <div class="flex flex-col gap-5">
+          <a href="#speakers" class="animate-cipher-on-hover"
+            onclick="document.getElementById('tab-speakers').checked = true">Speakers</a>
+          <a href="#sponsors" class="animate-cipher-on-hover"
+            onclick="document.getElementById('tab-sponsors').checked = true">Sponsors</a>
+          <a href="#partners" class="animate-cipher-on-hover"
+            onclick="document.getElementById('tab-partners').checked = true">Partners</a>
+        </div>
+        <div class="flex flex-col gap-5">
+          <a href="/cryptist-2022" class="animate-cipher-on-hover">Cryptist 2022</a>
+          <a href="/cryptist-2023" class="animate-cipher-on-hover">Cryptist 2023</a>
+          <a href="#recent-cryptography-sessions" class="animate-cipher-on-hover inline">Cryptography Sessions</a>
+        </div>
+        <div class="flex flex-col gap-5 max-md:hidden">
+          <a href="https://x.com/cryptistanbul" target="_blank" class="animate-cipher-on-hover">X</a>
+          <a href="https://t.me/cryptistanbul" target="_blank" class="animate-cipher-on-hover">Telegram</a>
+          <a href="https://www.youtube.com/playlist?list=PL5c21nTlaW9ODGy_XOOUTFzZZbrlSO2d7" target="_blank"
+            class="animate-cipher-on-hover">YouTube</a>
+          <a href="https://www.linkedin.com/company/cryptistanbul" target="_blank"
+            class="animate-cipher-on-hover">LinkedIn</a>
         </div>
       </div>
-    </section>
-    <section id="navigation" class="pb-16">
-      <div class="flex flex-col gap-8 p-12 max-sm:p-4 w-full text-[#F4F4F4] font-[Space_Mono] pt-44 bg-[#11191D] z-20 relative">
-        <h2 class="text-2xl fade-in-on-scroll cursor-default">Navigation</h2>
-        <div class="flex gap-11 w-full justify-between text-base max-sm:text-sm fade-in-on-scroll cursor-default">
-          <div class="flex flex-col gap-5">
-            <a href="#about" class="animate-cipher-on-hover">About</a>
-            <a href="#venue" class="animate-cipher-on-hover">Venue</a>
-            <a href="#faq" class="animate-cipher-on-hover">FAQ</a>
-          </div>
-          <div class="flex flex-col gap-5">
-            <a href="#speakers" class="animate-cipher-on-hover" onclick="document.getElementById('tab-speakers').checked = true">Speakers</a>
-            <a href="#sponsors" class="animate-cipher-on-hover" onclick="document.getElementById('tab-sponsors').checked = true">Sponsors</a>
-            <a href="#partners" class="animate-cipher-on-hover" onclick="document.getElementById('tab-partners').checked = true">Partners</a>
-          </div>
-          <div class="flex flex-col gap-5">
-            <a href="/cryptist-2022" class="animate-cipher-on-hover">Cryptist 2022</a>
-            <a href="/cryptist-2023" class="animate-cipher-on-hover">Cryptist 2023</a>
-            <a href="#recent-cryptography-sessions" class="animate-cipher-on-hover inline">Cryptography Sessions</a>
-          </div>
-          <div class="flex flex-col gap-5 max-md:hidden">
-            <a href="https://x.com/cryptistanbul" target="_blank" class="animate-cipher-on-hover">X</a>
-            <a href="https://t.me/cryptistanbul" target="_blank" class="animate-cipher-on-hover">Telegram</a>
-            <a href="https://www.youtube.com/playlist?list=PL5c21nTlaW9ODGy_XOOUTFzZZbrlSO2d7" target="_blank" class="animate-cipher-on-hover">YouTube</a>
-            <a href="https://www.linkedin.com/company/cryptistanbul" target="_blank" class="animate-cipher-on-hover">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    {{> footer}}
-    <img id="hover-filter" src="/hover.webp" alt="hover" class="
+    </div>
+  </section>
+  {{> footer}}
+  <img id="hover-filter" src="/hover.webp" alt="hover" class="
       pointer-events-none
       size-42
       fixed
@@ -395,23 +447,30 @@
       origin-center
       portrait:opacity-0!
     ">
-    <script type="module" src="/src/main.ts"></script>
-    <script defer>
+  <script type="module" src="/src/main.ts"></script>
+  <script defer>
       // dragscroll.js
       !(function (e, n) {
-      "function" == typeof define && define.amd? define(["exports"], n): n("undefined" != typeof exports ? exports : (e.dragscroll = {}));
-      })(this, function (e) {
-      var n,t,o = window,l = document,c = "mousemove",r = "mouseup",i = "mousedown",m = "EventListener",d = "add" + m,s = "remove" + m,f = [],u = function (e, m) {for (e = 0; e < f.length; )(m = f[e++]),(m = m.container || m),m[s](i, m.md, 0),o[s](r, m.mu, 0),o[s](c, m.mm, 0);for (f = [].slice.call(l.getElementsByClassName("dragscroll")), e = 0;e < f.length;
-      )!(function (e, m, s, f, u, a) {(a = e.container || e)[d](i,(a.md = function (n) {if (n.button !== 0) {return;}(e.hasAttribute("nochilddrag") &&l.elementFromPoint(n.pageX, n.pageY) != a) ||((f = 1),(m = n.clientX),(s = n.clientY),n.preventDefault());}),0),o[d](r,(a.mu = function () {f = 0;}),0),o[d](c,(a.mm = function (o) {f &&(((u = e.scroller || e).scrollLeft -= n =-m + (m = o.clientX)),(u.scrollTop -= t = -s + (s = o.clientY)),e == l.body &&((u = l.documentElement).scrollLeft -= n),(u.scrollTop -= t));}),0);})(f[e++]);};
-      "complete" == l.readyState ? u() : o[d]("load", u, 0), (e.reset = u);});
-      !(function () {var f = 0,x,y,t = 3;
-      document.addEventListener("mousedown", function (e) {x = e.clientX;y = e.clientY;f = 0;
+          "function" == typeof define && define.amd ? define(["exports"], n) : n("undefined" != typeof exports ? exports : (e.dragscroll = {}));
+        })(this, function (e) {
+          var n, t, o = window, l = document, c = "mousemove", r = "mouseup", i = "mousedown", m = "EventListener", d = "add" + m, s = "remove" + m, f = [], u = function (e, m) {
+            for (e = 0; e < f.length;)(m = f[e++]), (m = m.container || m), m[s](i, m.md, 0), o[s](r, m.mu, 0), o[s](c, m.mm, 0); for (f = [].slice.call(l.getElementsByClassName("dragscroll")), e = 0; e < f.length;
+            )!(function (e, m, s, f, u, a) { (a = e.container || e)[d](i, (a.md = function (n) { if (n.button !== 0) { return; } (e.hasAttribute("nochilddrag") && l.elementFromPoint(n.pageX, n.pageY) != a) || ((f = 1), (m = n.clientX), (s = n.clientY), n.preventDefault()); }), 0), o[d](r, (a.mu = function () { f = 0; }), 0), o[d](c, (a.mm = function (o) { f && (((u = e.scroller || e).scrollLeft -= n = -m + (m = o.clientX)), (u.scrollTop -= t = -s + (s = o.clientY)), e == l.body && ((u = l.documentElement).scrollLeft -= n), (u.scrollTop -= t)); }), 0); })(f[e++]);
+          };
+          "complete" == l.readyState ? u() : o[d]("load", u, 0), (e.reset = u);
+        });
+    !(function () {
+      var f = 0, x, y, t = 3;
+      document.addEventListener("mousedown", function (e) {
+        x = e.clientX; y = e.clientY; f = 0;
       });
-      document.addEventListener("mousemove", function (e) {if (!f &&(Math.abs(e.clientX - x) > t || Math.abs(e.clientY - y) > t))f = 1;
+      document.addEventListener("mousemove", function (e) {
+        if (!f && (Math.abs(e.clientX - x) > t || Math.abs(e.clientY - y) > t)) f = 1;
       });
-      document.addEventListener("click",function (e) {if (f && e.target.tagName === "A") {e.preventDefault();e.stopPropagation();}},1
+      document.addEventListener("click", function (e) { if (f && e.target.tagName === "A") { e.preventDefault(); e.stopPropagation(); } }, 1
       );
-      })();
-    </script>
-  </body>
+    })();
+  </script>
+</body>
+
 </html>

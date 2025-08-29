@@ -131,17 +131,17 @@ const pageData = {
       {
         time: "09.00-09.30",
         topic: "OPENING",
-        speaker: "Mete Koray Gergin // Node101",
+        speaker: "Mete asfklsşf // Node101",
       },
       {
         time: "09.00-09.30",
         topic: "OPENING",
-        speaker: "Mete Koray Gergin // Node101",
+        speaker: "Mete Koray s // Node101",
       },
       {
         time: "09.00-09.30",
         topic: "OPENING",
-        speaker: "Mete Koray Gergin // Node101",
+        speaker: "Mete Koray Gergin // Nssode101",
       },
       {
         time: "09.00-09.30",
