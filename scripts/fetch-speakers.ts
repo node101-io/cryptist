@@ -23,8 +23,14 @@ const speakerImageMap: Record<string, string> = {
   "Dan Mills": "/speakers/dan.webp",
   "Toghrul Maharramov": "/speakers/toghrul.webp",
   "Alp Bassa": "/speakers/alp.webp",
-  "David TSE": "/speakers/david.webp",
   "Erhan Tezcan": "/speakers/erhan.webp",
+  "Oğuz Yayla": "/speakers/oguz_yayla.webp",
+  "Muhammed Ali Bingol": "/speakers/muhammed.webp",
+  "Fisher Yu": "/speakers/fisher_yu.webp",
+  "Errol Drummond": "/speakers/errol.webp",
+  "Ahmet Şahinoğlu": "/speakers/ahmet.webp",
+  "Fatih Birinci": "/speakers/fatih.webp",
+  // "Furkan Akal": "/speakers/furkan_akal.webp",
 };
 
 export async function fetchSpeakersData(spreadsheetId: string): Promise<SpeakersApiResponse> {
@@ -40,7 +46,7 @@ export async function fetchSpeakersData(spreadsheetId: string): Promise<Speakers
     const speakers: Speaker[] = data
       .filter((row: any) => row.NAME && row.NAME.trim() !== '')
       .map((row: any) => {
-        const speakerName = row.NAME || 'Unknown';
+        const speakerName = row.NAME.trim() || 'Unknown';
         const speakerImage = speakerImageMap[speakerName];
 
         if (!speakerImage && speakerName !== 'Unknown') {

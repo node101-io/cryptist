@@ -36,11 +36,11 @@
       "url": "https://x.com/toghrulmaharram"
     },
     {
-      "name": "David TSE",
+      "name": "Fisher Yu",
       "company": "Babylon ",
-      "image": "/speakers/david.webp",
+      "image": "/speakers/fisher_yu.webp",
       "type": "Speakers",
-      "url": "https://x.com/dntse?s=11&t=_622jfOfGQKD0pLPsXnjKg"
+      "url": "https://x.com/baby_fisherman"
     },
     {
       "name": "Erhan Tezcan",
@@ -48,7 +48,49 @@
       "image": "/speakers/erhan.webp",
       "type": "Speakers",
       "url": "https://x.com/0xerhant"
+    },
+    {
+      "name": "Furkan Akal",
+      "company": "Inco",
+      "image": "/hover.webp",
+      "type": "Speakers",
+      "url": "https://x.com/furkanakalcom"
+    },
+    {
+      "name": "Oğuz Yayla",
+      "company": "Middle East Technical University ",
+      "image": "/speakers/oguz_yayla.webp",
+      "type": "Speakers",
+      "url": "https://x.com/oguzyayla"
+    },
+    {
+      "name": "Muhammed Ali Bingol",
+      "company": "De Montfort University / TUBITAK BILGEM",
+      "image": "/speakers/muhammed.webp",
+      "type": "Speakers",
+      "url": "https://www.linkedin.com/in/dr-muhammed-ali-bing%C3%B6l-b3b7b317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+      "name": "Errol Drummond",
+      "company": "The philosophy of privacy",
+      "image": "/speakers/errol.webp",
+      "type": "Speakers",
+      "url": "https://x.com/EDGDrummond"
+    },
+    {
+      "name": "Ahmet Şahinoğlu",
+      "company": "Security in Digital Asset Custod",
+      "image": "/speakers/ahmet.webp",
+      "type": "Speakers",
+      "url": "https://www.linkedin.com/in/ahmetsahinoglu/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+      "name": "Fatih Birinci",
+      "company": "Security in Digital Asset Custod",
+      "image": "/speakers/fatih.webp",
+      "type": "Speakers",
+      "url": "https://www.linkedin.com/in/fatih-birinci-6a223656/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
   ],
-  "lastUpdated": "2025-08-28T15:02:24.412Z"
+  "lastUpdated": "2025-09-02T14:18:07.012Z"
 }
