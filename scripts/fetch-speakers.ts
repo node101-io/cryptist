@@ -30,7 +30,7 @@ const speakerImageMap: Record<string, string> = {
   "Errol Drummond": "/speakers/errol.webp",
   "Ahmet Şahinoğlu": "/speakers/ahmet.webp",
   "Fatih Birinci": "/speakers/fatih.webp",
-  // "Furkan Akal": "/speakers/furkan_akal.webp",
+  "Furkan Akal": "/speakers/furkan_akal.webp",
 };
 
 export async function fetchSpeakersData(spreadsheetId: string): Promise<SpeakersApiResponse> {

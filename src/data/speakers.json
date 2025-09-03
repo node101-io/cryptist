@@ -52,45 +52,45 @@
     {
       "name": "Furkan Akal",
       "company": "Inco",
-      "image": "/hover.webp",
+      "image": "/speakers/furkan_akal.webp",
       "type": "Speakers",
       "url": "https://x.com/furkanakalcom"
     },
     {
       "name": "Oğuz Yayla",
-      "company": "Middle East Technical University ",
+      "company": "METU",
       "image": "/speakers/oguz_yayla.webp",
       "type": "Speakers",
       "url": "https://x.com/oguzyayla"
     },
     {
       "name": "Muhammed Ali Bingol",
-      "company": "De Montfort University / TUBITAK BILGEM",
+      "company": "De Montfort University",
       "image": "/speakers/muhammed.webp",
       "type": "Speakers",
       "url": "https://www.linkedin.com/in/dr-muhammed-ali-bing%C3%B6l-b3b7b317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
       "name": "Errol Drummond",
-      "company": "The philosophy of privacy",
+      "company": "Terminal 3",
       "image": "/speakers/errol.webp",
       "type": "Speakers",
       "url": "https://x.com/EDGDrummond"
     },
     {
       "name": "Ahmet Şahinoğlu",
-      "company": "Security in Digital Asset Custod",
+      "company": "‎",
       "image": "/speakers/ahmet.webp",
       "type": "Speakers",
       "url": "https://www.linkedin.com/in/ahmetsahinoglu/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
       "name": "Fatih Birinci",
-      "company": "Security in Digital Asset Custod",
+      "company": "‎",
       "image": "/speakers/fatih.webp",
       "type": "Speakers",
       "url": "https://www.linkedin.com/in/fatih-birinci-6a223656/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
   ],
-  "lastUpdated": "2025-09-02T14:18:07.012Z"
+  "lastUpdated": "2025-09-03T19:21:07.115Z"
 }
