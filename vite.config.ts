@@ -122,6 +122,93 @@ const pageData = {
         alt: "recent cryptography sessions 5",
       },
     ],
+    schedule: [
+      {
+        time: "10.00-10.20",
+        topic: "Opening",
+        speaker: "Errol Drummond & Yunus Gürlek // Terminal 3 & node101",
+      },
+      {
+        time: "10.20-10.40",
+        topic: "Computational Assumptions in Blockchains",
+        speaker: "Abdullah Talayhan // Individual",
+      },
+      {
+        time: "10.40-11.00",
+        topic: "Evolution of Threshold Signatures: The Cryptographic Backbone of Modern Custodial Wallets",
+        speaker: "Muhammed Ali Bingöl // De Montfort Uni, ex. TUBITAK BILGEM",
+      },
+      {
+        time: "11.00-11.20",
+        topic: "eERC: A Practical Confidential Token Protocol",
+        speaker: "Furkan Boyraz // Avalanche",
+      },
+      {
+        time: "11.20-11.40",
+        topic: "Transciphering in FHE",
+        speaker: "Furkan Akal // Inco Network",
+      },
+      {
+        time: "11.40-12.30",
+        topic: "Break",
+        speaker: "",
+      },
+      {
+        time: "12.30-12.50",
+        topic: "Multi-party Computation and its Application in Leader Election",
+        speaker: "Oğuz Yayla // METU, Ayware",
+      },
+      {
+        time: "12.50-13.10",
+        topic: "What is a Rollup? 2025 Edition",
+        speaker: "Toghrul Maharramov // Fluent",
+      },
+      {
+        time: "13.10-13.30",
+        topic: "The philosophy of privacy",
+        speaker: "Errol Drummond // Terminal 3",
+      },
+      {
+        time: "13.30-13.50",
+        topic: "Verifiable & Private Inference, beyond ZK & FHE",
+        speaker: "Erhan Tezcan // @dria",
+      },
+      {
+        time: "13.50-14.50",
+        topic: "Lunch Break",
+        speaker: "",
+      },
+      {
+        time: "14.50-15.50",
+        topic: "Side discussions, and research meetups",
+        speaker: "",
+      },
+      {
+        time: "15.50-16.20",
+        topic: "Security in Digital Asset Custody",
+        speaker: "Ahmet Şahinoğlu // Paribu Custody",
+      },
+      {
+        time: "16.20-16.40",
+        topic: "BitVM",
+        speaker: "Robin Linus // BitVM, zkCoins, ZeroSync creator",
+      },
+      {
+        time: "16.40-17.00",
+        topic: "PQC on Bitcoin",
+        speaker: "Hunter Beast // BIP360 Author, Anduro, Surmount Systems",
+      },
+      {
+        time: "17.00-17.20",
+        topic: "Crytography: the corner stone of BTCFi",
+        speaker: "Fisher Yu // Babylon Labs",
+      },
+      {
+        time: "17.20-17.40",
+        topic: "Closing",
+        speaker: "Errol Drummond & Yunus Gürlek // Terminal 3 & node101",
+      }
+    ],
     oldSponsors: [
       {
         src: "/sponsors/aleo.webp",
