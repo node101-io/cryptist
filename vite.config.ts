@@ -244,7 +244,7 @@ const pageData = {
       },
     ],
     switchContext: {
-      speakers: convertSpeakersForConfig(loadSpeakers()),
+      speakers: convertSpeakersForConfig(loadSpeakers()).sort((a, b) => a.name.localeCompare(b.name)),
       partners: [
         {
           name: "coinzonia",

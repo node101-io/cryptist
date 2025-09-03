@@ -85,7 +85,7 @@
         max-md:text-[calc((100dvw-40px-96px)/3/14)]
         max-sm:text-[calc((100dvw-12px-32px)/3/14)]
       ">{{speaker.company}}</h4>
-      <img class="mt-2 grayscale" src="{{speaker.image}}" alt="{{speaker.name}}" />
+      <img class="mt-2 grayscale aspect-square object-cover" src="{{speaker.image}}" alt="{{speaker.name}}" />
     </a>
     {{/each}}
   {{else}}
